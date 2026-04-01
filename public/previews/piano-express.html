@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Piano Express ARS | Toca el Piano en 30 Días</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "accent": "#1754cf",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#0a0a0a",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                font-family: 'Manrope', sans-serif;
+            }
+        }
+        .piano-gradient {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.9) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<nav class="sticky top-0 z-50 w-full bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary dark:text-white">
+<span class="material-symbols-outlined text-3xl">piano</span>
+</div>
+<span class="text-xl font-bold tracking-tight uppercase">Piano Express ARS</span>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-sm font-semibold hover:text-accent transition-colors" href="#metodo">Metodología</a>
+<a class="text-sm font-semibold hover:text-accent transition-colors" href="#programa">Programa</a>
+<a class="text-sm font-semibold hover:text-accent transition-colors" href="#videos">Demos</a>
+<button class="bg-primary dark:bg-white dark:text-black text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide hover:opacity-90 transition-all">
+                Empezar a tocar hoy
+            </button>
+</div>
+</div>
+</nav>
+<header class="relative h-[85vh] w-full flex items-center justify-center overflow-hidden bg-black">
+<div class="absolute inset-0 z-0">
+<img alt="Piano Keys" class="w-full h-full object-cover opacity-50 grayscale" data-alt="Close up of elegant black and white piano keys" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwvHat-pTMXDTTz71Qofr9eRaWXzJp2K3-0zSSwukA_RKn17xTA6S11CBLkHrrOlPvcvBE_Ua0JpIg7NEHRcueO28Df5DS4NW7ApMbHmsy0DytXEKeemA-i1Kzk4E-548fkbBDKcwS3H0qGC5mPCrpVvXHh21jkCzPAEJ3GxyI5P1bXxWw7skjaC0AESU0kOZdjzb697tzPWLaPWC8N6QxiI4rOewX1tCRr7ZtjdN-tot97e4CyeX2EYtoVG4_Q1Erv8_WpCnMPA"/>
+<div class="absolute inset-0 piano-gradient"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+<h1 class="text-white text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 leading-[1.1]">
+            Toca el Piano en <span class="text-slate-400">30 Días</span>
+</h1>
+<p class="text-slate-300 text-lg md:text-xl font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+            Olvídate de las <span class="text-white font-medium">partituras imposibles y años de teoría aburrida</span>. 
+            Aprende con un método diseñado para resultados inmediatos en Argentina.
+        </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="bg-white text-black px-10 py-5 rounded-xl text-lg font-bold hover:scale-105 transition-transform w-full sm:w-auto shadow-2xl">
+                Empezar a tocar hoy por $25.000
+            </button>
+<button class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-xl text-lg font-bold hover:bg-white/20 transition-all w-full sm:w-auto">
+                Ver Programa
+            </button>
+</div>
+<p class="text-slate-400 mt-6 text-sm font-medium italic">Equivale a solo 2 clases particulares</p>
+</div>
+</header>
+<section class="py-24 px-6 bg-white dark:bg-background-dark" id="metodo">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-2xl">
+<h2 class="text-slate-500 font-bold tracking-widest uppercase text-sm mb-4">La Diferencia</h2>
+<h3 class="text-4xl md:text-5xl font-black tracking-tight leading-none text-slate-900 dark:text-white">
+                    Menos teoría, más música.
+                </h3>
+</div>
+<p class="text-slate-500 max-w-md text-lg italic">
+                "Adiós a las partituras imposibles y años de teoría aburrida."
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 rounded-2xl bg-background-light dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-black dark:hover:border-white transition-colors group">
+<div class="w-14 h-14 bg-black/5 dark:bg-white/10 rounded-xl flex items-center justify-center text-black dark:text-white mb-6 group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all">
+<span class="material-symbols-outlined text-3xl">library_music</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Sin Partituras Complejas</h4>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Utilizamos un sistema visual intuitivo. No necesitás saber leer música para empezar a sonar como un profesional.
+                </p>
+</div>
+<div class="p-8 rounded-2xl bg-background-light dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-black dark:hover:border-white transition-colors group">
+<div class="w-14 h-14 bg-black/5 dark:bg-white/10 rounded-xl flex items-center justify-center text-black dark:text-white mb-6 group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all">
+<span class="material-symbols-outlined text-3xl">bolt</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Resultados Reales</h4>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+<span class="font-bold text-slate-900 dark:text-white">Toca tu primera canción en la semana 1.</span> Garantizado a través de nuestra metodología acelerada.
+                </p>
+</div>
+<div class="p-8 rounded-2xl bg-background-light dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-black dark:hover:border-white transition-colors group">
+<div class="w-14 h-14 bg-black/5 dark:bg-white/10 rounded-xl flex items-center justify-center text-black dark:text-white mb-6 group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all">
+<span class="material-symbols-outlined text-3xl">payments</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Inversión Inteligente</h4>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Costo-beneficio imbatible. El acceso total al curso equivale a solo 2 clases particulares de piano en Argentina.
+                </p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 bg-slate-950 text-white overflow-hidden" id="videos">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-black mb-6">Míralo en Acción</h2>
+<p class="text-slate-400 max-w-2xl mx-auto text-lg">
+                Comprobá lo fácil que es avanzar cuando el método está diseñado para el disfrute, no para la frustración.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="relative group cursor-pointer aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+<img alt="Video Thumbnail" class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700" data-alt="Hands playing a melody on a digital piano in high definition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK4sSb-pO_EPmYSk2Pk9IDiEX-fimoT-EJ0n9XnhC8me9S56UJJVE5CQ3ZerC_kTRNdS0juUH2PVMQ_kAjBKyycHJE8izKRYhzZlNIfOAke4dijjRNj_59brDKWnSIBJZztl_baF-48awC0gPUPHuoGA1_nmYrc_nROABI841q7LOA-VumOgRtqR2FE5CMpHb9NqkH9M4Y_rmov-edfxSBGIWgDoa5CUDkOdwKAXMfrKHgdakF2RwpYZ1WVuKN_2kJlaKVdAMpsg"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-all">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-black fill-current">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="bg-white/90 text-black px-3 py-1 rounded text-xs font-bold uppercase tracking-widest">Demo: Canción Semana 1</span>
+</div>
+</div>
+<div class="space-y-8 pl-0 md:pl-12">
+<div class="flex gap-6">
+<div class="flex-shrink-0 text-white">
+<span class="material-symbols-outlined text-4xl">check_circle</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Sin teoría aburrida</h4>
+<p class="text-slate-400">Vas directo a las teclas. Aprendés la teoría necesaria mientras tocás, no antes.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 text-white">
+<span class="material-symbols-outlined text-4xl">check_circle</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Canciones Populares</h4>
+<p class="text-slate-400">Aprendé con temas que conocés y amás, no con ejercicios monótonos de hace 200 años.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 text-white">
+<span class="material-symbols-outlined text-4xl">check_circle</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Acceso Permanente</h4>
+<p class="text-slate-400">Pagás una vez $25.000 ARS y tenés el contenido para siempre. Sin suscripciones.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 bg-background-light dark:bg-background-dark" id="programa">
+<div class="max-w-5xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="text-4xl font-black mb-4">Tu Evolución</h2>
+<div class="w-24 h-1 bg-black dark:bg-white mx-auto"></div>
+</div>
+<div class="space-y-12">
+<div class="flex flex-col md:flex-row gap-8 items-start relative">
+<div class="md:w-1/4">
+<span class="text-6xl font-black text-slate-200 dark:text-slate-800">01</span>
+<h4 class="text-xl font-bold mt-[-1rem] text-black dark:text-white">Semana 1</h4>
+</div>
+<div class="md:w-3/4 p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 flex-1 border-l-4 border-l-black dark:border-l-white">
+<h5 class="text-xl font-bold mb-4">Toca tu primera canción</h5>
+<ul class="space-y-3 text-slate-600 dark:text-slate-400">
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-black dark:bg-white rounded-full"></span> Ubicación instantánea en el teclado sin partituras.</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-black dark:bg-white rounded-full"></span> Los 3 acordes mágicos que abren mil canciones.</li>
+<li class="flex items-center gap-3"><span class="font-bold text-black dark:text-white">Hito:</span> Al finalizar el día 7 ya estarás tocando tu primer tema completo.</li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="md:w-1/4">
+<span class="text-6xl font-black text-slate-200 dark:text-slate-800">02</span>
+<h4 class="text-xl font-bold mt-[-1rem] text-slate-400">Semanas 2-4</h4>
+</div>
+<div class="md:w-3/4 p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 flex-1">
+<h5 class="text-xl font-bold mb-4">Independencia y Repertorio</h5>
+<ul class="space-y-3 text-slate-600 dark:text-slate-400">
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-slate-300 rounded-full"></span> Coordinación rítmica entre ambas manos.</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-slate-300 rounded-full"></span> Técnicas de acompañamiento profesional.</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-slate-300 rounded-full"></span> Proyecto Final: Un mini-recital de 3 canciones elegidas por vos.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 bg-white dark:bg-background-dark">
+<div class="max-w-4xl mx-auto">
+<div class="relative bg-black rounded-[2rem] overflow-hidden p-12 md:p-20 text-center shadow-3xl">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<img alt="Background" class="w-full h-full object-cover grayscale" data-alt="Abstract musical background with piano texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwzpfw-U1u1TsqhUGvTR10ivCHi2x19J9p6IAg-9DJKJkv_lxciDNdW5tDqLAlShckj8wLISjQ2Kq3rSsVUPD_mPa9kktnvxLkrcBXLQhXHaZTp_f-4iB7R8ash-Ov8EmAtxxmpAzYMwmwJ-9c5N8z4bToZ416jEijFXQf6YNOv-OJVq1pHD2XA5M9RfT9j0KMXVM6SHdAbxpYPIbNu0TAzDX8pw2RyPnI3cQbt-0OgwcsWCmrz99_z1XN4Z05o-bgvBFwocU-2g"/>
+</div>
+<div class="relative z-10">
+<h2 class="text-white text-4xl md:text-5xl font-black mb-6 leading-tight">¿Listo para empezar a tocar?</h2>
+<p class="text-slate-400 text-lg mb-10 max-w-xl mx-auto">
+                    Evitá años de frustración. Empezá hoy mismo con el curso más práctico y efectivo de Argentina.
+                </p>
+<div class="inline-block bg-white p-8 md:p-12 rounded-3xl mb-10 shadow-2xl">
+<p class="text-slate-500 text-sm font-bold uppercase tracking-widest mb-2 italic">Precio Especial Argentina</p>
+<div class="flex flex-col items-center justify-center gap-1 mb-6">
+<span class="text-6xl md:text-8xl font-black text-black">$25.000 ARS</span>
+<span class="text-slate-400 text-sm font-bold uppercase tracking-widest">Pago Único</span>
+</div>
+<button class="bg-black text-white w-full py-5 px-12 rounded-xl text-xl font-bold hover:scale-105 transition-all shadow-xl">
+                        Empezar a tocar hoy
+                    </button>
+<p class="text-slate-500 text-xs mt-6 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">payments</span> 
+                        Equivale a solo 2 clases particulares
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-background-light dark:bg-slate-950 py-16 px-6 border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<div class="text-black dark:text-white">
+<span class="material-symbols-outlined text-3xl">piano</span>
+</div>
+<span class="text-xl font-bold tracking-tight uppercase">Piano Express ARS</span>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed">
+                Transformamos el aprendizaje del piano en una experiencia moderna, rápida y accesible para toda la Argentina.
+            </p>
+</div>
+<div>
+<h6 class="font-bold mb-6 text-sm uppercase tracking-widest">Legal</h6>
+<ul class="space-y-4 text-slate-500 text-sm">
+<li><a class="hover:text-black dark:hover:text-white" href="#">Privacidad</a></li>
+<li><a class="hover:text-black dark:hover:text-white" href="#">Términos</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-bold mb-6 text-sm uppercase tracking-widest">Contacto</h6>
+<ul class="space-y-4 text-slate-500 text-sm">
+<li><a class="hover:text-black dark:hover:text-white" href="#">Soporte alumnos</a></li>
+<li><a class="hover:text-black dark:hover:text-white" href="#">WhatsApp</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-bold mb-6 text-sm uppercase tracking-widest">Novedades</h6>
+<p class="text-slate-500 text-sm mb-4">Sumate para recibir tips gratis.</p>
+<div class="flex gap-2">
+<input class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-2 text-sm w-full focus:ring-black focus:border-black" placeholder="Tu email" type="email"/>
+<button class="bg-black text-white p-2 rounded-lg hover:opacity-90 transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-slate-500 text-xs">
+        © 2024 Piano Express ARS. Todos los derechos reservados.
+    </div>
+</footer>
+
+</body></html>

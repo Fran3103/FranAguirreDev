@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sueño Reparador ARS - Recupera tus noches</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Playfair+Display:italic,wght@400;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6366f1",
+                        "night-bg": "#020617",
+                        "night-card": "#0f172a",
+                        "accent": "#f43f5e",
+                    },
+                    fontFamily: {
+                        "sans": ["Plus Jakarta Sans", "sans-serif"],
+                        "display": ["Playfair Display", "serif"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #6366f1;
+            --night-bg: #020617;
+        }
+        body {
+            background-color: var(--night-bg);
+            color: #f8fafc;
+        }
+        .star-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .gradient-blur {
+            background: radial-gradient(circle at center, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body class="selection:bg-primary/30 star-pattern">
+<header class="sticky top-0 z-50 bg-night-bg/80 backdrop-blur-xl border-b border-slate-800 px-6 md:px-20 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-2 group cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl">nights_stay</span>
+<h2 class="text-xl font-bold tracking-tight text-white">Sueño Reparador</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium text-slate-400 hover:text-white transition-colors" href="#dolor">Problema</a>
+<a class="text-sm font-medium text-slate-400 hover:text-white transition-colors" href="#beneficios">Beneficios</a>
+<a class="text-sm font-medium text-slate-400 hover:text-white transition-colors" href="#garantia">Garantía</a>
+</nav>
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-primary/20 transition-all transform hover:scale-105">
+            Descansar de verdad
+        </button>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 md:px-20">
+<section class="relative py-16 md:py-28 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="absolute -top-20 -left-20 w-96 h-96 gradient-blur -z-10"></div>
+<div class="order-2 lg:order-1 space-y-8">
+<div class="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">Guía Definitiva - Edición Argentina</div>
+<h1 class="text-5xl md:text-7xl font-extrabold leading-[1.1] text-white">
+                Dile adiós al <br/><span class="text-primary font-display italic">insomnio crónico</span>
+</h1>
+<p class="text-lg md:text-xl text-slate-400 leading-relaxed max-w-lg">
+                ¿Cansado de las mañanas sin energía? Descubre el método probado para transformar tu descanso y recuperar tu vitalidad desde la primera noche.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="bg-primary text-white px-8 py-4 rounded-xl text-lg font-bold shadow-2xl shadow-primary/40 hover:translate-y-[-2px] transition-all">
+                    Descansar de verdad
+                </button>
+<div class="flex items-center gap-3 px-5 py-2 bg-slate-900/50 border border-slate-800 rounded-xl">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<span class="text-sm font-medium text-slate-300">Pago seguro en ARS</span>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 relative">
+<div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-700/50 aspect-[4/5] bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPZk7cpbINR4LADrfFCAozaJpCFzxXwaUnwo2ZpKw--3-zallVD-cPZ8EUBfUpcHlehLsqj5UjQbaI3clExopvWrEY2rCzu1tmpHsaboXQFQSP0rpQw6SHzBh3gd5oNqnlio-HwU3T1tRMh64nT1R7I4IVNoOczMDjQ5j95fpj9NR_r9T_YzdPBPrb40LXrNxsah2els-HNoUATkikPaIUG8pmgziTDImnVjho4AHJWnA1MHKennYmU8LGYrPkU8oXxytqQISopQ');">
+<div class="absolute inset-0 bg-gradient-to-t from-night-bg via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="absolute -bottom-6 -right-6 bg-night-card p-6 rounded-2xl shadow-2xl max-w-xs border border-slate-700">
+<p class="italic text-slate-300 font-medium">"Pasé años sin dormir bien. Con esta guía, finalmente logré descansar 8 horas de corrido."</p>
+<p class="mt-3 text-sm font-bold text-primary">— Marina G., Buenos Aires</p>
+</div>
+</div>
+</section>
+<section class="py-20 border-y border-slate-800" id="dolor">
+<div class="text-center mb-16 space-y-4">
+<h2 class="text-4xl font-bold text-white">¿Te sientes identificado?</h2>
+<p class="text-slate-400 max-w-2xl mx-auto">El agotamiento no debería ser tu estado natural.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="p-8 rounded-2xl bg-slate-900/40 border border-slate-800 flex gap-6 items-center">
+<div class="size-14 bg-accent/10 text-accent rounded-2xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-3xl">bedtime_off</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-white mb-1">Insomnio Crónico</h3>
+<p class="text-slate-400">Horas dando vueltas en la cama sin poder apagar la mente.</p>
+</div>
+</div>
+<div class="p-8 rounded-2xl bg-slate-900/40 border border-slate-800 flex gap-6 items-center">
+<div class="size-14 bg-accent/10 text-accent rounded-2xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-3xl">battery_0_bar</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-white mb-1">Mañanas sin energía</h3>
+<p class="text-slate-400">Despertar sintiéndote más cansado de lo que te acostaste.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24" id="beneficios">
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="w-full lg:w-1/2 rounded-3xl overflow-hidden shadow-2xl aspect-square bg-cover bg-center border border-slate-800" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD7TRENLDg0OqB4Ef6h1ewxcQ70oFVzquFnJuwyxwTBiiQH-uQcbrAwE67VVvgESHo56L33dxf9ESypqZBQDsNhICCpVJaIAYelrVgkhrzjvqyHzWLZiFAk73bgMxRvvhpp9dXwMjwzuCxvB7-jaYEumPmsZPeZSNiF4ZvZHFrqYPAyK2T6sobo82FSZD-924_-0PSJrx9RBUZQVdrDcUDl-6aopDOo1BmUvEeSk0tJJm5Go9UCrWV2B2dwgd4YG8tV6zlYHR2Nqg');">
+<div class="w-full h-full bg-indigo-900/20 backdrop-brightness-75"></div>
+</div>
+<div class="w-full lg:w-1/2 space-y-10">
+<h2 class="text-4xl font-bold leading-tight">Tu nueva realidad: <br/><span class="text-primary">Dormir 8 horas de corrido</span></h2>
+<div class="space-y-6">
+<div class="flex gap-6 items-start">
+<div class="text-3xl font-display font-black text-primary/30">01</div>
+<div>
+<h4 class="text-xl font-bold text-white mb-1">Higiene del Sueño Avanzada</h4>
+<p class="text-slate-400">Protocolos específicos adaptados al ritmo de vida actual.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="text-3xl font-display font-black text-primary/30">02</div>
+<div>
+<h4 class="text-xl font-bold text-white mb-1">Control del Estrés Nocturno</h4>
+<p class="text-slate-400">Técnicas de desactivación para silenciar el ruido mental antes de dormir.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="text-3xl font-display font-black text-primary/30">03</div>
+<div>
+<h4 class="text-xl font-bold text-white mb-1">Energía Renovada</h4>
+<p class="text-slate-400">Optimiza tus ciclos para despertar con claridad mental y vigor físico.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 text-center relative" id="garantia">
+<div class="absolute inset-0 bg-primary/5 border border-primary/10 rounded-[3rem] -z-10"></div>
+<div class="max-w-3xl mx-auto px-6">
+<h2 class="text-4xl md:text-5xl font-black mb-6 text-white">Dormir bien no tiene precio, tu salud te lo agradecerá</h2>
+<p class="text-xl text-slate-400 mb-10">Invierte hoy en tu bienestar a largo plazo con una oferta especial para Argentina.</p>
+<div class="bg-night-card inline-flex flex-col md:flex-row items-center p-4 rounded-3xl shadow-2xl border border-slate-700">
+<div class="px-10 py-6 text-center md:text-left border-b md:border-b-0 md:border-r border-slate-700">
+<span class="text-sm text-slate-500 line-through">$12.500 ARS</span>
+<div class="text-4xl font-extrabold text-white mt-1">$6.900 <span class="text-lg font-normal text-slate-400">ARS</span></div>
+<p class="text-xs text-primary font-bold mt-1 uppercase tracking-tighter">Único pago - Acceso de por vida</p>
+</div>
+<div class="p-6 w-full md:w-auto">
+<button class="w-full md:w-auto bg-primary text-white px-12 py-5 rounded-2xl text-xl font-bold shadow-xl shadow-primary/30 hover:bg-primary/90 hover:scale-[1.02] transition-all">
+                        Descansar de verdad
+                    </button>
+</div>
+</div>
+<div class="mt-10 flex flex-wrap justify-center gap-8 text-slate-500 text-sm">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-xl">verified</span> Garantía de satisfacción</div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-xl">bolt</span> Entrega inmediata vía Email</div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-xl">payments</span> Mercado Pago disponible</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-slate-950 text-slate-500 py-16 px-6 md:px-20 mt-20 border-t border-slate-900">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-primary">nights_stay</span>
+<span class="text-xl font-bold">Sueño Reparador</span>
+</div>
+<p class="text-sm leading-relaxed">Ayudando a los argentinos a recuperar su descanso y transformar sus vidas a través de la ciencia del sueño.</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Contenido</h4>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Inicio</a></li>
+<li><a class="hover:text-primary transition-colors" href="#dolor">Problema</a></li>
+<li><a class="hover:text-primary transition-colors" href="#beneficios">Beneficios</a></li>
+<li><a class="hover:text-primary transition-colors" href="#garantia">Precio</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Soporte</h4>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Términos de Servicio</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Política de Reembolso</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacidad</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Contacto</h4>
+<p class="text-xs mb-4">¿Tienes dudas? Escríbenos y te responderemos a la brevedad.</p>
+<div class="flex gap-2">
+<input class="bg-slate-900 border-slate-800 rounded-lg text-sm w-full focus:ring-1 focus:ring-primary text-white" placeholder="Tu email" type="email"/>
+<button class="bg-primary text-white p-2 rounded-lg"><span class="material-symbols-outlined">send</span></button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-900 text-center text-xs">
+        © 2024 Sueño Reparador ARS. Todos los derechos reservados. Tu descanso es nuestra prioridad.
+    </div>
+</footer>
+
+</body></html>

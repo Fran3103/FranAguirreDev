@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recetario Airfryer ARS - 100 Recetas Saludables</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2f20d",
+                        "accent-red": "#ff3e3e",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#222210",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'pop': '6px 6px 0px 0px #000000',
+                        'pop-sm': '3px 3px 0px 0px #000000',
+                        'pop-red': '6px 6px 0px 0px #ff3e3e',
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #f8f8f5;
+        }
+        .pop-border {
+            border: 3px solid #000000;
+        }
+        .dot-pattern {
+            background-image: radial-gradient(#000000 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.05;
+        }
+        .stroke-text {
+            -webkit-text-stroke: 1.5px black;
+        }
+    </style>
+</head>
+<body class="bg-background-light text-slate-900 overflow-x-hidden">
+<header class="sticky top-0 z-50 bg-background-light/90 backdrop-blur-md border-b-4 border-black px-6 md:px-20 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-1 pop-border rounded-lg shadow-pop-sm">
+<span class="material-symbols-outlined text-black font-bold text-3xl">air_purifier</span>
+</div>
+<h2 class="text-xl md:text-2xl font-bold tracking-tighter uppercase italic">Recetario <span class="text-accent-red">ARS</span></h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="font-bold uppercase tracking-wide hover:text-accent-red transition-colors" href="#beneficios">Beneficios</a>
+<a class="font-bold uppercase tracking-wide hover:text-accent-red transition-colors" href="#recetas">Recetas</a>
+<a class="font-bold uppercase tracking-wide hover:text-accent-red transition-colors" href="#indice">Índice</a>
+</nav>
+<button class="bg-primary hover:bg-yellow-300 text-black font-black uppercase px-6 py-2 pop-border shadow-pop-sm transition-all active:translate-x-1 active:translate-y-1 active:shadow-none">
+                Comprar Ahora
+            </button>
+</div>
+</header>
+<main>
+<section class="relative min-h-[85vh] flex items-center py-20 px-6 md:px-20 overflow-hidden">
+<div class="absolute inset-0 dot-pattern -z-10"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="flex flex-col gap-8 order-2 lg:order-1">
+<div class="inline-block bg-accent-red text-white font-black px-4 py-1 pop-border shadow-pop-sm w-fit -rotate-2 uppercase tracking-widest text-sm">
+                        ¡Oferta Especial Argentina!
+                    </div>
+<h1 class="text-6xl md:text-8xl font-black leading-[0.9] uppercase tracking-tighter">
+                        100 <br/>
+<span class="bg-primary px-2 pop-border shadow-pop inline-block rotate-1">Recetas</span> <br/>
+                        Airfryer
+                    </h1>
+<p class="text-xl md:text-2xl font-medium leading-tight max-w-lg border-l-4 border-black pl-4">
+                        ¿Cansado de la <span class="font-black text-accent-red italic">comida frita aceitosa</span> o de cocinar siempre lo mismo? Descubrí cómo comer sano y <span class="underline decoration-4">ahorrar gas y aceite</span>.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center mt-4">
+<button class="bg-primary hover:bg-yellow-300 text-black text-2xl font-black uppercase px-10 py-5 pop-border shadow-pop transition-all active:translate-x-1 active:translate-y-1 active:shadow-none">
+                            ¡Quiero cocinar brutal!
+                        </button>
+<div class="flex flex-col">
+<span class="text-slate-500 line-through font-bold text-lg italic">Antes $15.000</span>
+<span class="text-accent-red font-black text-2xl italic uppercase">$7.500 ARS</span>
+</div>
+</div>
+</div>
+<div class="relative order-1 lg:order-2 flex justify-center">
+<div class="absolute -top-4 -right-4 md:-top-10 md:-right-10 bg-white pop-border p-6 rounded-full shadow-pop z-20 animate-bounce">
+<p class="font-black text-center leading-none uppercase">
+<span class="text-3xl text-accent-red">¡CRUNCH!</span><br/>
+<span class="text-xs">Sabor Argento</span>
+</p>
+</div>
+<div class="relative w-full max-w-md aspect-square bg-accent-red pop-border shadow-pop rounded-2xl rotate-3 overflow-hidden">
+<img alt="Crispy Fried Chicken" class="w-full h-full object-cover mix-blend-multiply opacity-90 scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOLgP3y8QeWbYeLGdPGOUOAbcBP9Bvsw9Bmdb-ee6532lgu7vNqxVU1CdZS07AwOCOYzHxDwM5TsdUz__58rz9O9cWJ-rtK5HYpI3-BDOSYcFGyAJo5H3qLfioyqfF3DldTLlqGlSPJosFKtXB_DWM9XxVM7Ub7qWBQD6qSle86vLtOWEuxpuTAPxhgLnezVgrwskyaCMbj3CLq1zAFJOr2iToCrwJQNMyFrshSOnw0WFAxysMHFQqEtnaJ1LB-hjoKp2nPMkgzA"/>
+</div>
+<div class="absolute -bottom-10 -left-10 w-48 md:w-64 aspect-square bg-primary pop-border shadow-pop rounded-2xl -rotate-6 overflow-hidden hidden md:block">
+<img alt="Crispy French Fries" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGjezgA5K4uOpj5dqUZgsZ9SYTPJhBze71ZYYGXvSj5Sw_vI_azQloJU2EvvrLcePCFvcfj0hT7Yz6LynLeGKx_JeIMwIWWdtqjAhdpcqHAnAsY2udU6z1IfvgOG90xG4KNtaXcHQGa4HpugqWwkDU05h2jj3g9pMwbTd6TTksNpOr4ZYyukyjINVSOKnw4VJVeFtmASfVyWUTIEJnIo_KLbhLL6zNXEpuwBWUjWQpuqWMW68MkGWFidDOpOiqhaB1BqNzZKXIqw"/>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-black py-12 px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+<div class="bg-white p-6 pop-border shadow-pop-red text-center">
+<p class="text-slate-500 uppercase text-xs font-black tracking-widest mb-1">Recetas Únicas</p>
+<p class="text-4xl font-black italic">100</p>
+</div>
+<div class="bg-primary p-6 pop-border shadow-pop text-center">
+<p class="text-black uppercase text-xs font-black tracking-widest mb-1">Menos Grasa</p>
+<p class="text-4xl font-black italic">85%</p>
+</div>
+<div class="bg-white p-6 pop-border shadow-pop-red text-center">
+<p class="text-slate-500 uppercase text-xs font-black tracking-widest mb-1">Ahorro Aceite</p>
+<p class="text-4xl font-black italic">90%</p>
+</div>
+<div class="bg-accent-red p-6 pop-border shadow-pop text-center text-white">
+<p class="text-white/80 uppercase text-xs font-black tracking-widest mb-1">Ahorro Gas</p>
+<p class="text-4xl font-black italic">70%</p>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 md:px-20 bg-background-light" id="beneficios">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-accent-red font-black uppercase tracking-[0.2em] text-sm mb-4">Basta de lo mismo</h2>
+<h3 class="text-5xl md:text-6xl font-black uppercase leading-none italic">
+                            Comé sano y <span class="bg-primary px-2 pop-border">ahorrá</span> en serio
+                        </h3>
+</div>
+<p class="text-lg font-bold max-w-sm">Dejá de lado la fritura pesada. Diseñamos este recetario para que cuides tu bolsillo mientras disfrutas como nunca.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="group bg-white p-8 pop-border shadow-pop transition-transform hover:-translate-y-2">
+<div class="bg-primary w-16 h-16 pop-border flex items-center justify-center mb-6 -rotate-6 group-hover:rotate-0 transition-transform">
+<span class="material-symbols-outlined text-4xl font-black">savings</span>
+</div>
+<h4 class="text-2xl font-black uppercase mb-3">Ahorro Total</h4>
+<p class="text-slate-700 font-medium">Bajá el consumo de gas y dejá de gastar fortunas en aceite. La Airfryer es la mejor aliada de tu economía hoy.</p>
+</div>
+<div class="group bg-white p-8 pop-border shadow-pop transition-transform hover:-translate-y-2">
+<div class="bg-accent-red text-white w-16 h-16 pop-border flex items-center justify-center mb-6 rotate-3 group-hover:rotate-0 transition-transform">
+<span class="material-symbols-outlined text-4xl font-black">health_metrics</span>
+</div>
+<h4 class="text-2xl font-black uppercase mb-3">Chau Aceitoso</h4>
+<p class="text-slate-700 font-medium">Basta de milanesas que chorrean aceite. Lográ ese dorado crocante perfecto sin la pesadez de la fritura tradicional.</p>
+</div>
+<div class="group bg-white p-8 pop-border shadow-pop transition-transform hover:-translate-y-2">
+<div class="bg-black text-primary w-16 h-16 pop-border flex items-center justify-center mb-6 -rotate-3 group-hover:rotate-0 transition-transform">
+<span class="material-symbols-outlined text-4xl font-black">restaurant_menu</span>
+</div>
+<h4 class="text-2xl font-black uppercase mb-3">Variedad Real</h4>
+<p class="text-slate-700 font-medium">¿Siempre cocinás lo mismo? Te damos 100 ideas para que cada comida sea una fiesta distinta y brutal.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 md:px-20 bg-black text-white overflow-hidden" id="recetas">
+<div class="max-w-7xl mx-auto relative">
+<div class="mb-16">
+<h2 class="text-6xl md:text-8xl font-black uppercase tracking-tighter opacity-20 absolute -top-10 left-0 leading-none">EL SABOR</h2>
+<h3 class="text-4xl md:text-5xl font-black uppercase relative z-10 italic">Un vistazo al <span class="text-primary">interior</span></h3>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="flex flex-col gap-4">
+<div class="pop-border shadow-pop-red overflow-hidden group">
+<img alt="Airfried Salmon" class="w-full aspect-[3/4] object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAglZa_2LxLgyNhHrVngc2gLlBKX-E3V9bLmyXIhwp_P5l01u8StNnDxXEA-QV9Ki4Dqx583Vg2EJQc40zF-42xV8oWWK1crlm7w9_ORyvqPTtpKazrreyWC0t1tem1lAUBeB9mAzCjihYAgoPcw6hqU-enISLc-kMaIXIe6gtnkFgOqNz62SdJLO0z5KwYYqDtviIfA6VPyS6oTxFX4KXdLZ1p_f2hN8gNFF6iFZXUOTvfmjAS65koRgcndfU_Eee9pMAZr7kElg"/>
+</div>
+<p class="font-black uppercase italic text-sm">Salmón Teriyaki Express</p>
+</div>
+<div class="flex flex-col gap-4 mt-12">
+<div class="pop-border shadow-pop overflow-hidden group">
+<img alt="Chicken Wings" class="w-full aspect-[3/4] object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqbnqJ4Z3ZJ-VgSkl5DygQM_XD-ZW_kxwTovJujPQwcv7Iq4E5vlp5P4a68QzgZQD2x0aKJI5zogPE4AAJ2odR7CtOFM0xScH7WH9UcwKrObbtXF6ZxvOK-Wp3FiQGMhp3A5uHknEyz_JFBMAUz9ZgQ3UpNJ-RtqZ1SrDvZ-wJosaLVdWvoucj4_PKa6Nwlgh7taLJfdgTb7_mDOetZtSL_d2UBjt38XGaOvcOSBfZK_gU1ejNP4ze3yX3O-8_Q9JxcY-Cus6HnQ"/>
+</div>
+<p class="font-black uppercase italic text-sm">Alitas Super-Crunch</p>
+</div>
+<div class="flex flex-col gap-4">
+<div class="pop-border shadow-pop-red overflow-hidden group">
+<img alt="Churros" class="w-full aspect-[3/4] object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaAWRc7a53iXBlaS2HxEqFDVtLokZFRqGy7MQj1qMgB4C9zZg4zQJQzq_tbwalO3WQyLbIGOqT5ElMY0UYjjsil-6URRe6PJo1bE9spXui1gx7x9Q4QviaoJQW6io6Cpnwfq6EHmVORiAA8NaJjrpC0yzv3l82Qp6CpAsw5dIhHCy_rWilLR3PVl8cB_PTRJgY3PmrGlI0NkPHZMP57KcVv2tIVC1s34DAKDVVhEh8s0JBaIqZugLHGXNyvPz-j0zHUnBUNlPFkQ"/>
+</div>
+<p class="font-black uppercase italic text-sm">Churros sin Aceite</p>
+</div>
+<div class="flex flex-col gap-4 mt-12">
+<div class="pop-border shadow-pop overflow-hidden group">
+<img alt="Roasted Veggies" class="w-full aspect-[3/4] object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDbjacU-gRdGVmPlPvWDN9HMIO-Q0onSAAeeIdRfmKDxtOjscIxVwhuD_rjl4a4yrweIFywmfVpkqDAe8E6oy1uqRM0tlcCLlCTBoL69FYP1LSVcN3_o-DO5Mvwc_SDkjL2OCk8yPIca6MQKb0m3hJ6oir6lEYJjR1xuccOC2Wg5AMGsBQUHtxRLeXuMqWNGF7bbWG9J8zbdA3qOHkuhmtkY3r3s8Ox1Lazl3_TmbOIHF_DopkiBtpysYyENKhlrxj5KqQG4yPZw"/>
+</div>
+<p class="font-black uppercase italic text-sm">Mix Mediterráneo</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 md:px-20" id="indice">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1">
+<h3 class="text-5xl font-black uppercase mb-12 italic">¿Qué <span class="bg-accent-red text-white px-2 pop-border shadow-pop-sm">incluye</span> el ebook?</h3>
+<div class="space-y-6">
+<div class="flex items-center gap-6 p-4 border-b-2 border-black">
+<span class="text-4xl font-black text-primary stroke-text">01</span>
+<div class="flex-1">
+<h4 class="text-xl font-black uppercase">Clásicos Argentos</h4>
+<p class="text-slate-600">Milanesas, empanadas y tortillas con 0% culpa y 100% sabor.</p>
+</div>
+</div>
+<div class="flex items-center gap-6 p-4 border-b-2 border-black">
+<span class="text-4xl font-black text-primary stroke-text">02</span>
+<div class="flex-1">
+<h4 class="text-xl font-black uppercase">Carnes y Guarniciones</h4>
+<p class="text-slate-600">Trucos para que el asado de tira o el pollo queden jugosos.</p>
+</div>
+</div>
+<div class="flex items-center gap-6 p-4 border-b-2 border-black">
+<span class="text-4xl font-black text-primary stroke-text">03</span>
+<div class="flex-1">
+<h4 class="text-xl font-black uppercase">Vegetales Crocantes</h4>
+<p class="text-slate-600">Papás rústicas y verduras que hasta los chicos van a devorar.</p>
+</div>
+</div>
+<div class="flex items-center gap-6 p-4 border-b-2 border-black">
+<span class="text-4xl font-black text-primary stroke-text">04</span>
+<div class="flex-1">
+<h4 class="text-xl font-black uppercase">Snacks y Dulces</h4>
+<p class="text-slate-600">Postres rápidos para salvar la merienda sin prender el horno.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 bg-primary pop-border shadow-pop p-8 rotate-2">
+<div class="bg-white pop-border p-4 shadow-pop-sm -rotate-2 mb-6">
+<img alt="Ebook Mockup Preview" class="w-full aspect-video object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa6mNybCQ0ouqJ-BB8mWvkKHlJdoDc7Tum3CcjvlsKPgP5_Don39tqZgK2vrFdlS2IHerpTaGl84nCSsTJuIJrMP-NyklAfrICw2c7Ve6M-HBcPU048XApTWn0SnzfxO5wzaHTF9a-xrU3G3PxYjIb07C66ijcSRDSYAl7T7KmlSOslGdOqRkF9K_rPyivaQfz0NmdBCOPof1CpEeSokjc0_h4rEP6YceHyuHxU5w6FMYHNmP9Nzk_jRSrLBespQ2zU5LL9mzVSQ"/>
+</div>
+<div class="text-center font-black uppercase italic flex flex-col gap-1">
+<span class="text-3xl">Guía de Tiempos Gratis</span>
+<span class="text-accent-red">Acceso Inmediato</span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 md:px-20 bg-primary border-t-8 border-black">
+<div class="max-w-4xl mx-auto text-center flex flex-col items-center gap-10">
+<div class="inline-block bg-black text-white font-black px-6 py-2 rotate-1 mb-2 uppercase tracking-[0.3em]">
+                    Promoción por Tiempo Limitado
+                </div>
+<h2 class="text-5xl md:text-7xl font-black uppercase leading-[0.85] tracking-tighter">
+                    Empieza a cocinar <br/> <span class="text-accent-red underline decoration-8">brutal</span> hoy mismo
+                </h2>
+<div class="flex flex-col gap-6 w-full max-w-md">
+<button class="bg-accent-red hover:bg-red-600 text-white text-3xl font-black uppercase px-12 py-8 pop-border shadow-pop transition-all active:translate-x-1 active:translate-y-1 active:shadow-none">
+                        ¡Quiero cocinar brutal!
+                    </button>
+<div class="text-2xl font-black italic">Solo $7.500 ARS</div>
+<div class="flex items-center justify-center gap-4 text-sm font-bold uppercase opacity-75">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">lock</span> Pago Seguro</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">download</span> PDF descargable</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-black text-white py-16 px-6 md:px-20">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<div class="bg-primary p-1 pop-border rounded-lg shadow-pop-sm text-black">
+<span class="material-symbols-outlined font-bold text-2xl">air_purifier</span>
+</div>
+<h2 class="text-xl font-bold tracking-tighter uppercase italic">Recetario <span class="text-accent-red">ARS</span></h2>
+</div>
+<p class="text-slate-400 max-w-xs">La guía definitiva para dominar tu freidora de aire en Argentina. Comé rico, sano y cuidá tu bolsillo.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-black uppercase text-primary tracking-widest mb-2">Legal</h4>
+<a class="text-slate-400 hover:text-white transition-colors" href="#">Aviso Legal</a>
+<a class="text-slate-400 hover:text-white transition-colors" href="#">Privacidad</a>
+<a class="text-slate-400 hover:text-white transition-colors" href="#">Términos y Condiciones</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-black uppercase text-primary tracking-widest mb-2">Seguinos</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 border-2 border-white flex items-center justify-center hover:bg-primary hover:text-black hover:border-black transition-all" href="#">IG</a>
+<a class="w-10 h-10 border-2 border-white flex items-center justify-center hover:bg-primary hover:text-black hover:border-black transition-all" href="#">TT</a>
+<a class="w-10 h-10 border-2 border-white flex items-center justify-center hover:bg-primary hover:text-black hover:border-black transition-all" href="#">FB</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 text-center text-slate-500 text-xs font-bold uppercase tracking-widest">
+            © 2024 Recetario Airfryer ARS - Hecho para Argentina.
+        </div>
+</footer>
+<div class="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-background-light/95 backdrop-blur-sm border-t-4 border-black z-50">
+<button class="w-full bg-primary text-black font-black uppercase py-4 pop-border shadow-pop-sm text-lg">
+            ¡Quiero cocinar brutal! - $7.500
+        </button>
+</div>
+
+</body></html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fotografía Móvil ARS | Maestría Digital</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#16439c",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body { font-family: 'Inter', sans-serif; }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+        .aspect-portrait { aspect-ratio: 3/4; }
+        .aspect-landscape { aspect-ratio: 16/9; }
+        .letter-spacing-widest { letter-spacing: 0.2em; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+<header class="fixed top-0 w-full z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">photo_camera</span>
+<span class="text-xl font-bold tracking-tighter uppercase letter-spacing-widest">Fotografía Móvil ARS</span>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider" href="#galeria">Galería</a>
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider" href="#beneficios">Beneficios</a>
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider" href="#precio">Precio</a>
+<button class="bg-primary text-white px-6 py-2 rounded font-bold text-sm tracking-wide hover:bg-primary/90 transition-all uppercase">
+                Sacar fotos increíbles
+            </button>
+</nav>
+<div class="md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<section class="relative min-h-[90vh] flex items-center justify-center px-6 overflow-hidden">
+<div class="max-w-7xl w-full grid md:grid-cols-2 gap-12 items-center">
+<div class="z-10 order-2 md:order-1">
+<p class="text-primary font-bold tracking-[0.3em] uppercase mb-4 text-sm">Disponible en Argentina</p>
+<h1 class="text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter mb-8">
+                    Fotos Pro <br/>con tu <span class="text-primary">Celular</span>
+</h1>
+<div class="mb-8 space-y-2">
+<p class="text-lg text-red-500 font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">error</span>
+                        ¿Harto de fotos borrosas o sin 'likes' en redes?
+                    </p>
+<p class="text-xl text-slate-600 dark:text-slate-400 max-w-md leading-relaxed">
+                        Conseguí <strong>calidad réflex sin comprar una cámara cara</strong>. Aprendé la técnica que los influencers no te cuentan.
+                    </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-white h-14 px-8 rounded-lg font-bold text-lg hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-primary/20">
+                        Sacar fotos increíbles por $11.500 ARS
+                    </button>
+<button class="border border-slate-300 dark:border-slate-700 h-14 px-8 rounded-lg font-bold text-lg hover:bg-slate-50 dark:hover:bg-slate-900 transition-all">
+                        Ver Resultados
+                    </button>
+</div>
+</div>
+<div class="relative order-1 md:order-2">
+<div class="aspect-[4/5] bg-slate-200 dark:bg-slate-800 rounded-xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700">
+<img alt="Fotografía urbana profesional" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9aBGPnQffs2AkwUMQ6rIpbwujMD-iZ3WT4B_C6CzQvURGbVtIpUmjFe6T67P9r3zaifd96hYwGNm9Ctc2_Mha62RYlrsbJS3hXw9wAcv7mvZSvjvrORkgk4Z3ax8aTwH_0dbqFYy2vRMxA8d4FFCJ0yE0ycW7OPBJ6ByvE31CHdVl19P7bQ92xoR6ZNclbkY-EZl5mGJM_B_v3EJZM3kS5PneHhWfMeJRxJ08X85vCtDDb6flYR2xvrIldzIZkWfohTL3Ge2fwA"/>
+</div>
+<div class="absolute -bottom-6 -right-6 aspect-square w-32 md:w-48 bg-primary rounded-xl flex items-center justify-center text-white p-4 text-center rotate-6">
+<span class="text-sm font-bold uppercase tracking-widest">Edición Pro desde el celu</span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-background-dark/50" id="galeria">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-16 border-l-4 border-primary pl-6">
+<h2 class="text-4xl font-bold tracking-tight mb-2 uppercase">Resultados Reales</h2>
+<p class="text-slate-500 uppercase tracking-widest text-sm font-medium">Capturadas y editadas 100% con smartphone</p>
+</div>
+<div class="gallery-grid">
+<div class="col-span-12 md:col-span-4 flex flex-col gap-6">
+<div class="group relative overflow-hidden rounded-lg aspect-portrait">
+<img alt="Foto urbana" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNKYtuY-rUBrf0-J-iwmR8WJqVJBL1QKZ2Nk4nMuxB12W9DCAv9B35wdLU1jhzadySyV4_nD1jE-q_XxoZPluEsu_ixUctQdHqR36EytZx28Xe_pXZEoiM2zUf86pC38nBue82bjMQ9EYpL1JxHTx0HHaYirbhzD16Ah7ctMVwxYhYq6S00rF1i2zkjn_toXAF-POcRDWrgsG6MaZt9MfRGu8fgyfpXYDGOfb6yi39JJMYQkOtFii5_3l0s37tDllIGM2GFFL9lw"/>
+</div>
+<div class="group relative overflow-hidden rounded-lg aspect-square">
+<img alt="Arquitectura" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-BmIgxn4KbPHFaRhX3xhS9TduPsn4JPo04vAGw8VGhjOevtpECgX_QaOFaTXID_aiS-9gO4WW9QoMFZJyL2lbGlkLeSJI2Z8nsfwXagebAzxiEGj7fITVzT5OnU6nnQdJ8HBzAOM2ihNFmNq6uqRJ1-MuS7Z5R4asjI7m0kSzaz9V3gK5o1DoKM__MiVFrQcXfMTomHvz_aRFTqOs6dZnr-8-XheLAt6f6ChF7ZMEBL8RhW6wJ9NEWFV1R8BjHEsez3NVmUM28A"/>
+</div>
+</div>
+<div class="col-span-12 md:col-span-8 flex flex-col gap-6">
+<div class="group relative overflow-hidden rounded-lg aspect-landscape">
+<img alt="Paisaje" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0uKLxi7l4esKaYxG0zoD93kZ46P8JqD5On3SW5J6-sutwLo_vIGP9TNwvdL5e4_VLxzBAnGMLD6QmkgHdI6YF61gsVhtXA8s9W37YQ2q7oKBzQaTZSOck8OuND3F6FAw7uXhSBhsLE_lwNdHtrIQjJOxLzuX1ihSLETAKjqb0ll9zDf96-QO8qAQbvrsCGK3zfzexKRzsZ-cg1cF1ILOHkJd6EplkCINZ_H5rUFHRN4Rh8qOfrYUuK0TMWb4rtrEJQyvNLsPoew"/>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="group relative overflow-hidden rounded-lg aspect-portrait">
+<img alt="Retrato" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMGSCSMRwS6iko7_0h7nS9u1KcKz-7fiy2lmwss7q1t7OmXG_-37YASpgtEmyhcAVnPAsP0Vvcr1jGaorYyGgrT8GSpF5X1p689Bev-aideGcGQrZVrEy18YUPc9QIHDbEd0AQzLbgx6_mi10jkX4xtxHGCLFaeLGtHcFpMgWx20Q-Pwt0OsGDiL0CG1ktu0y6aMuPz6HfDaGO0cEpzczfxTSLKfcgoJXvAswlNB_-d-AAXuMsaIfn9OTrHi0idVUagceQixe3WA"/>
+</div>
+<div class="group relative overflow-hidden rounded-lg aspect-portrait">
+<img alt="Naturaleza" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKUFHjgr6DyTj3dOow_KV52u_YS-6bQbVd5Cpfw7HS4Jg6cSVKRr1Lud-1qK50JPcBtyr6DQhszgzvQ7BikXwvhL5IpCeD94d2aksYYIvmepWPYskYkOub9tGj8_MFw2d03rZ58EfIzAqcObHgdRmE7_6zlaxFvj6rndP6ArKy3hix9HYfPNTfDOrcYJWokYYNVu6BdRz5WtkD9oRsyhlHJ76LLSQi0H-x8hKhQ2Hx7u7P22w4ngk0Ih3N7sqFodBmSJ1rEjnrUQ"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 bg-background-light dark:bg-background-dark" id="beneficios">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="text-5xl font-black mb-6">¿Por qué este curso?</h2>
+<div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+<p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                    Olvidate de las frustraciones. Aprendé a dominar tu herramienta de todos los días.
+                </p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="group p-10 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-primary transition-all duration-300">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">edit_note</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 uppercase tracking-tight">Edición Profesional</h3>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed">
+                        Edición avanzada directamente desde el celu. Aprendé a usar apps profesionales para darle ese look de revista a tus tomas.
+                    </p>
+</div>
+<div class="group p-10 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-primary transition-all duration-300">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">savings</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 uppercase tracking-tight">Costo-Beneficio</h3>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed">
+                        Calidad réflex sin comprar una cámara cara. Ahorrá miles de dólares aprovechando el sensor que ya tenés en el bolsillo.
+                    </p>
+</div>
+<div class="group p-10 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-primary transition-all duration-300">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">trending_up</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 uppercase tracking-tight">Más Engagement</h3>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed">
+                        Chau fotos ignoradas. Aprendé composición y luz para que tus publicaciones en redes sociales destaquen sobre el resto.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6" id="precio">
+<div class="max-w-5xl mx-auto bg-slate-900 dark:bg-primary rounded-[2rem] p-12 md:p-20 text-center text-white relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-primary/30 rounded-full -ml-32 -mb-32 blur-3xl"></div>
+<h2 class="text-4xl md:text-6xl font-black mb-8 relative z-10">Llevá tus fotos al <br/>siguiente nivel</h2>
+<div class="relative z-10 mb-12">
+<span class="text-sm uppercase tracking-widest text-slate-400 block mb-2">Oferta exclusiva Argentina</span>
+<p class="text-5xl md:text-7xl font-black">$11.500 ARS</p>
+<p class="text-xl text-slate-300 mt-4 opacity-90">Un único pago por acceso de por vida.</p>
+</div>
+<div class="flex flex-col items-center gap-4 relative z-10">
+<button class="bg-white text-slate-900 h-16 px-12 rounded-full font-black text-xl hover:scale-105 transition-all shadow-2xl">
+                    Sacar fotos increíbles
+                </button>
+<p class="text-sm font-medium uppercase tracking-widest text-slate-400">Acceso inmediato • Incluye guía de edición</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-background-light dark:bg-background-dark py-12 border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">photo_camera</span>
+<span class="text-lg font-bold tracking-tighter uppercase letter-spacing-widest">Fotografía Móvil ARS</span>
+</div>
+<p class="text-slate-500 text-sm">© 2024 Argentina Mobile Photography. Transformando miradas.</p>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+</footer>
+
+</body></html>

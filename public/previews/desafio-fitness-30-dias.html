@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Desafío Fitness 30 Días</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f48c25",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#120d08",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">fitness_center</span>
+<span class="text-xl font-bold tracking-tighter uppercase">Desafío <span class="text-primary">30</span></span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#beneficios">Beneficios</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#bonos">Bonos</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#testimonios">Testimonios</a>
+<button class="bg-primary hover:bg-primary/90 text-background-dark px-6 py-2 rounded-full text-sm font-bold transition-transform active:scale-95">
+                        Aceptar el desafío
+                    </button>
+</div>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent z-10"></div>
+<img alt="Entrenamiento intenso" class="w-full h-full object-cover" data-alt="Atleta entrenando intensamente en un ambiente oscuro" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKPIfJJqcceiquIvtc8RyT66N8dVrMT73iaXSexhgyO9aUePWYDwxWOdvoTfqrJcyFw-8IlW-ufCM2Ksb5oAoS4yAUaTJZ2ScZMyM_hY5nHK63DL7FVx1gsYNTlxIbjf9_3FNmZjwuygEYrEaoF9_xuGBeniuCzsFO7Nu_wwt6W3T_b6P2pJ_lHE8nnfsCYmSGgKETooN4nyywQHLAqJRXCNrL-HShXkuEbIot6PodLxoIcpQxMf2uJJVB7tsub1aVTrGREf6-Vg"/>
+</div>
+<div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary mb-6">
+<span class="material-symbols-outlined text-sm">local_fire_department</span>
+<span class="text-xs font-bold uppercase tracking-wider">Nuevo programa 2024</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-black leading-[1.1] mb-6 uppercase italic">
+                    Transforma tu <span class="text-primary">cuerpo</span> en 30 días
+                </h1>
+<p class="text-lg md:text-xl text-slate-300 mb-8 max-w-lg leading-relaxed">
+                    Cuerpo atlético en solo 30 minutos al día. Sin gimnasio, sin pesas, sin excusas. Resultados reales desde casa.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary hover:bg-primary/90 text-background-dark px-8 py-4 rounded-full text-lg font-black uppercase transition-all flex items-center justify-center gap-2">
+                        Aceptar el desafío
+                        <span class="material-symbols-outlined">trending_flat</span>
+</button>
+<div class="flex items-center gap-3 px-4 py-2">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-background-dark bg-slate-500 overflow-hidden">
+<img data-alt="Perfil de usuario satisfecho" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyVuKYD06fJgNsnjh2MOIq5A1KchflFPdWlHG6Y36MjZ3aUsBpbmGImxvkGZRx_-f1iO8beH6EEbK96U_zU3H_sqXlvOPkqQuAGjkbmyYWoKozdsFLOqWyQ5WNyrpkClFyqyyzSxD_mb7MzEnYdPFaDzQjO3bO5RrCbtbrnM-P-eLEo2bJs4avj8umi2DHL9c59z2faaKv-3wllWnztwsBa7U7llnz3nR1ZsYRA-H9F5ZwE8eqSXSO8bzlhFpttslTTrkNXGx1_g"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-background-dark bg-slate-400 overflow-hidden">
+<img data-alt="Perfil de usuario feliz" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE9wpnjzKR0sMUOvg7WXeoIVLt7k0ZvYzv01MIgCRZ1yCK9K99xVQ4h_9b9Nez0kQX9bOMXgmCsF7W0N8xBTyRvgb7PWrlZR9roFNikPoAXdAfOel-uVhsE8Gg5Q4YnUWYh-VP2VtIH3qwcDSSl9JL_gWUDjmbmaxHqnevaW74dpneMEuCjeagSfzusO35t7V8zmWCuZBHcSYg4BVmK1O3ETG_W_PhV3QbY-7dobABYHkjMgRUl4s4Q-0mNO4BjU3R3UJST38W7w"/>
+</div>
+</div>
+<span class="text-sm font-medium text-slate-400">+500 alumnos ya iniciaron</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pain Points -->
+<section class="py-24 bg-background-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4 uppercase italic">¿Cansado de lo mismo?</h2>
+<div class="w-20 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="p-8 rounded-xl border border-white/5 bg-white/5 flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-red-500/20 text-red-500 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-4xl">schedule</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 italic uppercase">"No tengo tiempo"</h3>
+<p class="text-slate-400 leading-relaxed">
+                        El trabajo, los estudios y la vida diaria te consumen. Ir al gimnasio implica 2 horas que no tienes. Nosotros te damos el resultado en 30 minutos.
+                    </p>
+</div>
+<div class="p-8 rounded-xl border border-white/5 bg-white/5 flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-red-500/20 text-red-500 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-4xl">chair</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 italic uppercase">Sedentarismo</h3>
+<p class="text-slate-400 leading-relaxed">
+                        Pasas 8 horas sentado frente a una pantalla. Tu espalda duele y tu energía está por los suelos. Es hora de despertar tu metabolismo.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Stats -->
+<div class="bg-primary py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center text-background-dark">
+<p class="text-4xl font-black italic uppercase leading-none">30</p>
+<p class="text-sm font-bold uppercase opacity-80">Minutos al día</p>
+</div>
+<div class="text-center text-background-dark">
+<p class="text-4xl font-black italic uppercase leading-none">0</p>
+<p class="text-sm font-bold uppercase opacity-80">Equipamiento</p>
+</div>
+<div class="text-center text-background-dark">
+<p class="text-4xl font-black italic uppercase leading-none">30</p>
+<p class="text-sm font-bold uppercase opacity-80">Días de reto</p>
+</div>
+<div class="text-center text-background-dark">
+<p class="text-4xl font-black italic uppercase leading-none">100%</p>
+<p class="text-sm font-bold uppercase opacity-80">Digital</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Benefits Section -->
+<section class="py-24 relative" id="beneficios">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="flex-1">
+<h2 class="text-4xl md:text-5xl font-black mb-8 uppercase italic leading-tight">
+                        Por qué este es el <br/><span class="text-primary underline decoration-primary/30">último programa</span> que comprarás
+                    </h2>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg h-fit">bolt</span>
+<div>
+<h4 class="text-xl font-bold uppercase italic">Metodología HIIT</h4>
+<p class="text-slate-400">Entrenamientos de alta intensidad que queman grasa incluso horas después de terminar.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg h-fit">home</span>
+<div>
+<h4 class="text-xl font-bold uppercase italic">Entrena donde sea</h4>
+<p class="text-slate-400">Tu sala, un parque o un hotel. Solo necesitas un par de metros cuadrados.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg h-fit">verified_user</span>
+<div>
+<h4 class="text-xl font-bold uppercase italic">Sin lesiones</h4>
+<p class="text-slate-400">Guía paso a paso con técnica perfecta para cada ejercicio, sin importar tu nivel.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="flex-1 w-full">
+<div class="relative rounded-2xl overflow-hidden aspect-square border border-white/10 group">
+<img alt="Atleta entrenando core" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" data-alt="Atleta haciendo plancha en su casa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm3_da7Tn8HGRcQxeiSm7DuF9RuUhKCPjIQ1Gg9ugDvVnNqflv7ziiceQeW_HQBtg-hYoMQWZcvjM2sV7vWk6YIRbX4RnoT2lWkZMA5rXJaUkM8OL6j4tHWljRFvntxlRxgAuFR19K4-Siy6C1GiKf-36jrC0kTZszj3PQ2xVukWQaaVk3dsxFIEbIYgpy0dzZcnQhetBK1xEqTONPpMEJsqqo8oxejOauibNjbUYmwIcWXZUDLB5aYGzzthth2U_1MJ7JV0AZuA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6 right-6 p-6 glass-card rounded-xl">
+<p class="text-sm font-bold uppercase text-primary mb-1">Resultados garantizados</p>
+<p class="text-lg font-bold italic uppercase">Transforma tu composición corporal en 4 semanas.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bonus Section -->
+<section class="py-24 bg-primary/5 border-y border-white/5" id="bonos">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="glass-card p-12 rounded-3xl border-primary/20 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-symbols-outlined text-[12rem]">menu_book</span>
+</div>
+<div class="relative z-10 flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 text-center md:text-left">
+<span class="bg-primary text-background-dark text-xs font-black uppercase px-3 py-1 rounded-full mb-4 inline-block tracking-tighter">GRATIS CON TU ACCESO</span>
+<h3 class="text-4xl font-black italic uppercase mb-4 leading-none">Ebook: Batidos Proteicos</h3>
+<p class="text-slate-300 text-lg mb-6 leading-relaxed">
+                            Acelera tu recuperación y maximiza tus resultados con nuestras 50 recetas secretas de batidos caseros, deliciosos y económicos.
+                        </p>
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined">check_circle</span>
+<span>Valor real: $4.500 ARS (Hoy: $0)</span>
+</div>
+</div>
+<div class="w-64 h-80 bg-background-dark border-4 border-white/10 rounded-lg shadow-2xl flex flex-col items-center justify-center p-6 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+<span class="material-symbols-outlined text-primary text-6xl mb-4">blender</span>
+<p class="text-center font-black uppercase text-xl leading-none italic">Power<br/><span class="text-primary">Smoothies</span></p>
+<div class="mt-8 w-full h-1 bg-white/10 rounded-full"></div>
+<div class="mt-2 w-2/3 h-1 bg-white/10 rounded-full"></div>
+<p class="mt-8 text-[10px] uppercase font-bold text-slate-500">The Ultimate Protein Guide</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="py-24">
+<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-4xl md:text-6xl font-black italic uppercase mb-8">Únete al <span class="text-primary">desafío</span></h2>
+<div class="bg-white/5 border border-white/10 p-12 rounded-3xl shadow-2xl relative">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-background-dark px-6 py-1 rounded-full text-sm font-black uppercase">Oferta por tiempo limitado</div>
+<p class="text-slate-400 mb-2 uppercase font-bold tracking-widest text-sm">Pago único</p>
+<div class="flex items-center justify-center gap-2 mb-8">
+<span class="text-2xl text-slate-500 line-through font-bold">$18.500</span>
+<span class="text-7xl font-black italic text-white leading-none">$11.000</span>
+<span class="text-xl font-bold text-primary self-end mb-2">ARS</span>
+</div>
+<ul class="space-y-4 mb-10 text-left max-w-sm mx-auto">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">done_all</span>
+<span class="font-medium">Plan Completo de 30 Días</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">done_all</span>
+<span class="font-medium">Videos de Entrenamiento HD</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">done_all</span>
+<span class="font-medium">Ebook de Batidos (BONO)</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">done_all</span>
+<span class="font-medium">Comunidad Exclusiva de Apoyo</span>
+</li>
+</ul>
+<button class="w-full bg-primary hover:bg-primary/90 text-background-dark px-10 py-6 rounded-2xl text-2xl font-black uppercase italic transition-all transform hover:scale-[1.02] shadow-xl shadow-primary/20">
+                    Aceptar el desafío
+                </button>
+<div class="mt-8 flex items-center justify-center gap-6 opacity-60">
+<span class="material-symbols-outlined">payments</span>
+<span class="material-symbols-outlined">verified</span>
+<span class="material-symbols-outlined">shield</span>
+</div>
+</div>
+<p class="mt-8 text-slate-500 text-sm">
+                7 días de garantía de satisfacción total o te devolvemos tu dinero.
+            </p>
+</div>
+</section>
+<!-- Footer -->
+<footer class="py-12 border-t border-white/5 bg-background-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">fitness_center</span>
+<span class="text-lg font-bold tracking-tighter uppercase italic">Desafío <span class="text-primary">30</span></span>
+</div>
+<div class="flex gap-8 text-sm font-medium text-slate-500">
+<a class="hover:text-primary transition-colors" href="#">Términos</a>
+<a class="hover:text-primary transition-colors" href="#">Privacidad</a>
+<a class="hover:text-primary transition-colors" href="#">Contacto</a>
+</div>
+<p class="text-slate-500 text-xs">© 2024 Desafío Fitness 30 Días. Todos los derechos reservados.</p>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Huerto Urbano ARS - Cosecha Orgánica en tu Balcón</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#22c55e",
+                        "background-light": "#fdfdfb",
+                        "background-dark": "#0f1a11",
+                        "earth": "#5d4037",
+                        "leaf": "#1b4332",
+                        "highlight": "#facc15"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display selection:bg-primary/30;
+            }
+        }
+        .botanical-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(34, 197, 94, 0.05) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+        .soft-shadow {
+            box-shadow: 0 20px 40px -15px rgba(27, 67, 50, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden botanical-pattern">
+        <header
+            class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 backdrop-blur-md dark:bg-background-dark/80 px-6 lg:px-40 py-4">
+            <div class="mx-auto flex max-w-[1200px] items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-leaf text-white">
+                        <span class="material-symbols-outlined font-bold">potted_plant</span>
+                    </div>
+                    <h2 class="text-xl font-extrabold tracking-tight text-leaf dark:text-primary">Huerto Urbano ARS</h2>
+                </div>
+                <nav class="hidden md:flex items-center gap-10">
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#problema">El
+                        Desafío</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors"
+                        href="#beneficios">Beneficios</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#precio">Comenzar</a>
+                </nav>
+                <button
+                    class="flex items-center justify-center rounded-full bg-leaf px-6 py-2.5 text-sm font-bold text-white shadow-lg hover:bg-leaf/90 hover:scale-105 active:scale-95 transition-all">
+                    Crear mi oasis verde
+                </button>
+            </div>
+        </header>
+        <main class="flex-1">
+            <section class="relative px-6 py-16 lg:px-40 lg:py-24">
+                <div class="mx-auto flex max-w-[1200px] flex-col items-center gap-12 lg:flex-row">
+                    <div class="flex flex-1 flex-col gap-8 text-center lg:text-left">
+                        <div
+                            class="inline-flex w-fit items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-leaf dark:text-primary mx-auto lg:mx-0">
+                            <span class="material-symbols-outlined text-sm">nature_people</span>
+                            Cultivo Urbano en Argentina
+                        </div>
+                        <h1
+                            class="text-5xl font-black leading-[1.1] tracking-tight text-slate-900 dark:text-white lg:text-7xl">
+                            Cosecha <span class="text-primary">orgánica</span> <br />
+                            <span
+                                class="text-leaf underline decoration-primary/30 decoration-wavy underline-offset-8">en
+                                tu balcón</span>
+                        </h1>
+                        <div class="space-y-4">
+                            <p
+                                class="max-w-xl text-lg leading-relaxed text-slate-600 dark:text-slate-400 mx-auto lg:mx-0">
+                                ¿Cansado de <span class="font-bold text-earth">verduras con químicos</span> y <span
+                                    class="font-bold text-earth">precios altos en la verdulería</span>?
+                            </p>
+                            <p
+                                class="max-w-xl text-xl font-medium text-leaf dark:text-primary/90 mx-auto lg:mx-0 italic">
+                                "Tu huerto se paga solo con la primera cosecha."
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start pt-4">
+                            <button
+                                class="flex h-16 min-w-[280px] items-center justify-center gap-3 rounded-2xl bg-leaf px-8 text-xl font-extrabold text-white shadow-2xl shadow-leaf/20 hover:bg-leaf/90 transition-all">
+                                Crear mi oasis verde
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                            <div class="flex flex-col items-center lg:items-start justify-center px-4">
+                                <span class="text-2xl font-black text-slate-900 dark:text-white">$9.800 ARS</span>
+                                <span class="text-xs font-bold text-slate-500 uppercase">Pago único</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative flex-1">
+                        <div
+                            class="relative aspect-[4/5] w-full max-w-[480px] overflow-hidden rounded-[2.5rem] bg-earth/5 soft-shadow ring-1 ring-black/5 mx-auto">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform hover:scale-105 duration-700"
+                                data-alt="Digital ebook cover showing a lush balcony garden with vegetables"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAbtAlTpFB2TYvFCejvlyQYADXL_g1OxE0IySoJnBdxUJgYuqwoXB4uRU395zBbdZfz0pCQsqD_hQ2pp7ky-wiryNZd8Urq6jK2UhtCIFMszZ672zzBkAioca5GGSsPBX0XwhKNCFeK5YcDpZz8FVtmeeZORjCqrUSIJzJKaSrr3TSrck7he8tq5kijmffqWygURl4QZ4eqU4_LFxncnWYXT7SljKyIZ7Erw6mbFadDLdgIHi1Y0xeMnRZxXe0Wp3oQkr8qwkLTGw')">
+                            </div>
+                            <div
+                                class="absolute bottom-8 right-8 flex h-28 w-28 flex-col items-center justify-center rounded-full bg-highlight text-background-dark shadow-xl ring-4 ring-white">
+                                <span class="text-[10px] font-bold uppercase tracking-tighter">Oferta ARS</span>
+                                <span class="text-xl font-black">$9.800</span>
+                            </div>
+                        </div>
+                        <div class="absolute -left-8 -top-8 h-32 w-32 bg-primary/10 blur-3xl rounded-full"></div>
+                        <div class="absolute -right-8 bottom-0 h-40 w-40 bg-earth/5 blur-3xl rounded-full"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-earth/5 dark:bg-background-dark/50 px-6 py-20 lg:px-40" id="problema">
+                <div class="mx-auto max-w-[1200px]">
+                    <div class="mb-16 text-center">
+                        <h2 class="mb-4 text-3xl font-black text-slate-900 dark:text-white md:text-4xl italic">Basta de
+                            químicos y sobreprecios</h2>
+                        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">La inflación y los pesticidas
+                            afectan tu salud y tu bolsillo. Es momento de tomar el control de lo que llega a tu mesa.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="bg-white dark:bg-slate-900/50 p-8 rounded-3xl border border-earth/10 soft-shadow">
+                            <span class="material-symbols-outlined text-4xl text-earth mb-4">science</span>
+                            <h3 class="text-xl font-bold mb-2">Libre de Químicos</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm">Las verduras de cadena comercial están
+                                cargadas de pesticidas. En tu balcón, vos decidís la pureza.</p>
+                        </div>
+                        <div class="bg-white dark:bg-slate-900/50 p-8 rounded-3xl border border-earth/10 soft-shadow">
+                            <span class="material-symbols-outlined text-4xl text-earth mb-4">trending_up</span>
+                            <h3 class="text-xl font-bold mb-2">Ahorro Real</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm">Dejá de pagar precios exorbitantes en
+                                la verdulería. Tu inversión inicial se recupera en semanas.</p>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-slate-900/50 p-8 rounded-3xl border border-earth/10 soft-shadow lg:col-span-1 md:col-span-2">
+                            <span class="material-symbols-outlined text-4xl text-earth mb-4">shopping_basket</span>
+                            <h3 class="text-xl font-bold mb-2">Frescura Total</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm">Del tallo al plato en segundos. Sin
+                                transportes kilométricos ni cámaras frigoríficas.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="px-6 py-20 lg:px-40" id="beneficios">
+                <div class="mx-auto max-w-[1200px]">
+                    <div class="flex flex-col lg:flex-row gap-16 items-center">
+                        <div class="flex-1 space-y-8">
+                            <h2 class="text-4xl font-black text-leaf">Beneficios de tu nuevo oasis</h2>
+                            <ul class="space-y-6">
+                                <li class="flex gap-4">
+                                    <div
+                                        class="flex-shrink-0 h-10 w-10 bg-primary/20 rounded-full flex items-center justify-center text-leaf">
+                                        <span class="material-symbols-outlined">check</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg">Cosecha 100% Orgánica</h4>
+                                        <p class="text-slate-500">Sabor auténtico y nutrición máxima para tu familia.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="flex gap-4">
+                                    <div
+                                        class="flex-shrink-0 h-10 w-10 bg-primary/20 rounded-full flex items-center justify-center text-leaf">
+                                        <span class="material-symbols-outlined">check</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg">Optimización de Espacio</h4>
+                                        <p class="text-slate-500">No necesitás patio. Te enseñamos a usar cada
+                                            centímetro de tu balcón.</p>
+                                    </div>
+                                </li>
+                                <li class="flex gap-4">
+                                    <div
+                                        class="flex-shrink-0 h-10 w-10 bg-primary/20 rounded-full flex items-center justify-center text-leaf">
+                                        <span class="material-symbols-outlined">check</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg">Terapia Verde</h4>
+                                        <p class="text-slate-500">Reducí el estrés diario cuidando de tus propios seres
+                                            vivos.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-1">
+                            <div class="rounded-3xl overflow-hidden shadow-2xl">
+                                <img alt="Jardinería Urbana" class="w-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPHCZ8pFZikK5v7AjXYtm2fOsmU0n3aNt-ZuyQEWvJy2XvHD2PwufmJlqu5g1LP94ZYpwwh9-n-DuAARwcsWw9XzEdN4RMdUGVCRE37eUgoGmx6GBqQdO9MfOQjO_Qy_Q4TNLHTLiaEO_xq9FFtqXkE8vpxPeriIhMK9pCweeoRRE66S_HNcpzKqHynhIPd-G9Tffm6xt5rEy9V7MsqQmS3hMnjWXaWS1D1vpF10u932ScIt4hInVmFBw3nLe30RTnSAcOk3DJFQ" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="px-6 py-20 lg:px-40" id="precio">
+                <div
+                    class="mx-auto max-w-[1200px] overflow-hidden rounded-[2.5rem] bg-leaf px-8 py-12 text-white lg:px-20 lg:py-20 relative">
+                    <div class="absolute top-0 right-0 w-1/3 h-full opacity-5 pointer-events-none">
+                        <span class="material-symbols-outlined text-[300px] absolute -right-20 -top-20">compost</span>
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center justify-between gap-10 lg:flex-row">
+                        <div class="flex flex-col gap-6 text-center lg:text-left">
+                            <h2 class="text-4xl font-black md:text-5xl italic">¿Empezamos tu oasis?</h2>
+                            <p class="max-w-md text-xl text-primary/90 font-medium">
+                                Recordá: Tu huerto se paga solo con la primera cosecha.
+                            </p>
+                            <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                                <div
+                                    class="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm border border-white/20">
+                                    <span class="material-symbols-outlined text-highlight">verified</span>
+                                    Acceso Inmediato
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm border border-white/20">
+                                    <span class="material-symbols-outlined text-highlight">payments</span>
+                                    Precio en Pesos Argentinos
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-col items-center gap-4 bg-background-dark/30 p-10 rounded-[2rem] border border-white/10 backdrop-blur-md shadow-2xl">
+                            <div class="text-center">
+                                <span class="text-xs uppercase tracking-widest text-primary font-bold">Inversión
+                                    Única</span>
+                                <div class="flex items-baseline justify-center gap-2 mt-2">
+                                    <span class="text-6xl font-black">$9.800</span>
+                                    <span class="text-lg opacity-60">ARS</span>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full flex min-w-[240px] items-center justify-center rounded-2xl bg-primary px-8 py-5 text-xl font-black text-leaf shadow-lg hover:bg-highlight hover:scale-105 transition-all">
+                                CREAR MI OASIS VERDE
+                            </button>
+                            <p class="text-[10px] opacity-60 uppercase tracking-widest flex items-center gap-2">
+                                <span class="material-symbols-outlined text-sm">lock</span>
+                                Transacción 100% segura
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="border-t border-primary/10 bg-white dark:bg-background-dark px-6 py-12 lg:px-40">
+            <div class="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-8 md:flex-row">
+                <div class="flex items-center gap-3">
+                    <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-leaf text-white">
+                        <span class="material-symbols-outlined font-bold text-lg">potted_plant</span>
+                    </div>
+                    <span class="text-lg font-bold tracking-tight text-leaf">Huerto Urbano ARS</span>
+                </div>
+                <p class="text-sm text-slate-500">© 2024 Oasis Urbano Argentina. Todos los derechos reservados.</p>
+                <div class="flex gap-6">
+                    <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span
+                            class="material-symbols-outlined">eco</span></a>
+                    <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span
+                            class="material-symbols-outlined">mail</span></a>
+                </div>
+            </div>
+        </footer>
+        <div class="fixed bottom-6 left-1/2 z-50 flex -translate-x-1/2 md:hidden w-[90%] max-w-sm">
+            <button
+                class="w-full flex h-14 items-center justify-center gap-3 rounded-full bg-leaf text-white px-8 text-sm font-bold shadow-2xl ring-4 ring-white">
+                Crear mi oasis por $9.800
+                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>

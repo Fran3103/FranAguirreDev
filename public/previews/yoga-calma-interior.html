@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yoga y Calma Interior - Transforma tu Vida</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#30bae8",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111d21",
+                        "neutral-dark": "#1a2c32",
+                        "border-dark": "#345965",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .zen-gradient {
+            background: radial-gradient(circle at top right, rgba(48, 186, 232, 0.15), transparent),
+                        radial-gradient(circle at bottom left, rgba(48, 186, 232, 0.05), transparent);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 selection:bg-primary/30">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-border-dark/30">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">spa</span>
+<span class="text-xl font-bold tracking-tight">Yoga y Calma Interior</span>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#beneficios">Beneficios</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#programa">Programa</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#bonos">Bonos</a>
+<button class="bg-primary hover:bg-primary/90 text-background-dark px-6 py-2.5 rounded-full font-bold text-sm transition-all shadow-lg shadow-primary/20">
+                    Inicia ahora
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden px-6">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-background-dark/60 via-background-dark/80 to-background-dark z-10"></div>
+<img class="w-full h-full object-cover" data-alt="Mujer practicando yoga al amanecer en la montaña" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf9mKSdOOn8CqtfGBfzsVgBXDT4szki4ULPg823fFjuzuB5DEEMjcTDuSq3bs6RLQsqUtiqF6Iva2i-bfAoWJyQC3aJ7u_X8asToRIKjdiTXnCI641dabOFLLta0jB4kZAp_7Xyg3J86VXPkid-P_ReH4Y5__DxqK9R0jHUe1V5tiZuQr9DhKt8yOAz-SYD8KjWIKAt9IZqAL0bn3RPKqsixaiY4cT5XrgUzOAT0AK7G001-qgKQ4OuPZz7WiGCMCE_gBauCwZkg"/>
+</div>
+<div class="relative z-20 max-w-4xl text-center flex flex-col items-center gap-8">
+<span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest border border-primary/20">
+                    Programa Online de Bienestar
+                </span>
+<h1 class="text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight text-white">
+                    Recupera tu equilibrio y <span class="text-primary">transforma</span> tu vida
+                </h1>
+<p class="text-lg md:text-xl text-slate-300 max-w-2xl font-light leading-relaxed">
+                    Un camino guiado hacia la paz mental y la flexibilidad física desde la comodidad de tu hogar. Diseñado para mentes inquietas.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4">
+<button class="bg-primary hover:bg-primary/90 text-background-dark px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl shadow-primary/30 flex items-center gap-2">
+                        Inicia tu transformación hoy
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Pain Points Section -->
+<section class="py-24 px-6 zen-gradient">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">¿Sientes el peso del día a día?</h2>
+<p class="text-slate-400 max-w-xl mx-auto">Identificamos los desafíos que te impiden vivir plenamente y te damos las herramientas para superarlos.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="group p-8 rounded-2xl bg-neutral-dark border border-border-dark/50 hover:border-primary/50 transition-all duration-500">
+<div class="w-14 h-14 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-red-400 text-3xl">work_history</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Estrés Laboral</h3>
+<p class="text-slate-400 leading-relaxed font-light">
+                            Libera la tensión acumulada en tus hombros y espalda tras largas jornadas. Nuestras rutinas cortas resetean tu sistema nervioso en minutos.
+                        </p>
+</div>
+<div class="group p-8 rounded-2xl bg-neutral-dark border border-border-dark/50 hover:border-primary/50 transition-all duration-500">
+<div class="w-14 h-14 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-indigo-400 text-3xl">nights_stay</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Falta de Sueño</h3>
+<p class="text-slate-400 leading-relaxed font-light">
+                            Corta el ciclo de pensamientos intrusivos por la noche. Técnicas de respiración profunda para un descanso reparador y constante.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefits Section -->
+<section class="py-24 px-6 bg-slate-900/30" id="beneficios">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1 relative">
+<div class="absolute -inset-4 bg-primary/20 rounded-full blur-3xl opacity-30"></div>
+<img class="relative rounded-3xl shadow-2xl border border-white/5 object-cover aspect-[4/5]" data-alt="Persona meditando en un ambiente tranquilo y minimalista" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_iNYipeIhQKRUmFraSVJ_Nnzq6hxu-MgVSI1kJjZp8lswN5RxEDsl_N4gI6hQv3c3mhBSuNKV_kUID-aU8vPrEgpg0Cu6YZWcd3aIT7ljijO9_2pDsT-_DrbIG9vXOpxLD04GVHIU0GozpACUQMD9PPSi5zBIa6K2H-BarxZIN3vPx9W7oi7WZqbGqUWPktbOcLPGIWRW2oHPi8NyExAbGUHbEvuqZ1LauvQHqJLYdrLFZuqZ96l5Y6abn9OpufM07xUIHOmoMw"/>
+</div>
+<div class="order-1 lg:order-2 space-y-12">
+<div>
+<h2 class="text-4xl font-bold mb-6">Tu camino hacia el bienestar integral</h2>
+<p class="text-slate-400 font-light">No es solo ejercicio, es una reconfiguración de tu estado mental y físico.</p>
+</div>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">accessibility_new</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Flexibilidad Total</h4>
+<p class="text-slate-400 font-light text-sm leading-relaxed">Adaptamos las posturas a tu nivel actual. Verás progreso real en tu movilidad semana a semana.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">self_care</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Calma Mental</h4>
+<p class="text-slate-400 font-light text-sm leading-relaxed">Domina el arte de estar presente. Silencia el ruido externo y reconecta con tu centro.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Energía Sostenida</h4>
+<p class="text-slate-400 font-light text-sm leading-relaxed">Olvídate de los picos de fatiga. Mantén un nivel de vitalidad equilibrado durante todo el día.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bonus Section -->
+<section class="py-24 px-6 overflow-hidden" id="bonos">
+<div class="max-w-5xl mx-auto">
+<div class="relative p-1 rounded-[2rem] bg-gradient-to-br from-primary via-primary/50 to-transparent">
+<div class="bg-neutral-dark rounded-[1.8rem] p-8 md:p-16 flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-yellow-500/10 text-yellow-500 text-xs font-bold border border-yellow-500/20">
+<span class="material-symbols-outlined text-sm">workspace_premium</span>
+                                REGALO EXCLUSIVO
+                            </div>
+<h2 class="text-3xl md:text-4xl font-bold">Guía de Alimentación Consciente</h2>
+<p class="text-slate-400 font-light leading-relaxed">
+                                Complementa tu práctica con nutrición que sana. Aprende a escuchar a tu cuerpo y alimentarlo con lo que realmente necesita para vibrar alto.
+                            </p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm text-slate-300">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                    Recetas rápidas y nutritivas
+                                </li>
+<li class="flex items-center gap-3 text-sm text-slate-300">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                    Guía de compras consciente
+                                </li>
+</ul>
+</div>
+<div class="w-full md:w-64 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
+<img class="w-full h-full object-cover" data-alt="Plato de comida saludable con vegetales frescos" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOGslriybS4MAQA4KGoNjgPB5R7Ko0GVD61Fm8MeRGM3tSr7fRF4ODea1JupL0rmBe2tAJfiWaeW2h2JZbgq54TXwhkWf8boIxYIvCZpUUHaE4EVQoGsFAEq2bF1jhL7X73hOrEnGiY01z1gQdULUj2vIU4Y2jtKqviw9EdieBoutr3jWNV0-Iy1mMBMCzwxhsc6iq0HFpRohDyUDRcDnj7LkpIsZPG-0_QuI_Jp1JNrDHtEIgtjYouMgEA4mHm3zJcvejSR5qTw"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="py-24 px-6 bg-gradient-to-b from-transparent to-primary/5">
+<div class="max-w-xl mx-auto text-center space-y-10">
+<div class="space-y-4">
+<h2 class="text-4xl font-bold">Tu transformación empieza aquí</h2>
+<p class="text-slate-400 font-light">Únete a cientos de personas que ya han cambiado su relación con el estrés.</p>
+</div>
+<div class="bg-neutral-dark border border-border-dark p-10 rounded-[2.5rem] shadow-2xl relative">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-background-dark px-4 py-1 rounded-full text-xs font-bold uppercase">
+                        Precio Lanzamiento
+                    </div>
+<div class="flex flex-col items-center gap-2 mb-8">
+<span class="text-slate-400 text-lg line-through">$25.000</span>
+<div class="flex items-baseline gap-2">
+<span class="text-6xl font-black text-white">$12.500</span>
+<span class="text-xl font-medium text-slate-400">ARS</span>
+</div>
+<p class="text-primary text-sm font-medium mt-2">Pago único • Acceso de por vida</p>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-background-dark py-5 rounded-2xl font-bold text-xl transition-all shadow-xl shadow-primary/20 mb-6 active:scale-95">
+                        Inicia tu transformación hoy
+                    </button>
+<div class="flex items-center justify-center gap-6 text-slate-400 text-xs uppercase tracking-widest font-bold">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+                            Pago Seguro
+                        </div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">history</span>
+                            7 Días Garantía
+                        </div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="py-12 px-6 border-t border-border-dark/30 mt-12">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">spa</span>
+<span class="text-lg font-bold tracking-tight">Yoga y Calma Interior</span>
+</div>
+<div class="flex gap-8 text-sm text-slate-500">
+<a class="hover:text-primary transition-colors" href="#">Privacidad</a>
+<a class="hover:text-primary transition-colors" href="#">Términos</a>
+<a class="hover:text-primary transition-colors" href="#">Contacto</a>
+</div>
+<p class="text-xs text-slate-600">© 2024 Yoga y Calma Interior. Todos los derechos reservados.</p>
+</div>
+</footer>
+</body></html>

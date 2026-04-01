@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Taller de Encuadernación Pro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#52d411",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#162210",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Epilogue', sans-serif;
+        }
+        .rustic-gradient {
+            background: linear-gradient(180deg, rgba(22, 34, 16, 0.8) 0%, rgba(22, 34, 16, 1) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">book_4</span>
+<span class="text-white text-xl font-extrabold tracking-tight">Encuadernación<span class="text-primary">Pro</span></span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#beneficios">Beneficios</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#programa">Programa</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#bonos">Bonos</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#precio">Precio</a>
+<button class="bg-primary hover:bg-primary/90 text-background-dark px-6 py-2 rounded-lg font-bold text-sm transition-all transform hover:scale-105">
+                        Inscribirme
+                    </button>
+</nav>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-white">menu</span>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40" data-alt="Handmade notebooks and bookbinding tools on a wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy_JBkPRMElroz97qc61TNdx5qNpDmRyAHDlX2DAlrziks7T5i-2wsT81sxvpcfdKgwMFbSviMCPpjf67H0LSBW2KDIZ52UCnJ6iM0bzO3IcbfLgFKDKrMeNjGIr6KiWTmG1AIeL5-79CPqNy1Esb5dKPP1dMONpZiVVDqx5RiVk1XHV3tyrVQ8lWKnwAGLjLm4rA1fStnZ-KQ_BopfHe2fceLYuv-oAqadhTnD8UthLmsQyiBcJj_O2o0tareUQPrWLlKP_pdqg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
+<span class="inline-block py-1 px-3 rounded-full bg-primary/20 text-primary border border-primary/30 text-xs font-bold uppercase tracking-widest mb-6">
+                    Taller Online &amp; Artesanal
+                </span>
+<h1 class="text-4xl md:text-7xl font-black text-white leading-[1.1] mb-6">
+                    Transforma el estrés en arte: <br/>
+<span class="text-primary">Encuadernación Artesanal</span>
+</h1>
+<p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+                    Aprende un oficio milenario, encuentra un hobby creativo y descubre una salida laboral rápida desde la comodidad de tu casa.
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="w-full sm:w-auto bg-primary hover:bg-primary/90 text-background-dark px-10 py-5 rounded-xl font-extrabold text-lg transition-all shadow-lg shadow-primary/20">
+                        Inscribirme al taller
+                    </button>
+<div class="flex items-center gap-2 text-slate-400">
+<span class="material-symbols-outlined text-primary">verified</span>
+<span class="text-sm font-medium">Acceso de por vida</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Pain Points Section -->
+<section class="py-24 bg-background-dark border-t border-white/5">
+<div class="max-w-7xl mx-auto px-4">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">¿Sientes el peso de la <span class="text-primary/80 italic">rutina digital</span>?</h2>
+<p class="text-slate-400 text-lg mb-8">Vivimos rodeados de pantallas. Tu mente necesita un respiro táctil, algo real que puedas tocar y crear con tus propias manos.</p>
+<div class="space-y-6">
+<div class="flex gap-4 p-6 rounded-xl bg-white/5 border border-white/10 hover:border-primary/30 transition-all group">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-all">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<div>
+<h3 class="text-white font-bold text-lg">Estrés constante</h3>
+<p class="text-slate-400">Encuentra un espacio de meditación activa a través del oficio manual.</p>
+</div>
+</div>
+<div class="flex gap-4 p-6 rounded-xl bg-white/5 border border-white/10 hover:border-primary/30 transition-all group">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-all">
+<span class="material-symbols-outlined">palette</span>
+</div>
+<div>
+<h3 class="text-white font-bold text-lg">Necesidad de un hobby</h3>
+<p class="text-slate-400">Cambia la luz azul por texturas, hilos y la nobleza del papel artesanal.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -inset-4 bg-primary/20 blur-3xl rounded-full"></div>
+<img class="relative rounded-2xl w-full h-[500px] object-cover border border-white/10 shadow-2xl" data-alt="Close up of hands sewing a book spine" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZylaAFxX8wJQtTZEXWfkP3aBvmPD4zhFOT959vC_N7OP7PD0Z8AN6XJVujT3RTUzR1l2Q99_WGAg31QRrTWgZBiQvYv1p-jgQVPqjnBFeQSYSNvjVYqEeVCwwdDkPrBUYxTIbNUvXkplMehb9c1_TU6PEfMT_hRnRDgagG6zTfcRs4I7ROaGNjlHZlIQqRiIJD7E4zmPUnMu_9eBvv1ofQo3ZL0pnjBLIJy1MB4hocQwlmMt9f1FwM8sDdLxk1Lk26LvNJcfCNA"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefits & Outcomes -->
+<section class="py-24 bg-white/5" id="beneficios">
+<div class="max-w-7xl mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-5xl font-black text-white mb-4">Lo que lograrás en este taller</h2>
+<p class="text-slate-400 text-lg">Un camino práctico para dominar la encuadernación de principio a fin.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-background-dark p-8 rounded-2xl border border-white/10 flex flex-col gap-6">
+<div class="w-full aspect-video rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Finished professional handmade books on display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3IMSuU9jmJRivm0tJ5F344T4J3TvVygRLokPU8YQxOQD3xu8ZXUrbmjhlnEsiUEKAPrnyVSxMXd8w5dkvVWK5kDMocd3UfFuIXC80sxDq_3MmaHcPjEJn4h5A5076B5O9y194na1oGs0j3U-EzRAB3zfo_aR5byCF9N1bUr05P-OkK0_isL4QdiE9eKf0-az8j2QH07YoirPbT93r7HK5RIeVWkM5Ku7tC3YQJrVCi_vOP7yikZKQQpg2ivup5mBVaJwNEz48bQ"/>
+</div>
+<div>
+<h3 class="text-xl font-bold text-white mb-2">Aprende un oficio real</h3>
+<p class="text-slate-400">Domina las técnicas tradicionales de costura, adhesivos y armado profesional de tapas duras.</p>
+</div>
+</div>
+<div class="bg-background-dark p-8 rounded-2xl border border-white/10 flex flex-col gap-6">
+<div class="w-full aspect-video rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Workshop table with organized bookbinding tools" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzL_CDDGwurwfqfyDSfNIiBwMuoPavsC5u2osw4WdcD5ySXXjYK58BlXDDqQg54IKs1DbyDsrzx8Cfs0TKf0KUzbbcshE2SO8t99vSXr6A0cGzcamTXQAMVmCI9KlgHFEle63cZBJrv5_hVUBOUBIe56QjqvNbnC7cR0rHP52iPS7ViqbVx8R8WEhVTn5eFySc-w1Qmkb3xjZrZArEvwAOKrJ1zKRm1W5soKyEN2OiElUZIDnsO-iVqsZbhxIn9M5-pi_PjDHH9Q"/>
+</div>
+<div>
+<h3 class="text-xl font-bold text-white mb-2">Salida laboral rápida</h3>
+<p class="text-slate-400">Crea productos únicos con alta demanda en el mercado de regalos personalizados y papelería.</p>
+</div>
+</div>
+<div class="bg-background-dark p-8 rounded-2xl border border-white/10 flex flex-col gap-6">
+<div class="w-full aspect-video rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Artist studio with books and creative materials" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQHUn_-qYZazT-krcWk2EVVRXrEieyYZavZ-RXEWQ-p49sk-xXUsenHWnzCkExJyugaHrgsbzYuOvB-OuMwMXrOg0OflzMm2H-oEDlPCRn5VD-C_u1c1_NT3EZlas1PoNPp5n9xaWOHl03tH68c_r91R1xkl_CXMB2wFu0yKEQtHdRcRQ-TEh1j8OhAE9H_xBLrk0ueKgMw99eaAgTktvFJ9XKjvZg7U5nEziBjM_qFG3L5prDDa2-cV1VtSIFG4D1o1qgQQLuzg"/>
+</div>
+<div>
+<h3 class="text-xl font-bold text-white mb-2">Libertad Creativa</h3>
+<p class="text-slate-400">Diseña tus propios cuadernos, agendas y álbumes con tu estilo personal y materiales únicos.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bonus Section -->
+<section class="py-20" id="bonos">
+<div class="max-w-4xl mx-auto px-4">
+<div class="relative bg-gradient-to-br from-primary/10 to-transparent border-2 border-primary/30 rounded-3xl p-8 md:p-12 overflow-hidden">
+<div class="absolute top-0 right-0 p-4">
+<span class="bg-primary text-background-dark px-4 py-1 rounded-full text-xs font-black uppercase tracking-tighter">GRATIS</span>
+</div>
+<div class="relative z-10 flex flex-col md:flex-row items-center gap-10">
+<div class="size-24 md:size-32 rounded-2xl bg-primary flex items-center justify-center shadow-lg shadow-primary/40 flex-shrink-0 rotate-3">
+<span class="material-symbols-outlined text-background-dark text-6xl">list_alt</span>
+</div>
+<div class="text-center md:text-left">
+<h3 class="text-2xl md:text-3xl font-black text-white mb-3">¡Bono Exclusivo de Lanzamiento!</h3>
+<p class="text-slate-300 text-lg mb-6 leading-relaxed">
+                                Al inscribirte hoy, recibes mi <strong>Guía Privada de Proveedores</strong>. No pierdas meses buscando dónde comprar materiales de calidad a buen precio.
+                            </p>
+<div class="flex flex-wrap justify-center md:justify-start gap-4">
+<span class="flex items-center gap-1 text-sm text-primary font-bold">
+<span class="material-symbols-outlined text-sm">check_circle</span> Papeles especiales
+                                </span>
+<span class="flex items-center gap-1 text-sm text-primary font-bold">
+<span class="material-symbols-outlined text-sm">check_circle</span> Telas &amp; Cueros
+                                </span>
+<span class="flex items-center gap-1 text-sm text-primary font-bold">
+<span class="material-symbols-outlined text-sm">check_circle</span> Herramientas Pro
+                                </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="py-24 bg-background-dark text-center" id="precio">
+<div class="max-w-3xl mx-auto px-4">
+<h2 class="text-3xl md:text-5xl font-black text-white mb-12">Comienza tu viaje artesanal hoy</h2>
+<div class="bg-white/5 border border-white/10 rounded-[2.5rem] p-12 relative overflow-hidden group">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/20 blur-[100px] pointer-events-none"></div>
+<p class="text-slate-400 font-medium mb-2 uppercase tracking-widest">Inversión única</p>
+<div class="flex items-center justify-center gap-2 mb-8">
+<span class="text-2xl text-slate-400 font-light">$</span>
+<span class="text-7xl md:text-8xl font-black text-white tracking-tighter">15.000</span>
+<span class="text-2xl text-slate-400 font-bold">ARS</span>
+</div>
+<ul class="text-left space-y-4 max-w-sm mx-auto mb-10">
+<li class="flex items-center gap-3 text-slate-300">
+<span class="material-symbols-outlined text-primary">done</span>
+<span>+20 Lecciones en HD</span>
+</li>
+<li class="flex items-center gap-3 text-slate-300">
+<span class="material-symbols-outlined text-primary">done</span>
+<span>Material descargable</span>
+</li>
+<li class="flex items-center gap-3 text-slate-300">
+<span class="material-symbols-outlined text-primary">done</span>
+<span>Comunidad privada de alumnos</span>
+</li>
+<li class="flex items-center gap-3 text-slate-300">
+<span class="material-symbols-outlined text-primary">done</span>
+<span>Certificado de finalización</span>
+</li>
+</ul>
+<button class="w-full bg-primary hover:bg-primary/90 text-background-dark py-6 rounded-2xl font-black text-xl transition-all shadow-xl shadow-primary/20 transform hover:-translate-y-1">
+                        Inscribirme al taller
+                    </button>
+<div class="mt-6 flex items-center justify-center gap-6 opacity-60">
+<img class="h-6" data-alt="Visa logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTafSCC8ZtaAwXmOcKVVcySi2ZwkgfHttuWRK_9J9hmrcCK-eHpkNMxNiRaBfJvWXDuEfv4h7BqmAYVP_bvf-0npE6s7pZz158SZbkqSH6InfXnoyzxSw24WBW2O_0ZvGK2DPiuvdZzWGkXU8FJfaVa8DpoOWZLVHDs6BWgEqhSZ_REbGr0deQkM6yyOptTWFbhW1YeVCIOdqmgFVFrmk3Rm90sEuwaQzvZmxVOQm3enlyagOYiyf26ksifyYDs1dStQTI5grx9A"/>
+<img class="h-6" data-alt="Mastercard logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMyMD9CCUiBitHRLZsKqS31E8YWOAVcHNEkiQRwoKw2JhtL_IFnaEnDo5ozkDStAJ63kUney79eTnh0f2UWMhuPbEBP_f_smV8vJ0Vt-tv_kzNSGKcwjJCWJwCRccR3t1NXE8fsLgdnZmZTEQvVcmi26ksP_TBd4b3RUvKE60CvLsfB8lnmPikHDYKa960OseNwgnXj_wR-iPKPJ1bhx-RYrBgQ30r1rAelYHxnR1qcOBBFTYyhCbh-UpQ_bHF2k8XDZwxZvNHjQ"/>
+<img class="h-6" data-alt="Mercado Pago logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqcYSpUBYoxlFpGemMcrz2StS8zp2cmq5nfuZFsiLLqc1sK80QZUdwPzZtf9pu-wwzEJ7-sSKnNJIqSg9Muc5I_l_DofLYrmrVDbB61QbMyjRLIXEokuPOPDtmD3p0JzE_hHoU0STddvyNLqCdEP7ocST_AVBTvV8io2VwLSOKua47C5zZqgrtw7dJwYe4AoGjfDbWb5TO-wAbzvxLCXPyb_PrfvCWJMolf1EPvVvKoZP8dSD7sudbdC3LXLUTfe_INI7JBHEYBw"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="py-12 border-t border-white/5 bg-background-dark">
+<div class="max-w-7xl mx-auto px-4 text-center">
+<div class="flex items-center justify-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">book_4</span>
+<span class="text-white font-bold">Encuadernación Pro</span>
+</div>
+<p class="text-slate-500 text-sm mb-6">© 2024 Encuadernación Pro. Todos los derechos reservados.</p>
+<div class="flex justify-center gap-8 text-slate-500 text-xs">
+<a class="hover:text-primary transition-colors" href="#">Términos y Condiciones</a>
+<a class="hover:text-primary transition-colors" href="#">Política de Privacidad</a>
+<a class="hover:text-primary transition-colors" href="#">Contacto</a>
+</div>
+</div>
+</footer>
+</body></html>
