@@ -4,20 +4,26 @@ export function CircularProgressDemo() {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    let intervalId: number;
+    let animationIntervalId: number | undefined;
 
     const runAnimation = () => {
+      if (animationIntervalId !== undefined) {
+        window.clearInterval(animationIntervalId);
+      }
+
       let current = 0;
       setProgress(0);
 
-      intervalId = window.setInterval(() => {
+      const currentIntervalId = window.setInterval(() => {
         current += 1;
         setProgress(current);
 
         if (current >= 75) {
-          window.clearInterval(intervalId);
+          window.clearInterval(currentIntervalId);
         }
-      }, 20);
+      }, 30);
+
+      animationIntervalId = currentIntervalId;
     };
 
     runAnimation();
@@ -27,7 +33,9 @@ export function CircularProgressDemo() {
     }, 10000);
 
     return () => {
-      window.clearInterval(intervalId);
+      if (animationIntervalId !== undefined) {
+        window.clearInterval(animationIntervalId);
+      }
       window.clearInterval(restartInterval);
     };
   }, []);

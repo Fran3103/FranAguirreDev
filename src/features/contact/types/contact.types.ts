@@ -4,5 +4,6 @@ export type ContactFormValues = {
   email: string;
   whatsapp: string;
   service: string;
+  template: string;
   message: string;
 };
