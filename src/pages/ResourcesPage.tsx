@@ -12,13 +12,13 @@ export function ResourcesPage() {
   return (
     <>
       <ResourcesHeroSection />
-      <ButtonsShowcaseSection />
+      <ScrollRevealShowcaseSection />
+      <CountersShowcaseSection />
       <CarouselShowcaseSection />
       <ProgressShowcaseSection />
+      <ButtonsShowcaseSection />
       <AccordionShowcaseSection />
       <OfferShowcaseSection />
-      <CountersShowcaseSection />
-      <ScrollRevealShowcaseSection />
       <ContactSection />
     </>
   );
