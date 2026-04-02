@@ -210,7 +210,7 @@ export function ContactForm() {
           className="w-full"
           disabled={status === "sending"}
         >
-          {status === "sending" ? "Enviando..." : "Quiero mi página"}
+          {status === "sending" ? "Enviando..." : "Quiero mi landing"}
         </Button>
       </div>
 

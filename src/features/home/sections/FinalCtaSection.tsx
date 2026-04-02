@@ -17,7 +17,7 @@ export function FinalCtaSection() {
 
         <a href="#contacto">
           <Button size="lg" className="px-10">
-            Empezar ahora
+            Quiero mi página lista para vender
           </Button>
         </a>
       </Container>

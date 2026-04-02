@@ -8,7 +8,7 @@ export function ServicesSection() {
     <section id="servicios" className="section-padding bg-brand-card">
       <Container>
         <SectionHeading
-          eyebrow="CÓMO PODEMOS TRABAJAR"
+          eyebrow="Podés empezar simple y después mejorar. No hace falta hacer todo de una"
           title="Servicios a tu medida"
           description="Los precios son orientativos según la complejidad del proyecto."
           className="mb-14"

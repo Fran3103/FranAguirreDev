@@ -8,27 +8,27 @@ export const navItems: NavItem[] = [
     sectionId: "servicios",
   },
   {
-    label: "Ejemplos",
+    label: "Plantillas",
     href: "/plantillas",
     type: "route",
-    sectionId: "ejemplos",
+    sectionId: "plantillas",
   },
   {
-    label: "Proceso",
+    label: "Como Funciona",
     href: "/#proceso",
     type: "anchor",
     sectionId: "proceso",
+  },
+  {
+    label: "Extras",
+    href: "/recursos",
+    type: "route",
+    sectionId: "recursos",
   },
   {
     label: "Contacto",
     href: "/#contacto",
     type: "anchor",
     sectionId: "contacto",
-  },
-  {
-    label: "Recursos",
-    href: "/recursos",
-    type: "route",
-    sectionId: "recursos",
   },
 ];

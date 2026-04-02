@@ -7,6 +7,7 @@ import { navItems } from "@/features/navigation/data/nav.data";
 import { SITE_CONFIG } from "@/shared/constants/site.constants";
 import { MobileMenu } from "./MobileMenu";
 import { cn } from "@/shared/lib/cn";
+import { IoRocketSharp } from "react-icons/io5";
 
 const SECTION_OFFSET = 140;
 
@@ -73,29 +74,33 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [location.pathname]);
 
-const currentHash = location.hash.replace("#", "");
+  const currentHash = location.hash.replace("#", "");
 
-const isItemActive = (item: (typeof navItems)[number]) => {
-  if (item.type === "route") {
-    return location.pathname === item.href;
-  }
+  const isItemActive = (item: (typeof navItems)[number]) => {
+    if (item.type === "route") {
+      return location.pathname === item.href;
+    }
 
-  if (location.pathname !== "/") return false;
+    if (location.pathname !== "/") return false;
 
-  return currentHash === item.sectionId || activeSection === item.sectionId;
-};
+    return currentHash === item.sectionId || activeSection === item.sectionId;
+  };
 
- 
+
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-brand bg-[rgba(245,241,237,0.50)] backdrop-blur-md shadow-sm">
       <Container className="relative flex h-20 items-center justify-between">
-        <Link
-          to="/"
-          className="text-lg font-semibold tracking-tight text-brand-foreground"
-        >
-          Fran Aguirre
-        </Link>
+        <div className="flex gap-3 items-center">
+          <Link
+            to="/"
+            className="text-lg font-semibold tracking-tight text-brand-foreground"
+          >
+            Fran Aguirre
+          </Link>
+          <IoRocketSharp className="text-brand-primary" />
+        </div>
+
 
         <nav className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => (

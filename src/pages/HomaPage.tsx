@@ -13,15 +13,15 @@ export function HomePage() {
   return (
     <>
       <HeroSection />
-      <ServicesSection />
+      <AudienceSection />
+      <BenefitsSection />
       <TemplatesPreviewSection />
       <EnhancementsSection/>
-      <BenefitsSection />
-      <AudienceSection />
       <ProcessSection />
+      <ServicesSection />
       <FaqSection />
-      <ContactSection />
       <FinalCtaSection />
+      <ContactSection />
     </>
   );
 }

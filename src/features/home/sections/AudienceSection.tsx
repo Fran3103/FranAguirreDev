@@ -7,7 +7,7 @@ export function AudienceSection() {
       <Container>
         <div className="text-center">
           <h2 className="mb-10 text-3xl font-bold tracking-tight text-brand-foreground sm:text-4xl">
-            ¿Es para vos?
+            Esto para vos si:
           </h2>
 
           <div className="flex flex-wrap justify-center gap-4">

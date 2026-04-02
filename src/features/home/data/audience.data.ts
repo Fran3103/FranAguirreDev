@@ -1,7 +1,8 @@
 export const audienceItems = [
-  "Emprendedores",
-  "Personas que venden por Instagram",
-  "Usuarios de Shopify",
-  "Infoproductores",
-  "Negocios pequeños",
+  "Emprendedor",
+  "Vendes por Instagram",
+  "Utilizas Shopify",
+  "Vendes Infoproductos",
+  "Necesitas una web profesional",
+  "Pequeños negocios",
 ];
