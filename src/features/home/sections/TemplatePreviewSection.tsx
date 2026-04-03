@@ -26,7 +26,7 @@ export function TemplatesPreviewSection() {
           />
 
           <Link to="/plantillas">
-            <Button variant="ghost">Ver todos los ejemplos</Button>
+            <Button variant="ghost">Ver plantillas</Button>
           </Link>
         </div>
 
