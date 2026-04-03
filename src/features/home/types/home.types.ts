@@ -15,6 +15,9 @@ export type ServiceItem = {
   price: string;
   featured?: boolean;
   icon: LucideIcon;
+  includes: string[];
+  notIncludes: string[];
+  cta?: string;
 };
 
 export type BenefitItem = {
