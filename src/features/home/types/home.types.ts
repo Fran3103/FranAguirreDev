@@ -1,12 +1,20 @@
 import type { LucideIcon } from "lucide-react";
 
+export type EnhancementId =
+  | "accordion"
+  | "counters"
+  | "scroll-animations"
+  | "carousel"
+  | "cta"
+  | "offer-blocks";
+
 export type ServiceItem = {
   id: string;
   title: string;
   description: string;
   price: string;
   featured?: boolean;
-  icon: LucideIcon
+  icon: LucideIcon;
 };
 
 export type BenefitItem = {
@@ -16,7 +24,7 @@ export type BenefitItem = {
 };
 
 export type EnhancementItem = {
-  id: string;
+  id: EnhancementId;
   title: string;
   description: string;
   icon: LucideIcon;

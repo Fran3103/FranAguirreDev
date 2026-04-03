@@ -30,7 +30,7 @@ export function HeroSection() {
 
               <a href="#ejemplos">
                 <Button variant="secondary" size="lg">
-                  Ver ejemplos
+                  Ver plantillas
                 </Button>
               </a>
             </div>
