@@ -10,11 +10,11 @@ export function ServicesSection() {
         <SectionHeading
           eyebrow="Podés empezar simple y después mejorar. No hace falta hacer todo de una"
           title="Servicios a tu medida"
-          description="Los precios son orientativos según la complejidad del proyecto."
+          description="Cada opción tiene un alcance claro para que sepas qué incluye y cuál te conviene más."
           className="mb-14"
         />
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {services.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}

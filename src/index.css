@@ -164,7 +164,35 @@ img {
   scroll-margin-top: 6rem;
 }
 
+  .animate-ui-swing {
+    animation: ui-swing 2.2s ease-in-out infinite;
+    transform-origin: top center;
+  }
 
+  .animate-ui-bounce-soft {
+    animation: ui-bounce-soft 1.8s ease-in-out infinite;
+  }
+
+  .animate-ui-fade-pulse {
+    animation: ui-fade-pulse 2s ease-in-out infinite;
+  }
+
+  .animate-ui-float {
+    animation: ui-float 2.4s ease-in-out infinite;
+  }
+
+  .animate-ui-shimmer {
+    background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.55) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 200% 100%;
+    animation: ui-shimmer 2s linear infinite;
+  }
+
+}
 
 
 /* animaciones para  botones imagenes etc,  pueden ser usadas en cualquier parte de la app, se pueden extender o modificar segun las necesidades
@@ -218,36 +246,4 @@ img {
   100% {
     background-position: 200% 0;
   }
-}
-
-@layer utilities {
-  .animate-ui-swing {
-    animation: ui-swing 2.2s ease-in-out infinite;
-    transform-origin: top center;
-  }
-
-  .animate-ui-bounce-soft {
-    animation: ui-bounce-soft 1.8s ease-in-out infinite;
-  }
-
-  .animate-ui-fade-pulse {
-    animation: ui-fade-pulse 2s ease-in-out infinite;
-  }
-
-  .animate-ui-float {
-    animation: ui-float 2.4s ease-in-out infinite;
-  }
-
-  .animate-ui-shimmer {
-    background-image: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.55) 50%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    background-size: 200% 100%;
-    animation: ui-shimmer 2s linear infinite;
-  }
-}
-
 }
