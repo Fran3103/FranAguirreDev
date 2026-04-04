@@ -43,6 +43,26 @@
             background-size: 40px 40px;
         }
     </style>
+
+<style>
+.reveal-left,.reveal-right,.reveal-up{opacity:0;transition:opacity .8s ease, transform .8s cubic-bezier(.2,.65,.2,1);will-change:transform,opacity}
+.reveal-left{transform:translateX(-48px)}
+.reveal-right{transform:translateX(48px)}
+.reveal-up{transform:translateY(36px)}
+.reveal-visible{opacity:1;transform:none}
+.float-soft{animation:floatSoft 4.5s ease-in-out infinite}
+.pulse-soft{animation:pulseSoft 2.2s ease-in-out infinite}
+.shimmer-cta{position:relative;overflow:hidden}
+.shimmer-cta::after{content:"";position:absolute;inset:0;transform:translateX(-120%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);animation:shimmerMove 3.2s linear infinite}
+.offer-marquee{white-space:nowrap;overflow:hidden;position:relative}
+.offer-marquee span{display:inline-block;padding-left:100%;animation:marqueeMove 16s linear infinite}
+.side-counter-card{backdrop-filter:blur(12px)}
+@keyframes shimmerMove{100%{transform:translateX(120%)}}
+@keyframes floatSoft{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes pulseSoft{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.04);opacity:.88}}
+@keyframes marqueeMove{100%{transform:translateX(-100%)}}
+</style>
+
 </head>
 <body class="bg-background-dark font-display text-slate-100 selection:bg-primary/30">
 <header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-dark/80 backdrop-blur-md">
@@ -69,7 +89,7 @@
 <section class="relative overflow-hidden pt-20 pb-32">
 <div class="grid-pattern absolute inset-0 -z-10"></div>
 <div class="hero-glow absolute inset-0 -z-10"></div>
-<div class="mx-auto max-w-7xl px-6 text-center">
+<div class="mx-auto max-w-7xl px-6 text-center reveal-up">
 <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary">
 <span class="relative flex h-2 w-2">
 <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
@@ -108,6 +128,38 @@
 <div class="text-sm font-medium text-slate-500 uppercase tracking-wider">Soberanía Financiera</div>
 </div>
 </div>
+
+<div class="mx-auto mt-8 max-w-4xl grid gap-4 md:grid-cols-3">
+  <div class="reveal-left rounded-2xl border border-primary/15 bg-surface-dark/70 px-5 py-4 text-left">
+    <p class="text-[11px] uppercase tracking-[0.24em] text-primary font-bold mb-2">Usuarios conectados</p>
+    <p class="text-3xl font-black text-white" data-live-range="31-67"></p>
+    <p class="text-sm text-slate-400">viendo esta estrategia ahora</p>
+  </div>
+  <div class="reveal-up rounded-2xl border border-cyan-400/15 bg-surface-dark/70 px-5 py-4 text-left">
+    <p class="text-[11px] uppercase tracking-[0.24em] text-accent-cyan font-bold mb-2">Cierre masterclass</p>
+    <p class="text-2xl font-black text-white" data-countdown="7320"></p>
+    <p class="text-sm text-slate-400">incluye checklist antiestafas</p>
+  </div>
+  <div class="reveal-right rounded-2xl border border-emerald-500/15 bg-surface-dark/70 px-5 py-4 text-left">
+    <p class="text-[11px] uppercase tracking-[0.24em] text-emerald-400 font-bold mb-2">Capital protegido</p>
+    <p class="text-3xl font-black text-white" data-count-to="84" data-suffix="%"></p>
+    <p class="text-sm text-slate-400">de alumnos aplicó stablecoins</p>
+  </div>
+</div>
+<div class="mx-auto mt-6 max-w-2xl reveal-up rounded-2xl border border-primary/10 bg-surface-dark/60 p-5" data-rotate-group>
+  <div data-rotate-item>
+    <p class="text-sm font-semibold text-primary mb-2">ALERTA 01</p>
+    <p class="text-slate-300">No compres por FOMO. Te enseñamos cuándo entrar y cuándo esperar.</p>
+  </div>
+  <div data-rotate-item style="display:none">
+    <p class="text-sm font-semibold text-accent-cyan mb-2">ALERTA 02</p>
+    <p class="text-slate-300">Detectá exchanges, wallets y plataformas confiables sin improvisar.</p>
+  </div>
+  <div data-rotate-item style="display:none">
+    <p class="text-sm font-semibold text-emerald-400 mb-2">ALERTA 03</p>
+    <p class="text-slate-300">Convertí pesos a dólares digitales sin perderte en pasos técnicos.</p>
+  </div>
+</div>
 </div>
 </section>
 <section class="border-t border-slate-800 bg-surface-dark/30 py-24" id="estrategias">
@@ -124,7 +176,7 @@
 </div>
 </div>
 <div class="grid gap-6 md:grid-cols-3">
-<div class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-surface-dark p-8 transition-all hover:border-primary/50">
+<div class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-surface-dark p-8 transition-all hover:border-primary/50 reveal-left">
 <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary">
 <span class="material-symbols-outlined text-3xl">currency_exchange</span>
 </div>
@@ -134,7 +186,7 @@
 <img alt="Dólar Cripto" class="h-full w-full object-cover opacity-50 transition-transform group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFS7AJJkhELma2IgMNrkN6Roc0YlfxLKDFzPOgQT6kgZzqJK3VmWK3x45WVQrcrub7AzU0SU3pYqnhuRFTAqmWggzSyeE7Io9XmJPs1HgnBAEQRohT5fsg-C049TsU5kWnjdlRwdyuJIq-2kMnA_evvEDymAbkYw5UKoMmXNJ8FBwCLWOHiUa8OG0UcDb5_uZI5aKHiScMdx5VEq0pvk_77FQOKIHGUXspJJjNetFql-FOaYq30cdEavK2zvGXxB-Cem7Hy6gC_g"/>
 </div>
 </div>
-<div class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-surface-dark p-8 transition-all hover:border-primary/50">
+<div class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-surface-dark p-8 transition-all hover:border-primary/50 reveal-up">
 <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-accent-cyan/10 text-accent-cyan">
 <span class="material-symbols-outlined text-3xl">trending_up</span>
 </div>
@@ -144,7 +196,7 @@
 <img alt="Rendimientos" class="h-full w-full object-cover opacity-50 transition-transform group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrkTYW97Tt-H8esdCf_-QQ4Rc5SMC1h8ypQuN78jVevFc2cLMSAPIMV0B5Jkbya2gItxTsxUOZocVvuR43C72L3CDMSuXhxAwV-_nBv4P9dz-i4yaeUikTGzR-m0mdqtRpwFUOfssAw7QSiP7R_7UhvxQoHqS3EY0g-1ZE9wxkdvM0G32sRJWc5RarT0qrG3KrfPZSDW9ceHIy1hhQXPUgZfz5-_WcijZmfD_xF2tdFA5LjPUqeat5Z316oeGhPfE94w9Khs4mWg"/>
 </div>
 </div>
-<div class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-surface-dark p-8 transition-all hover:border-primary/50">
+<div class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-surface-dark p-8 transition-all hover:border-primary/50 reveal-right">
 <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-500">
 <span class="material-symbols-outlined text-3xl">gpp_good</span>
 </div>
@@ -251,5 +303,25 @@
 </div>
 </div>
 </footer>
+
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const io=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting){entry.target.classList.add('reveal-visible');io.unobserve(entry.target);}})},{threshold:.14});
+  document.querySelectorAll('.reveal-left,.reveal-right,.reveal-up').forEach(el=>io.observe(el));
+  document.querySelectorAll('[data-count-to]').forEach((el)=>{
+    const end=parseInt(el.getAttribute('data-count-to')||'0',10); const suffix=el.getAttribute('data-suffix')||''; const duration=parseInt(el.getAttribute('data-duration')||'1600',10); const start=performance.now();
+    const step=(now)=>{ const progress=Math.min((now-start)/duration,1); const value=Math.floor(end*progress); el.textContent=value.toLocaleString('es-AR')+suffix; if(progress<1) requestAnimationFrame(step);}; requestAnimationFrame(step);
+  });
+  document.querySelectorAll('[data-countdown]').forEach((el)=>{
+    let total=parseInt(el.getAttribute('data-countdown')||'900',10); const reset=parseInt(el.getAttribute('data-reset')||el.getAttribute('data-countdown')||'900',10);
+    const render=()=>{ const h=Math.floor(total/3600),m=Math.floor((total%3600)/60),s=total%60; el.textContent=[h,m,s].map(v=>String(v).padStart(2,'0')).join(':'); };
+    render(); setInterval(()=>{total=total<=1?reset:total-1; render();},1000);
+  });
+  document.querySelectorAll('[data-live-range]').forEach((el)=>{ const [min,max]=String(el.getAttribute('data-live-range')).split('-').map(Number); let current=Math.round((min+max)/2); el.textContent=current; setInterval(()=>{current=Math.max(min,Math.min(max,current+(Math.floor(Math.random()*5)-2))); el.textContent=current;},1700);});
+  document.querySelectorAll('[data-rotate-group]').forEach((wrap)=>{ const items=[...wrap.querySelectorAll('[data-rotate-item]')]; let active=0; const paint=()=>items.forEach((item,i)=>item.style.display=i===active?'block':'none'); paint(); setInterval(()=>{active=(active+1)%items.length; paint();},2600);});
+  document.querySelectorAll('[data-progress-fill]').forEach((bar)=>{ const target=bar.getAttribute('data-progress-fill'); requestAnimationFrame(()=>{bar.style.width=target;});});
+});
+</script>
 
 </body></html>

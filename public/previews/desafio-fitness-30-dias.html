@@ -41,6 +41,26 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
     </style>
+
+<style>
+.reveal-left,.reveal-right,.reveal-up{opacity:0;transition:opacity .8s ease, transform .8s cubic-bezier(.2,.65,.2,1);will-change:transform,opacity}
+.reveal-left{transform:translateX(-48px)}
+.reveal-right{transform:translateX(48px)}
+.reveal-up{transform:translateY(36px)}
+.reveal-visible{opacity:1;transform:none}
+.float-soft{animation:floatSoft 4.5s ease-in-out infinite}
+.pulse-soft{animation:pulseSoft 2.2s ease-in-out infinite}
+.shimmer-cta{position:relative;overflow:hidden}
+.shimmer-cta::after{content:"";position:absolute;inset:0;transform:translateX(-120%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);animation:shimmerMove 3.2s linear infinite}
+.offer-marquee{white-space:nowrap;overflow:hidden;position:relative}
+.offer-marquee span{display:inline-block;padding-left:100%;animation:marqueeMove 16s linear infinite}
+.side-counter-card{backdrop-filter:blur(12px)}
+@keyframes shimmerMove{100%{transform:translateX(120%)}}
+@keyframes floatSoft{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes pulseSoft{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.04);opacity:.88}}
+@keyframes marqueeMove{100%{transform:translateX(-100%)}}
+</style>
+
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
 <!-- Navigation -->
@@ -69,7 +89,7 @@
 <img alt="Entrenamiento intenso" class="w-full h-full object-cover" data-alt="Atleta entrenando intensamente en un ambiente oscuro" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKPIfJJqcceiquIvtc8RyT66N8dVrMT73iaXSexhgyO9aUePWYDwxWOdvoTfqrJcyFw-8IlW-ufCM2Ksb5oAoS4yAUaTJZ2ScZMyM_hY5nHK63DL7FVx1gsYNTlxIbjf9_3FNmZjwuygEYrEaoF9_xuGBeniuCzsFO7Nu_wwt6W3T_b6P2pJ_lHE8nnfsCYmSGgKETooN4nyywQHLAqJRXCNrL-HShXkuEbIot6PodLxoIcpQxMf2uJJVB7tsub1aVTrGREf6-Vg"/>
 </div>
 <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-<div class="max-w-2xl">
+<div class="max-w-2xl reveal-left">
 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary mb-6">
 <span class="material-symbols-outlined text-sm">local_fire_department</span>
 <span class="text-xs font-bold uppercase tracking-wider">Nuevo programa 2024</span>
@@ -96,6 +116,24 @@
 </div>
 <span class="text-sm font-medium text-slate-400">+500 alumnos ya iniciaron</span>
 </div>
+
+<div class="mt-8 grid gap-4 sm:grid-cols-3 max-w-2xl">
+  <div class="reveal-left rounded-2xl glass-card px-5 py-4 text-left side-counter-card">
+    <p class="text-[11px] uppercase tracking-[0.24em] text-primary font-bold mb-2">Cupos de hoy</p>
+    <p class="text-3xl font-black" data-count-to="27"></p>
+    <p class="text-sm text-slate-400">lugares con seguimiento activo</p>
+  </div>
+  <div class="reveal-up rounded-2xl glass-card px-5 py-4 text-left side-counter-card">
+    <p class="text-[11px] uppercase tracking-[0.24em] text-primary font-bold mb-2">Cierre promo</p>
+    <p class="text-2xl font-black" data-countdown="4860"></p>
+    <p class="text-sm text-slate-400">bono nutrición + calendario</p>
+  </div>
+  <div class="reveal-right rounded-2xl glass-card px-5 py-4 text-left side-counter-card">
+    <p class="text-[11px] uppercase tracking-[0.24em] text-primary font-bold mb-2">Comenzaron hoy</p>
+    <p class="text-3xl font-black" data-live-range="14-39"></p>
+    <p class="text-sm text-slate-400">personas activando el reto</p>
+  </div>
+</div>
 </div>
 </div>
 </div>
@@ -108,7 +146,7 @@
 <div class="w-20 h-1 bg-primary mx-auto"></div>
 </div>
 <div class="grid md:grid-cols-2 gap-8">
-<div class="p-8 rounded-xl border border-white/5 bg-white/5 flex flex-col items-center text-center">
+<div class="p-8 rounded-xl border border-white/5 bg-white/5 flex flex-col items-center text-center reveal-left">
 <div class="w-16 h-16 rounded-full bg-red-500/20 text-red-500 flex items-center justify-center mb-6">
 <span class="material-symbols-outlined text-4xl">schedule</span>
 </div>
@@ -117,7 +155,7 @@
                         El trabajo, los estudios y la vida diaria te consumen. Ir al gimnasio implica 2 horas que no tienes. Nosotros te damos el resultado en 30 minutos.
                     </p>
 </div>
-<div class="p-8 rounded-xl border border-white/5 bg-white/5 flex flex-col items-center text-center">
+<div class="p-8 rounded-xl border border-white/5 bg-white/5 flex flex-col items-center text-center reveal-right">
 <div class="w-16 h-16 rounded-full bg-red-500/20 text-red-500 flex items-center justify-center mb-6">
 <span class="material-symbols-outlined text-4xl">chair</span>
 </div>
@@ -161,21 +199,21 @@
                         Por qué este es el <br/><span class="text-primary underline decoration-primary/30">último programa</span> que comprarás
                     </h2>
 <ul class="space-y-6">
-<li class="flex gap-4">
+<li class="flex gap-4 reveal-left">
 <span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg h-fit">bolt</span>
 <div>
 <h4 class="text-xl font-bold uppercase italic">Metodología HIIT</h4>
 <p class="text-slate-400">Entrenamientos de alta intensidad que queman grasa incluso horas después de terminar.</p>
 </div>
 </li>
-<li class="flex gap-4">
+<li class="flex gap-4 reveal-right">
 <span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg h-fit">home</span>
 <div>
 <h4 class="text-xl font-bold uppercase italic">Entrena donde sea</h4>
 <p class="text-slate-400">Tu sala, un parque o un hotel. Solo necesitas un par de metros cuadrados.</p>
 </div>
 </li>
-<li class="flex gap-4">
+<li class="flex gap-4 reveal-left">
 <span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg h-fit">verified_user</span>
 <div>
 <h4 class="text-xl font-bold uppercase italic">Sin lesiones</h4>
@@ -286,4 +324,24 @@
 <p class="text-slate-500 text-xs">© 2024 Desafío Fitness 30 Días. Todos los derechos reservados.</p>
 </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const io=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting){entry.target.classList.add('reveal-visible');io.unobserve(entry.target);}})},{threshold:.14});
+  document.querySelectorAll('.reveal-left,.reveal-right,.reveal-up').forEach(el=>io.observe(el));
+  document.querySelectorAll('[data-count-to]').forEach((el)=>{
+    const end=parseInt(el.getAttribute('data-count-to')||'0',10); const suffix=el.getAttribute('data-suffix')||''; const duration=parseInt(el.getAttribute('data-duration')||'1600',10); const start=performance.now();
+    const step=(now)=>{ const progress=Math.min((now-start)/duration,1); const value=Math.floor(end*progress); el.textContent=value.toLocaleString('es-AR')+suffix; if(progress<1) requestAnimationFrame(step);}; requestAnimationFrame(step);
+  });
+  document.querySelectorAll('[data-countdown]').forEach((el)=>{
+    let total=parseInt(el.getAttribute('data-countdown')||'900',10); const reset=parseInt(el.getAttribute('data-reset')||el.getAttribute('data-countdown')||'900',10);
+    const render=()=>{ const h=Math.floor(total/3600),m=Math.floor((total%3600)/60),s=total%60; el.textContent=[h,m,s].map(v=>String(v).padStart(2,'0')).join(':'); };
+    render(); setInterval(()=>{total=total<=1?reset:total-1; render();},1000);
+  });
+  document.querySelectorAll('[data-live-range]').forEach((el)=>{ const [min,max]=String(el.getAttribute('data-live-range')).split('-').map(Number); let current=Math.round((min+max)/2); el.textContent=current; setInterval(()=>{current=Math.max(min,Math.min(max,current+(Math.floor(Math.random()*5)-2))); el.textContent=current;},1700);});
+  document.querySelectorAll('[data-rotate-group]').forEach((wrap)=>{ const items=[...wrap.querySelectorAll('[data-rotate-item]')]; let active=0; const paint=()=>items.forEach((item,i)=>item.style.display=i===active?'block':'none'); paint(); setInterval(()=>{active=(active+1)%items.length; paint();},2600);});
+  document.querySelectorAll('[data-progress-fill]').forEach((bar)=>{ const target=bar.getAttribute('data-progress-fill'); requestAnimationFrame(()=>{bar.style.width=target;});});
+});
+</script>
+
 </body></html>

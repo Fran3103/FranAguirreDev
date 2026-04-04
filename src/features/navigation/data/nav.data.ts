@@ -24,11 +24,5 @@ export const navItems: NavItem[] = [
     href: "/recursos",
     type: "route",
     sectionId: "recursos",
-  },
-  {
-    label: "Contacto",
-    href: "/#contacto",
-    type: "anchor",
-    sectionId: "contacto",
-  },
+  }
 ];

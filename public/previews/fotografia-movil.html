@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html class="light" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -40,9 +41,26 @@
         .aspect-landscape { aspect-ratio: 16/9; }
         .letter-spacing-widest { letter-spacing: 0.2em; }
     </style>
+
+<style id="fad-enhancements">
+@keyframes fadFloat {0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes fadPulse {0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,255,255,.0)}50%{transform:scale(1.03);box-shadow:0 14px 30px -12px rgba(0,0,0,.18)}}
+@keyframes fadShimmer {0%{transform:translateX(-130%)}100%{transform:translateX(130%)}}
+@keyframes fadMarquee {0%{transform:translateX(0)}100%{transform:translateX(-33.33%)}}
+.reveal-on-scroll{opacity:0;transform:translateY(28px);transition:opacity .7s ease, transform .7s ease;will-change:transform,opacity}
+.reveal-on-scroll.is-visible{opacity:1;transform:translateY(0)}
+.fad-cta{position:relative;overflow:hidden}
+.fad-cta::after{content:"";position:absolute;inset:0;transform:translateX(-130%);background:linear-gradient(110deg,transparent 0%,rgba(255,255,255,.12) 45%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.12) 55%,transparent 100%);animation:fadShimmer 3.8s infinite}
+.fad-float{animation:fadFloat 4s ease-in-out infinite}
+.fad-pulse{animation:fadPulse 2.8s ease-in-out infinite}
+.fad-metric{backdrop-filter: blur(10px)}
+.fad-carousel-track{display:flex;width:300%;animation:fadMarquee 16s linear infinite}
+.fad-carousel-track:hover{animation-play-state:paused}
+.fad-chip{white-space:nowrap}
+</style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
-<header class="fixed top-0 w-full z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<header class="fixed top-0 w-full z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 reveal-on-scroll">
 <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-primary text-3xl">photo_camera</span>
@@ -52,7 +70,7 @@
 <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider" href="#galeria">Galería</a>
 <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider" href="#beneficios">Beneficios</a>
 <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider" href="#precio">Precio</a>
-<button class="bg-primary text-white px-6 py-2 rounded font-bold text-sm tracking-wide hover:bg-primary/90 transition-all uppercase">
+<button class="bg-primary text-white px-6 py-2 rounded font-bold text-sm tracking-wide hover:bg-primary/90 transition-all uppercase fad-cta">
                 Sacar fotos increíbles
             </button>
 </nav>
@@ -62,7 +80,7 @@
 </div>
 </header>
 <main class="pt-20">
-<section class="relative min-h-[90vh] flex items-center justify-center px-6 overflow-hidden">
+<section class="relative min-h-[90vh] flex items-center justify-center px-6 overflow-hidden reveal-on-scroll">
 <div class="max-w-7xl w-full grid md:grid-cols-2 gap-12 items-center">
 <div class="z-10 order-2 md:order-1">
 <p class="text-primary font-bold tracking-[0.3em] uppercase mb-4 text-sm">Disponible en Argentina</p>
@@ -79,7 +97,7 @@
                     </p>
 </div>
 <div class="flex flex-col sm:flex-row gap-4">
-<button class="bg-primary text-white h-14 px-8 rounded-lg font-bold text-lg hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-primary/20">
+<button class="bg-primary text-white h-14 px-8 rounded-lg font-bold text-lg hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-primary/20 fad-cta fad-pulse">
                         Sacar fotos increíbles por $11.500 ARS
                     </button>
 <button class="border border-slate-300 dark:border-slate-700 h-14 px-8 rounded-lg font-bold text-lg hover:bg-slate-50 dark:hover:bg-slate-900 transition-all">
@@ -88,16 +106,31 @@
 </div>
 </div>
 <div class="relative order-1 md:order-2">
-<div class="aspect-[4/5] bg-slate-200 dark:bg-slate-800 rounded-xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700">
+<div class="aspect-[4/5] bg-slate-200 dark:bg-slate-800 rounded-xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700 reveal-on-scroll">
 <img alt="Fotografía urbana profesional" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9aBGPnQffs2AkwUMQ6rIpbwujMD-iZ3WT4B_C6CzQvURGbVtIpUmjFe6T67P9r3zaifd96hYwGNm9Ctc2_Mha62RYlrsbJS3hXw9wAcv7mvZSvjvrORkgk4Z3ax8aTwH_0dbqFYy2vRMxA8d4FFCJ0yE0ycW7OPBJ6ByvE31CHdVl19P7bQ92xoR6ZNclbkY-EZl5mGJM_B_v3EJZM3kS5PneHhWfMeJRxJ08X85vCtDDb6flYR2xvrIldzIZkWfohTL3Ge2fwA"/>
 </div>
-<div class="absolute -bottom-6 -right-6 aspect-square w-32 md:w-48 bg-primary rounded-xl flex items-center justify-center text-white p-4 text-center rotate-6">
+<div class="absolute -bottom-6 -right-6 aspect-square w-32 md:w-48 bg-primary rounded-xl flex items-center justify-center text-white p-4 text-center rotate-6 fad-float reveal-on-scroll">
 <span class="text-sm font-bold uppercase tracking-widest">Edición Pro desde el celu</span>
 </div>
 </div>
 </div>
 </section>
-<section class="py-24 bg-white dark:bg-background-dark/50" id="galeria">
+<section class="px-6 py-8 md:px-20 lg:px-40 reveal-on-scroll">
+<div class="mx-auto max-w-7xl grid gap-4 md:grid-cols-3">
+<div class="reveal-on-scroll fad-metric rounded-2xl border border-primary/10 bg-white/80 dark:bg-slate-900/70 p-6 shadow-xl">
+<p class="text-3xl font-extrabold text-primary" data-fad-counter="1200" data-fad-suffix="+">1200+</p>
+<p class="mt-2 text-sm font-medium text-slate-500 dark:text-slate-400">alumnos</p>
+</div><div class="reveal-on-scroll fad-metric rounded-2xl border border-primary/10 bg-white/80 dark:bg-slate-900/70 p-6 shadow-xl">
+<p class="text-3xl font-extrabold text-primary" data-fad-counter="4.9/5" data-fad-suffix="">4.9/5</p>
+<p class="mt-2 text-sm font-medium text-slate-500 dark:text-slate-400">reseñas</p>
+</div><div class="reveal-on-scroll fad-metric rounded-2xl border border-primary/10 bg-white/80 dark:bg-slate-900/70 p-6 shadow-xl">
+<p class="text-3xl font-extrabold text-primary" data-fad-counter="100" data-fad-suffix="%">100%</p>
+<p class="mt-2 text-sm font-medium text-slate-500 dark:text-slate-400">desde el celu</p>
+</div>
+</div>
+</section>
+
+<section class="py-24 bg-white dark:bg-background-dark/50 reveal-on-scroll" id="galeria">
 <div class="max-w-7xl mx-auto px-6">
 <div class="mb-16 border-l-4 border-primary pl-6">
 <h2 class="text-4xl font-bold tracking-tight mb-2 uppercase">Resultados Reales</h2>
@@ -128,7 +161,7 @@
 </div>
 </div>
 </section>
-<section class="py-24 px-6 bg-background-light dark:bg-background-dark" id="beneficios">
+<section class="py-24 px-6 bg-background-light dark:bg-background-dark reveal-on-scroll" id="beneficios">
 <div class="max-w-7xl mx-auto">
 <div class="text-center mb-20">
 <h2 class="text-5xl font-black mb-6">¿Por qué este curso?</h2>
@@ -138,7 +171,7 @@
                 </p>
 </div>
 <div class="grid md:grid-cols-3 gap-8">
-<div class="group p-10 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-primary transition-all duration-300">
+<div class="group p-10 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-primary transition-all duration-300 reveal-on-scroll">
 <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
 <span class="material-symbols-outlined text-4xl">edit_note</span>
 </div>
@@ -147,7 +180,7 @@
                         Edición avanzada directamente desde el celu. Aprendé a usar apps profesionales para darle ese look de revista a tus tomas.
                     </p>
 </div>
-<div class="group p-10 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-primary transition-all duration-300">
+<div class="group p-10 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-primary transition-all duration-300 reveal-on-scroll">
 <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
 <span class="material-symbols-outlined text-4xl">savings</span>
 </div>
@@ -156,7 +189,7 @@
                         Calidad réflex sin comprar una cámara cara. Ahorrá miles de dólares aprovechando el sensor que ya tenés en el bolsillo.
                     </p>
 </div>
-<div class="group p-10 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-primary transition-all duration-300">
+<div class="group p-10 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-primary transition-all duration-300 reveal-on-scroll">
 <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
 <span class="material-symbols-outlined text-4xl">trending_up</span>
 </div>
@@ -168,8 +201,102 @@
 </div>
 </div>
 </section>
-<section class="py-24 px-6" id="precio">
+
+<section class="px-6 py-20 md:px-20 lg:px-40 reveal-on-scroll">
+<div class="mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-primary/10 bg-primary/5 p-6 md:p-10">
+<div class="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+<div>
+<p class="text-xs font-bold uppercase tracking-[0.22em] text-primary">Extras visuales</p>
+<h2 class="mt-3 text-3xl md:text-4xl font-black">Secciones con más dinamismo y conversión</h2>
+</div>
+<div class="rounded-full border border-primary/20 bg-white/70 dark:bg-slate-900/60 px-5 py-3 text-sm font-semibold" data-fad-live="" data-max="74" data-min="28" data-start="48">
+<span class="text-primary font-black" data-fad-live-value="">48</span> personas viendo esta oferta
+      </div>
+</div>
+<div class="overflow-hidden">
+<div class="fad-carousel-track">
+<article class="fad-chip w-full md:w-1/3 shrink-0 px-3">
+<div class="h-full rounded-3xl border border-primary/10 bg-white dark:bg-slate-900/70 p-8 shadow-xl reveal-on-scroll">
+<div class="mb-4 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">Demo visual</div>
+<h3 class="text-2xl font-bold">Antes y después</h3>
+<p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">Compará tomas comunes con resultados editados de forma pro.</p>
+</div>
+</article>
+<article class="fad-chip w-full md:w-1/3 shrink-0 px-3">
+<div class="h-full rounded-3xl border border-primary/10 bg-white dark:bg-slate-900/70 p-8 shadow-xl reveal-on-scroll">
+<div class="mb-4 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">Demo visual</div>
+<h3 class="text-2xl font-bold">Edición rápida</h3>
+<p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">Ajustes simples para levantar color, contraste y presencia visual.</p>
+</div>
+</article>
+<article class="fad-chip w-full md:w-1/3 shrink-0 px-3">
+<div class="h-full rounded-3xl border border-primary/10 bg-white dark:bg-slate-900/70 p-8 shadow-xl reveal-on-scroll">
+<div class="mb-4 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">Demo visual</div>
+<h3 class="text-2xl font-bold">Contenido que vende</h3>
+<p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">Fotos más fuertes para redes, productos y marca personal.</p>
+</div>
+</article>
+<article class="fad-chip w-full md:w-1/3 shrink-0 px-3">
+<div class="h-full rounded-3xl border border-primary/10 bg-white dark:bg-slate-900/70 p-8 shadow-xl reveal-on-scroll">
+<div class="mb-4 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">Demo visual</div>
+<h3 class="text-2xl font-bold">Antes y después</h3>
+<p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">Compará tomas comunes con resultados editados de forma pro.</p>
+</div>
+</article>
+<article class="fad-chip w-full md:w-1/3 shrink-0 px-3">
+<div class="h-full rounded-3xl border border-primary/10 bg-white dark:bg-slate-900/70 p-8 shadow-xl reveal-on-scroll">
+<div class="mb-4 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">Demo visual</div>
+<h3 class="text-2xl font-bold">Edición rápida</h3>
+<p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">Ajustes simples para levantar color, contraste y presencia visual.</p>
+</div>
+</article>
+<article class="fad-chip w-full md:w-1/3 shrink-0 px-3">
+<div class="h-full rounded-3xl border border-primary/10 bg-white dark:bg-slate-900/70 p-8 shadow-xl reveal-on-scroll">
+<div class="mb-4 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">Demo visual</div>
+<h3 class="text-2xl font-bold">Contenido que vende</h3>
+<p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">Fotos más fuertes para redes, productos y marca personal.</p>
+</div>
+</article>
+<article class="fad-chip w-full md:w-1/3 shrink-0 px-3">
+<div class="h-full rounded-3xl border border-primary/10 bg-white dark:bg-slate-900/70 p-8 shadow-xl reveal-on-scroll">
+<div class="mb-4 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">Demo visual</div>
+<h3 class="text-2xl font-bold">Antes y después</h3>
+<p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">Compará tomas comunes con resultados editados de forma pro.</p>
+</div>
+</article>
+<article class="fad-chip w-full md:w-1/3 shrink-0 px-3">
+<div class="h-full rounded-3xl border border-primary/10 bg-white dark:bg-slate-900/70 p-8 shadow-xl reveal-on-scroll">
+<div class="mb-4 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">Demo visual</div>
+<h3 class="text-2xl font-bold">Edición rápida</h3>
+<p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">Ajustes simples para levantar color, contraste y presencia visual.</p>
+</div>
+</article>
+<article class="fad-chip w-full md:w-1/3 shrink-0 px-3">
+<div class="h-full rounded-3xl border border-primary/10 bg-white dark:bg-slate-900/70 p-8 shadow-xl reveal-on-scroll">
+<div class="mb-4 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">Demo visual</div>
+<h3 class="text-2xl font-bold">Contenido que vende</h3>
+<p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">Fotos más fuertes para redes, productos y marca personal.</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 reveal-on-scroll" id="precio">
 <div class="max-w-5xl mx-auto bg-slate-900 dark:bg-primary rounded-[2rem] p-12 md:p-20 text-center text-white relative overflow-hidden">
+<div class="mb-8 grid gap-4 md:grid-cols-2">
+<div class="rounded-2xl bg-primary text-white p-6 shadow-xl reveal-on-scroll fad-pulse" data-fad-countdown="" data-start="900">
+<p class="text-xs font-bold uppercase tracking-[0.2em] text-white/80">Cupos creativos</p>
+<p class="mt-3 text-4xl font-black" data-fad-time="">15:00</p>
+<p class="mt-3 text-sm text-white/85">Sumate hoy y accedé al material completo con bonus de edición.</p>
+</div>
+<div class="rounded-2xl border border-primary/15 bg-white dark:bg-slate-900/70 p-6 shadow-xl reveal-on-scroll" data-fad-live="" data-max="74" data-min="28" data-start="48">
+<p class="text-xs font-bold uppercase tracking-[0.2em] text-primary">Actividad en tiempo real</p>
+<p class="mt-3 text-4xl font-black"><span data-fad-live-value="">48</span></p>
+<p class="mt-3 text-sm text-slate-600 dark:text-slate-400">personas están mirando esta propuesta ahora</p>
+</div>
+</div>
+
 <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
 <div class="absolute bottom-0 left-0 w-64 h-64 bg-primary/30 rounded-full -ml-32 -mb-32 blur-3xl"></div>
 <h2 class="text-4xl md:text-6xl font-black mb-8 relative z-10">Llevá tus fotos al <br/>siguiente nivel</h2>
@@ -201,4 +328,54 @@
 </div>
 </footer>
 
+<script id="fad-enhancements-script">
+(function(){
+  const revealEls = document.querySelectorAll('.reveal-on-scroll');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add('is-visible'); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el=>io.observe(el));
+
+  document.querySelectorAll('[data-fad-countdown]').forEach((box)=>{
+    let total = parseInt(box.getAttribute('data-start') || '900', 10);
+    const out = box.querySelector('[data-fad-time]');
+    const tick = ()=>{
+      const minutes = String(Math.floor(total / 60)).padStart(2, '0');
+      const seconds = String(total % 60).padStart(2, '0');
+      if (out) out.textContent = `${minutes}:${seconds}`;
+      total = total <= 1 ? parseInt(box.getAttribute('data-start') || '900', 10) : total - 1;
+    };
+    tick();
+    setInterval(tick, 1000);
+  });
+
+  document.querySelectorAll('[data-fad-live]').forEach((box)=>{
+    const out = box.querySelector('[data-fad-live-value]');
+    let value = parseInt(box.getAttribute('data-start') || '42', 10);
+    const min = parseInt(box.getAttribute('data-min') || '28', 10);
+    const max = parseInt(box.getAttribute('data-max') || '68', 10);
+    const tick = ()=>{
+      value += Math.floor(Math.random() * 5) - 2;
+      value = Math.max(min, Math.min(max, value));
+      if (out) out.textContent = String(value);
+    };
+    if (out) out.textContent = String(value);
+    setInterval(tick, 1800);
+  });
+
+  document.querySelectorAll('[data-fad-counter]').forEach((el)=>{
+    const target = parseInt(el.getAttribute('data-fad-counter') || '0', 10);
+    const suffix = el.getAttribute('data-fad-suffix') || '';
+    let current = 0;
+    const step = Math.max(1, Math.floor(target / 50));
+    const run = ()=>{
+      current += step;
+      if(current >= target){ current = target; }
+      el.textContent = String(current) + suffix;
+      if(current < target) requestAnimationFrame(run);
+    };
+    run();
+  });
+})();
+</script>
 </body></html>

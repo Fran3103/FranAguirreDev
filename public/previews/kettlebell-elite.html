@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html class="dark" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -46,7 +47,24 @@
             color: transparent;
         }
     </style>
-</head>
+
+<style id="dynamic-enhancements">
+  @keyframes pulse-soft {0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,255,255,.0)}50%{transform:scale(1.03);box-shadow:0 0 0 10px rgba(255,255,255,0)}}
+  @keyframes shimmer-x {0%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+  @keyframes float-soft {0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+  .reveal-left,.reveal-right,.reveal-up{opacity:0;transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1);will-change:transform,opacity}
+  .reveal-left{transform:translateX(-40px)}
+  .reveal-right{transform:translateX(40px)}
+  .reveal-up{transform:translateY(28px)}
+  .reveal-visible{opacity:1 !important;transform:none !important}
+  .shimmer-wrap{position:relative;overflow:hidden}
+  .shimmer-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 0%,rgba(255,255,255,.08) 45%,rgba(255,255,255,.28) 50%,transparent 55%);transform:translateX(-120%);animation:shimmer-x 3.5s linear infinite;pointer-events:none}
+  .pulse-soft{animation:pulse-soft 2.5s ease-in-out infinite}
+  .float-soft{animation:float-soft 4s ease-in-out infinite}
+  .counter-card{backdrop-filter:blur(12px)}
+  .mini-dots span{display:inline-block;height:.45rem;border-radius:9999px;transition:all .35s ease}
+  .mini-dots span.active{width:2rem;opacity:1}.mini-dots span:not(.active){width:.45rem;opacity:.35}
+</style></head>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-black">
 <header class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md">
 <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -59,18 +77,18 @@
 <a class="text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors" href="#beneficios">Beneficios</a>
 <a class="text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors" href="#precio">Precio</a>
 </nav>
-<button class="bg-primary text-black px-6 py-2.5 font-bold uppercase tracking-tighter text-sm hover:translate-y-[-2px] active:translate-y-0 transition-transform">
+<button class="bg-primary text-black px-6 py-2.5 font-bold uppercase tracking-tighter text-sm hover:translate-y-[-2px] active:translate-y-0 transition-transform reveal-left shimmer-wrap">
             Dominar el acero
         </button>
 </div>
 </header>
 <main>
 <section class="relative min-h-[90vh] flex items-center overflow-hidden">
-<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 z-0 reveal-up">
 <div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent z-10"></div>
-<img alt="Atleta entrenando con pesa rusa" class="w-full h-full object-cover grayscale-img opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr1B5UZjZxg8dTScx1J4879IOChOtJwVGRd97J2PQhLxlbQ4Dwi1hJ-H1lDfkfZB0cM1WfXwNc7ujoUA8Pe945vTAy6P49m6gkJzNYcZorSHjglZHxofrmRB6XVnnqmbD303t7_-9P9ZAx14AghG7_Ypko0YDoTiaYsdLQbkcuzkEtZFfJh9RXbJdCmU1iKUfpFmLvA9IKZBvzGD5CsbgT_27z5AugDCeT71XoJtpnpjrcCl-VugjI5Dyj_GaaJMHeXKAoFEBi6A"/>
+<img alt="Atleta entrenando con pesa rusa" class="w-full h-full object-cover grayscale-img opacity-50 reveal-left" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr1B5UZjZxg8dTScx1J4879IOChOtJwVGRd97J2PQhLxlbQ4Dwi1hJ-H1lDfkfZB0cM1WfXwNc7ujoUA8Pe945vTAy6P49m6gkJzNYcZorSHjglZHxofrmRB6XVnnqmbD303t7_-9P9ZAx14AghG7_Ypko0YDoTiaYsdLQbkcuzkEtZFfJh9RXbJdCmU1iKUfpFmLvA9IKZBvzGD5CsbgT_27z5AugDCeT71XoJtpnpjrcCl-VugjI5Dyj_GaaJMHeXKAoFEBi6A"/>
 </div>
-<div class="container mx-auto px-6 relative z-20">
+<div class="container mx-auto px-6 relative z-20 reveal-up">
 <div class="max-w-3xl">
 <span class="inline-block bg-primary text-black px-3 py-1 text-xs font-black uppercase tracking-[0.2em] mb-6">Disponible en Argentina</span>
 <h1 class="text-7xl md:text-9xl font-black uppercase leading-[0.85] tracking-tighter mb-8">
@@ -80,67 +98,77 @@
                     Olvidate de los <span class="text-white font-bold">gimnasios llenos y rutinas que no funcionan</span>. Entrená con máxima eficiencia desde tu casa.
                 </p>
 <div class="flex flex-col sm:flex-row gap-4">
-<button class="bg-primary text-black px-10 py-5 text-xl font-black uppercase tracking-tighter hover:bg-white transition-colors flex items-center justify-center gap-3">
+<button class="bg-primary text-black px-10 py-5 text-xl font-black uppercase tracking-tighter hover:bg-white transition-colors flex items-center justify-center gap-3 reveal-right shimmer-wrap pulse-soft">
                         Dominar el acero por $15.500 ARS
                         <span class="material-symbols-outlined">trending_flat</span>
 </button>
 </div>
+<div class="mt-6 flex flex-wrap gap-4 reveal-right">
+<div class="counter-card border border-primary/30 bg-black/35 px-5 py-4 rounded-xl min-w-[180px] float-soft">
+<p class="text-[11px] uppercase tracking-[0.22em] text-primary font-black mb-1">Oferta limitada</p>
+<div class="text-3xl font-black text-white" id="kettlebell-countdown">14:59</div>
+<p class="text-xs text-slate-400 uppercase tracking-widest mt-1">cierra hoy</p>
 </div>
+<div class="counter-card border border-white/10 bg-neutral-dark/70 px-5 py-4 rounded-xl min-w-[180px]">
+<p class="text-[11px] uppercase tracking-[0.22em] text-primary font-black mb-1">Alumnos activos</p>
+<div class="text-3xl font-black text-primary" data-counter-suffix="+" data-counter-target="1280">0</div>
+<p class="text-xs text-slate-400 uppercase tracking-widest mt-1">entrenando ahora</p>
+</div></div></div>
 </div>
-<div class="absolute bottom-10 right-10 hidden lg:block">
+<div class="absolute bottom-10 right-10 hidden lg:block reveal-up">
 <div class="rotate-90 origin-right text-6xl font-black text-stroke uppercase tracking-widest opacity-20 select-none">
                 BUENOS AIRES
             </div>
 </div>
 </section>
 <section class="bg-neutral-dark border-y border-white/5" id="dolor">
-<div class="container mx-auto grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
-<div class="p-10 flex flex-col gap-2 group">
+<div class="container mx-auto grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10 reveal-up">
+<div class="p-10 flex flex-col gap-2 group reveal-left">
 <span class="text-primary font-black text-4xl leading-none uppercase">20 MINUTOS</span>
 <span class="text-slate-500 uppercase tracking-widest text-sm font-bold">Entrená en tu casa</span>
 </div>
-<div class="p-10 flex flex-col gap-2">
+<div class="p-10 flex flex-col gap-2 reveal-right">
 <span class="text-primary font-black text-4xl leading-none uppercase">CHAU GIMNASIOS</span>
 <span class="text-slate-500 uppercase tracking-widest text-sm font-bold">Sin esperas ni amontonamientos</span>
 </div>
-<div class="p-10 flex flex-col gap-2">
+<div class="p-10 flex flex-col gap-2 reveal-left">
 <span class="text-primary font-black text-4xl leading-none uppercase">RESULTADOS</span>
 <span class="text-slate-500 uppercase tracking-widest text-sm font-bold">Rutinas que sí funcionan</span>
 </div>
 </div>
 </section>
 <section class="py-24 container mx-auto px-6" id="beneficios">
-<div class="flex flex-col md:flex-row gap-16 items-end mb-20">
+<div class="flex flex-col md:flex-row gap-16 items-end mb-20 reveal-up">
 <div class="flex-1">
 <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-6 industrial-border pl-6">Fuerza Real en Casa</h2>
-<p class="text-xl text-slate-400 max-w-2xl font-light italic">"Más barato que un mes de gimnasio y para toda la vida".</p>
+<p class="text-xl text-slate-400 max-w-2xl font-light italic">"Más barato que un mes de gimnasio y para toda la vida".</p><div class="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-primary reveal-left"><span class="material-symbols-outlined text-sm">timer</span>Rutinas nuevas destraban al hacer scroll</div>
 </div>
 <div class="hidden md:block pb-2">
 <div class="text-primary font-black text-8xl opacity-10 leading-none italic">ARS //</div>
 </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="group relative overflow-hidden bg-neutral-dark border border-white/5 hover:border-primary/50 transition-colors">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 reveal-up">
+<div class="group relative overflow-hidden bg-neutral-dark border border-white/5 hover:border-primary/50 transition-colors reveal-right">
 <div class="aspect-[4/5] overflow-hidden">
-<img alt="Rutinas de Poder" class="w-full h-full object-cover grayscale-img group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKQ9G3CSGsndmoQb1KBcNRhhu5f-tUmrHNKbruDueFpXgQKIoj6lxgKDWibZ9ch5anekGkW1gi8gUv-IgcvRei-1EbMEDQ9wbo6t_e7Scb9zmOmzmLmlCo72O8gLgAWoJrcrlQ7ZH2Cln3lA3tIFbIpvl2aD2Q-JnjYQrkPctkELXIX0CaYPwP9uyOO8joVihwkKNnfWkC1S2A6ctfnwF5qU4nDt7Ixfsx6WoyO-7yf7m3FsS6lIMbXDIuowai8_Ell0w-t-qJMw"/>
+<img alt="Rutinas de Poder" class="w-full h-full object-cover grayscale-img group-hover:scale-105 transition-transform duration-500 reveal-right" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKQ9G3CSGsndmoQb1KBcNRhhu5f-tUmrHNKbruDueFpXgQKIoj6lxgKDWibZ9ch5anekGkW1gi8gUv-IgcvRei-1EbMEDQ9wbo6t_e7Scb9zmOmzmLmlCo72O8gLgAWoJrcrlQ7ZH2Cln3lA3tIFbIpvl2aD2Q-JnjYQrkPctkELXIX0CaYPwP9uyOO8joVihwkKNnfWkC1S2A6ctfnwF5qU4nDt7Ixfsx6WoyO-7yf7m3FsS6lIMbXDIuowai8_Ell0w-t-qJMw"/>
 </div>
 <div class="p-8">
 <h3 class="text-2xl font-black uppercase mb-4 tracking-tight">Efectividad Total</h3>
 <p class="text-slate-400 font-light mb-6">Basta de rutinas genéricas que no dan resultados. Programas diseñados para la máxima quema calórica.</p>
 </div>
 </div>
-<div class="group relative overflow-hidden bg-neutral-dark border border-white/5 hover:border-primary/50 transition-colors">
+<div class="group relative overflow-hidden bg-neutral-dark border border-white/5 hover:border-primary/50 transition-colors reveal-left">
 <div class="aspect-[4/5] overflow-hidden">
-<img alt="Técnica Maestra" class="w-full h-full object-cover grayscale-img group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPvIcyFH5Ez7bz8x9UGSPgwg0GaPh04wvpwMQsr_63sBuRcH406r02ydRowNF8CMGEsFBdalj1oHJcxZgwAZhJLArj2aKlVYGi28hI7382iMddqB4ifVtzOl5hRHYcyROi8Q1vYh2xkDjWgTXCV76IugiwBB8hBT_N6IlvvBiQCJb1-n6WDDSaoGRUd_wrL-6i4nP7oCsLtqnUd-YIEdBuaolxUXP8gGm8NfeW2zSAv2I3A6MjSClRmsTDyc_fPL4IsiktZGT6IA"/>
+<img alt="Técnica Maestra" class="w-full h-full object-cover grayscale-img group-hover:scale-105 transition-transform duration-500 reveal-left" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPvIcyFH5Ez7bz8x9UGSPgwg0GaPh04wvpwMQsr_63sBuRcH406r02ydRowNF8CMGEsFBdalj1oHJcxZgwAZhJLArj2aKlVYGi28hI7382iMddqB4ifVtzOl5hRHYcyROi8Q1vYh2xkDjWgTXCV76IugiwBB8hBT_N6IlvvBiQCJb1-n6WDDSaoGRUd_wrL-6i4nP7oCsLtqnUd-YIEdBuaolxUXP8gGm8NfeW2zSAv2I3A6MjSClRmsTDyc_fPL4IsiktZGT6IA"/>
 </div>
 <div class="p-8">
 <h3 class="text-2xl font-black uppercase mb-4 tracking-tight">Libertad de Horarios</h3>
 <p class="text-slate-400 font-light mb-6">Entrená en 20 minutos sin salir de tu living. Optimizá tu tiempo al máximo.</p>
 </div>
 </div>
-<div class="group relative overflow-hidden bg-neutral-dark border border-white/5 hover:border-primary/50 transition-colors">
+<div class="group relative overflow-hidden bg-neutral-dark border border-white/5 hover:border-primary/50 transition-colors reveal-right">
 <div class="aspect-[4/5] overflow-hidden">
-<img alt="Quema de Grasa" class="w-full h-full object-cover grayscale-img group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB287YVHIsA4d0vPvgEBnmpklsbvlY2Ue713MEEVilE2vNuk-caByenNkRQlMuoucPbUgdGS_RdDmt_mpkGNLHSdj2FRjZtmUdm7uIfj95m-R_cjjfqRE3-WiulWekxdf1k0cjFPE8EVQHBYdamMYdFDW3SM-8caYU19TJG9ay2RZiDvN3hWhVcTls2AG9aj8_reZQ5aQnnfqM_YOyJ2TFJKoI9rzwVugOSv8zLnf500r8sOlzkShHX1ONphbS5-nH_YYUM2R6gVg"/>
+<img alt="Quema de Grasa" class="w-full h-full object-cover grayscale-img group-hover:scale-105 transition-transform duration-500 reveal-right" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB287YVHIsA4d0vPvgEBnmpklsbvlY2Ue713MEEVilE2vNuk-caByenNkRQlMuoucPbUgdGS_RdDmt_mpkGNLHSdj2FRjZtmUdm7uIfj95m-R_cjjfqRE3-WiulWekxdf1k0cjFPE8EVQHBYdamMYdFDW3SM-8caYU19TJG9ay2RZiDvN3hWhVcTls2AG9aj8_reZQ5aQnnfqM_YOyJ2TFJKoI9rzwVugOSv8zLnf500r8sOlzkShHX1ONphbS5-nH_YYUM2R6gVg"/>
 </div>
 <div class="p-8">
 <h3 class="text-2xl font-black uppercase mb-4 tracking-tight">Inversión Inteligente</h3>
@@ -150,12 +178,12 @@
 </div>
 </section>
 <section class="py-24 bg-primary text-black" id="precio">
-<div class="container mx-auto px-6 text-center">
+<div class="container mx-auto px-6 text-center reveal-up">
 <h2 class="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-8 italic">Precio Lanzamiento</h2>
 <div class="flex flex-col items-center">
 <div class="text-[10rem] md:text-[14rem] font-black leading-none tracking-tighter mb-4">$15.500</div>
 <p class="text-2xl font-bold uppercase tracking-widest mb-10 border-y-4 border-black inline-block px-8 py-2">Más barato que un mes de gimnasio</p>
-<button class="bg-black text-white px-12 py-6 text-2xl font-black uppercase tracking-tight hover:scale-105 transition-transform flex items-center gap-4">
+<button class="bg-black text-white px-12 py-6 text-2xl font-black uppercase tracking-tight hover:scale-105 transition-transform flex items-center gap-4 reveal-left shimmer-wrap pulse-soft">
                     Dominar el acero
                     <span class="material-symbols-outlined text-primary text-3xl">shopping_cart</span>
 </button>
@@ -164,14 +192,14 @@
 </div>
 </section>
 <section class="py-24 container mx-auto px-6">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div class="relative">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center reveal-up">
+<div class="relative reveal-left">
 <div class="absolute -top-10 -left-10 w-40 h-40 bg-primary/20 -z-10"></div>
 <div class="border-8 border-white/5 p-4 bg-accent-dark">
-<img alt="Ebook Preview" class="w-full h-auto grayscale-img shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeHjiJuhWvHcIvcOTDezy3xYJE08Gf-VUYW3SF2FOE3IpBcezS2pqUa7PKwFuJ9MyiELhliTRu6m1D5k_8rJ0dlhqpkCBzhO2NQ2cQIzhJlUiRPMQr6Sais5JaJ_OQH9R8MCf4eNoR5exwqxVzeIKSRDr6VXIva_Yn1Qbtqt6cOAeBr4hVHSMihSYTJ1wxtF12MOFyy47dwx2xibeZ6dGK1Pxusni7unXf0LEex5hXiKJIsmai6IomaqPCWwaqOwWPEvzjst6QSA"/>
+<img alt="Ebook Preview" class="w-full h-auto grayscale-img shadow-2xl reveal-left" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeHjiJuhWvHcIvcOTDezy3xYJE08Gf-VUYW3SF2FOE3IpBcezS2pqUa7PKwFuJ9MyiELhliTRu6m1D5k_8rJ0dlhqpkCBzhO2NQ2cQIzhJlUiRPMQr6Sais5JaJ_OQH9R8MCf4eNoR5exwqxVzeIKSRDr6VXIva_Yn1Qbtqt6cOAeBr4hVHSMihSYTJ1wxtF12MOFyy47dwx2xibeZ6dGK1Pxusni7unXf0LEex5hXiKJIsmai6IomaqPCWwaqOwWPEvzjst6QSA"/>
 </div>
 </div>
-<div>
+<div class="reveal-right">
 <h2 class="text-5xl font-black uppercase tracking-tighter mb-10 industrial-border pl-6">Tu Arsenal de Entrenamiento</h2>
 <ul class="space-y-6">
 <li class="flex items-start gap-4">
@@ -200,21 +228,21 @@
 </div>
 </section>
 <section class="py-32 relative overflow-hidden bg-background-dark text-center">
-<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute inset-0 opacity-10 pointer-events-none reveal-up">
 <div class="grid grid-cols-12 h-full uppercase font-black text-8xl leading-none italic gap-4">
-<div class="text-stroke">POWER</div>
-<div class="text-stroke">FORCE</div>
-<div class="text-stroke">BUENOS AIRES</div>
-<div class="text-stroke">METAL</div>
-<div class="text-stroke">POWER</div>
-<div class="text-stroke">FORCE</div>
-<div class="text-stroke">ARGENTINA</div>
-<div class="text-stroke">METAL</div>
+<div class="text-stroke reveal-left">POWER</div>
+<div class="text-stroke reveal-right">FORCE</div>
+<div class="text-stroke reveal-left">BUENOS AIRES</div>
+<div class="text-stroke reveal-right">METAL</div>
+<div class="text-stroke reveal-left">POWER</div>
+<div class="text-stroke reveal-right">FORCE</div>
+<div class="text-stroke reveal-left">ARGENTINA</div>
+<div class="text-stroke reveal-right">METAL</div>
 </div>
 </div>
-<div class="container mx-auto px-6 relative z-10">
+<div class="container mx-auto px-6 relative z-10 reveal-up">
 <h2 class="text-6xl md:text-8xl font-black uppercase tracking-tighter mb-10 leading-tight">¿Estás Listo para <br/><span class="text-primary italic">Dominar el Acero?</span></h2>
-<button class="bg-primary text-black px-16 py-8 text-3xl font-black uppercase tracking-tighter hover:bg-white transition-all transform hover:scale-105 active:scale-95 shadow-[0_0_50px_rgba(249,246,31,0.2)]">
+<button class="bg-primary text-black px-16 py-8 text-3xl font-black uppercase tracking-tighter hover:bg-white transition-all transform hover:scale-105 active:scale-95 shadow-[0_0_50px_rgba(249,246,31,0.2)] reveal-right shimmer-wrap">
                 Empezar por $15.500 ARS
             </button>
 </div>
@@ -223,7 +251,7 @@
 <footer class="bg-background-dark border-t border-white/10 py-16">
 <div class="container mx-auto px-6">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-<div class="col-span-1 md:col-span-2">
+<div class="col-span-1 md:col-span-2 reveal-left">
 <div class="flex items-center gap-3 mb-6">
 <span class="material-symbols-outlined text-primary text-4xl">fitness_center</span>
 <span class="text-2xl font-bold tracking-tighter uppercase italic">Kettlebell Elite ARS</span>
@@ -232,15 +260,15 @@
                     La guía definitiva para entrenar en Argentina. Olvidate de los gimnasios llenos, dominá el acero en tu propia casa.
                 </p>
 <div class="flex gap-4">
-<a class="w-10 h-10 flex items-center justify-center border border-white/10 hover:bg-primary hover:text-black transition-colors" href="#">
+<a class="w-10 h-10 flex items-center justify-center border border-white/10 hover:bg-primary hover:text-black transition-colors reveal-left shimmer-wrap" href="#">
 <span class="material-symbols-outlined text-xl">share</span>
 </a>
-<a class="w-10 h-10 flex items-center justify-center border border-white/10 hover:bg-primary hover:text-black transition-colors" href="#">
+<a class="w-10 h-10 flex items-center justify-center border border-white/10 hover:bg-primary hover:text-black transition-colors reveal-right shimmer-wrap" href="#">
 <span class="material-symbols-outlined text-xl">video_library</span>
 </a>
 </div>
 </div>
-<div>
+<div class="reveal-right">
 <h4 class="font-bold uppercase tracking-widest text-primary mb-6">Navegación</h4>
 <ul class="space-y-4 text-slate-500 uppercase text-sm font-bold">
 <li><a class="hover:text-white transition-colors" href="#">Inicio</a></li>
@@ -248,7 +276,7 @@
 <li><a class="hover:text-white transition-colors" href="#">Resultados</a></li>
 </ul>
 </div>
-<div>
+<div class="reveal-left">
 <h4 class="font-bold uppercase tracking-widest text-primary mb-6">Atención</h4>
 <ul class="space-y-4 text-slate-500 uppercase text-sm font-bold">
 <li><a class="hover:text-white transition-colors" href="#">Soporte</a></li>
@@ -263,5 +291,38 @@
 </div>
 </div>
 </footer>
+<script>(function(){let total=14*60+59;const el=document.getElementById("kettlebell-countdown");setInterval(()=>{total=total<=0?14*60+59:total-1;const m=String(Math.floor(total/60)).padStart(2,'0');const s=String(total%60).padStart(2,'0');if(el)el.textContent=`${m}:${s}`;},1000);})();</script>
+<script id="dynamic-enhancements-script">
+(() => {
+  const revealEls = document.querySelectorAll('.reveal-left, .reveal-right, .reveal-up');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.14 });
+  revealEls.forEach((el, index) => {
+    el.style.transitionDelay = `${Math.min(index * 70, 320)}ms`;
+    io.observe(el);
+  });
 
-</body></html>
+  document.querySelectorAll('[data-counter-target]').forEach((el) => {
+    const target = Number(el.dataset.counterTarget || 0);
+    const suffix = el.dataset.counterSuffix || '';
+    const duration = Number(el.dataset.counterDuration || 1400);
+    let start = 0;
+    const step = Math.max(1, Math.ceil(target / (duration / 16)));
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= target) {
+        el.textContent = `${target}${suffix}`;
+        clearInterval(timer);
+      } else {
+        el.textContent = `${start}${suffix}`;
+      }
+    }, 16);
+  });
+})();
+</script></body></html>

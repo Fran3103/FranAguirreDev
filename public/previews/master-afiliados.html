@@ -26,6 +26,23 @@
             },
         }
     </script>
+
+<style id="fad-enhancements">
+@keyframes fadFloat {0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes fadPulse {0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,255,255,.0)}50%{transform:scale(1.03);box-shadow:0 14px 30px -12px rgba(0,0,0,.18)}}
+@keyframes fadShimmer {0%{transform:translateX(-130%)}100%{transform:translateX(130%)}}
+@keyframes fadMarquee {0%{transform:translateX(0)}100%{transform:translateX(-33.33%)}}
+.reveal-on-scroll{opacity:0;transform:translateY(28px);transition:opacity .7s ease, transform .7s ease;will-change:transform,opacity}
+.reveal-on-scroll.is-visible{opacity:1;transform:translateY(0)}
+.fad-cta{position:relative;overflow:hidden}
+.fad-cta::after{content:"";position:absolute;inset:0;transform:translateX(-130%);background:linear-gradient(110deg,transparent 0%,rgba(255,255,255,.12) 45%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.12) 55%,transparent 100%);animation:fadShimmer 3.8s infinite}
+.fad-float{animation:fadFloat 4s ease-in-out infinite}
+.fad-pulse{animation:fadPulse 2.8s ease-in-out infinite}
+.fad-metric{backdrop-filter: blur(10px)}
+.fad-carousel-track{display:flex;width:300%;animation:fadMarquee 16s linear infinite}
+.fad-carousel-track:hover{animation-play-state:paused}
+.fad-chip{white-space:nowrap}
+</style>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
 <!-- Sticky Header -->
@@ -37,13 +54,13 @@
 </div>
 <span class="text-xl font-extrabold tracking-tight">MASTER<span class="text-primary">AFILIADOS</span></span>
 </div>
-<a class="hidden md:block bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full font-bold transition-all shadow-lg shadow-primary/25" href="#pricing">
+<a class="hidden md:block bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full font-bold transition-all shadow-lg shadow-primary/25 fad-cta fad-pulse" href="#pricing">
                 Asegurar mi lugar
             </a>
 </div>
 </nav>
 <!-- Hero Section -->
-<header class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+<header class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden reveal-on-scroll">
 <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
 <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px]"></div>
 <div class="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px]"></div>
@@ -59,7 +76,7 @@
                 Domina el Marketing de Afiliados y construye un negocio digital escalable mientras otros siguen atrapados en la inflación.
             </p>
 <div class="flex flex-col md:flex-row items-center justify-center gap-6">
-<a class="w-full md:w-auto bg-primary hover:bg-primary/90 text-white px-10 py-5 rounded-full text-lg font-bold transition-all shadow-xl shadow-primary/30 flex items-center justify-center gap-3" href="#pricing">
+<a class="w-full md:w-auto bg-primary hover:bg-primary/90 text-white px-10 py-5 rounded-full text-lg font-bold transition-all shadow-xl shadow-primary/30 flex items-center justify-center gap-3 fad-cta fad-pulse" href="#pricing">
                     ASEGURAR MI LUGAR <span class="material-icons">rocket_launch</span>
 </a>
 <div class="flex items-center gap-4 text-sm font-medium">
@@ -73,21 +90,36 @@
 </div>
 </div>
 </header>
+<section class="px-6 py-8 md:px-20 lg:px-40 reveal-on-scroll">
+<div class="mx-auto max-w-7xl grid gap-4 md:grid-cols-3">
+<div class="reveal-on-scroll fad-metric rounded-2xl border border-primary/10 bg-white/80 dark:bg-slate-900/70 p-6 shadow-xl">
+<p class="text-3xl font-extrabold text-primary" data-fad-counter="1200" data-fad-suffix="+">1200+</p>
+<p class="mt-2 text-sm font-medium text-slate-500 dark:text-slate-400">inscritos</p>
+</div><div class="reveal-on-scroll fad-metric rounded-2xl border border-primary/10 bg-white/80 dark:bg-slate-900/70 p-6 shadow-xl">
+<p class="text-3xl font-extrabold text-primary">USD</p>
+<p class="mt-2 text-sm font-medium text-slate-500 dark:text-slate-400">comisiones</p>
+</div><div class="reveal-on-scroll fad-metric rounded-2xl border border-primary/10 bg-white/80 dark:bg-slate-900/70 p-6 shadow-xl">
+<p class="text-3xl font-extrabold text-primary" data-fad-counter="100" data-fad-suffix="%">100%</p>
+<p class="mt-2 text-sm font-medium text-slate-500 dark:text-slate-400">digital</p>
+</div>
+</div>
+</section>
+
 <!-- Pain Points -->
-<section class="py-24 bg-primary/5">
+<section class="py-24 bg-primary/5 reveal-on-scroll">
 <div class="max-w-7xl mx-auto px-6">
 <div class="grid md:grid-cols-2 gap-12 items-center">
 <div>
 <h2 class="text-4xl font-bold mb-8">¿Sientes que el esfuerzo <span class="text-primary">nunca es suficiente?</span></h2>
 <div class="space-y-6">
-<div class="flex gap-4 p-6 bg-background-dark border border-primary/10 rounded-xl">
+<div class="flex gap-4 p-6 bg-background-dark border border-primary/10 rounded-xl reveal-on-scroll">
 <span class="material-icons text-primary text-3xl">money_off</span>
 <div>
 <h3 class="font-bold text-xl mb-2">Sueldo que no alcanza</h3>
 <p class="text-slate-400 text-sm md:text-base leading-relaxed">Trabajas más horas cada día, pero la inflación devora tus ahorros antes de fin de mes. Estás cansado de sobrevivir en vez de vivir.</p>
 </div>
 </div>
-<div class="flex gap-4 p-6 bg-background-dark border border-primary/10 rounded-xl">
+<div class="flex gap-4 p-6 bg-background-dark border border-primary/10 rounded-xl reveal-on-scroll">
 <span class="material-icons text-primary text-3xl">schedule</span>
 <div>
 <h3 class="font-bold text-xl mb-2">Falta de tiempo real</h3>
@@ -98,7 +130,7 @@
 </div>
 <div class="relative">
 <img class="rounded-lg shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" data-alt="Stressed person looking at bills on a desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZkKztKADzRPDpiEoK0FsdSdPfu4JGa_E-9ENcn5fC6A2SRdcYDS6upIm-3a3d2Li6eSZr1APvp2XTvLWGZF0Bicm91UJTnSHh0Y-CafNOses0kAYLIJoMhSn3RiwLwZGr3K7wo_ZfJK3BmEyIDBUTQUXJlnu-otRV4Dn9cW_jKwgjO_gFvQ62zu2CDuNw0T-3UMSYxDcmH4FzO8730-ZNu8Gd21LY7BUmO5GO7uUo5cF0tYpd4hwiID4FkyJ8NVv7COMmHE1m9w"/>
-<div class="absolute -bottom-6 -left-6 bg-primary p-6 rounded-xl shadow-xl max-w-[200px]">
+<div class="absolute -bottom-6 -left-6 bg-primary p-6 rounded-xl shadow-xl max-w-[200px] fad-float reveal-on-scroll">
 <p class="text-white font-bold italic">"Esto termina hoy mismo."</p>
 </div>
 </div>
@@ -106,7 +138,7 @@
 </div>
 </section>
 <!-- Benefits -->
-<section class="py-24">
+<section class="py-24 reveal-on-scroll">
 <div class="max-w-7xl mx-auto px-6">
 <div class="text-center mb-16">
 <h2 class="text-4xl md:text-5xl font-extrabold mb-4">¿Por qué Marketing de Afiliados?</h2>
@@ -114,7 +146,7 @@
 </div>
 <div class="grid md:grid-cols-3 gap-8">
 <!-- Benefit 1 -->
-<div class="p-8 bg-background-dark border border-primary/10 rounded-xl text-center group hover:border-primary/50 transition-all">
+<div class="p-8 bg-background-dark border border-primary/10 rounded-xl text-center group hover:border-primary/50 transition-all reveal-on-scroll">
 <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
 <span class="material-icons text-primary text-4xl">payments</span>
 </div>
@@ -122,7 +154,7 @@
 <p class="text-slate-400">Protege tu economía generando comisiones en moneda fuerte, sin importar dónde te encuentres.</p>
 </div>
 <!-- Benefit 2 -->
-<div class="p-8 bg-background-dark border border-primary/10 rounded-xl text-center group hover:border-primary/50 transition-all">
+<div class="p-8 bg-background-dark border border-primary/10 rounded-xl text-center group hover:border-primary/50 transition-all reveal-on-scroll">
 <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
 <span class="material-icons text-primary text-4xl">inventory_2</span>
 </div>
@@ -130,7 +162,7 @@
 <p class="text-slate-400">Olvídate de envíos, proveedores o devoluciones. Vendes productos digitales de entrega inmediata.</p>
 </div>
 <!-- Benefit 3 -->
-<div class="p-8 bg-background-dark border border-primary/10 rounded-xl text-center group hover:border-primary/50 transition-all">
+<div class="p-8 bg-background-dark border border-primary/10 rounded-xl text-center group hover:border-primary/50 transition-all reveal-on-scroll">
 <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
 <span class="material-icons text-primary text-4xl">public</span>
 </div>
@@ -141,7 +173,7 @@
 </div>
 </section>
 <!-- Bonus Section -->
-<section class="py-24 relative">
+<section class="py-24 relative reveal-on-scroll">
 <div class="max-w-5xl mx-auto px-6">
 <div class="bg-gradient-to-br from-primary/20 to-transparent p-[1px] rounded-lg">
 <div class="bg-background-dark rounded-lg p-10 md:p-16 flex flex-col md:flex-row items-center gap-12">
@@ -171,9 +203,103 @@
 </div>
 </section>
 <!-- Pricing Section -->
-<section class="py-24 text-center" id="pricing">
+
+<section class="px-6 py-20 md:px-20 lg:px-40 reveal-on-scroll">
+<div class="mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-primary/10 bg-primary/5 p-6 md:p-10">
+<div class="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+<div>
+<p class="text-xs font-bold uppercase tracking-[0.22em] text-primary">Extras visuales</p>
+<h2 class="mt-3 text-3xl md:text-4xl font-black">Secciones con más dinamismo y conversión</h2>
+</div>
+<div class="rounded-full border border-primary/20 bg-white/70 dark:bg-slate-900/60 px-5 py-3 text-sm font-semibold" data-fad-live="" data-max="74" data-min="28" data-start="63">
+<span class="text-primary font-black" data-fad-live-value="">63</span> personas viendo esta oferta
+      </div>
+</div>
+<div class="overflow-hidden">
+<div class="fad-carousel-track">
+<article class="fad-chip w-full md:w-1/3 shrink-0 px-3">
+<div class="h-full rounded-3xl border border-primary/10 bg-white dark:bg-slate-900/70 p-8 shadow-xl reveal-on-scroll">
+<div class="mb-4 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">Demo visual</div>
+<h3 class="text-2xl font-bold">Embudo simple</h3>
+<p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">Mostrá una ruta clara para captar y convertir sin fricción.</p>
+</div>
+</article>
+<article class="fad-chip w-full md:w-1/3 shrink-0 px-3">
+<div class="h-full rounded-3xl border border-primary/10 bg-white dark:bg-slate-900/70 p-8 shadow-xl reveal-on-scroll">
+<div class="mb-4 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">Demo visual</div>
+<h3 class="text-2xl font-bold">Bonos visibles</h3>
+<p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">Usá bloques de oferta para reforzar urgencia y valor.</p>
+</div>
+</article>
+<article class="fad-chip w-full md:w-1/3 shrink-0 px-3">
+<div class="h-full rounded-3xl border border-primary/10 bg-white dark:bg-slate-900/70 p-8 shadow-xl reveal-on-scroll">
+<div class="mb-4 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">Demo visual</div>
+<h3 class="text-2xl font-bold">Prueba social</h3>
+<p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">Más actividad y señales de interés elevan la percepción.</p>
+</div>
+</article>
+<article class="fad-chip w-full md:w-1/3 shrink-0 px-3">
+<div class="h-full rounded-3xl border border-primary/10 bg-white dark:bg-slate-900/70 p-8 shadow-xl reveal-on-scroll">
+<div class="mb-4 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">Demo visual</div>
+<h3 class="text-2xl font-bold">Embudo simple</h3>
+<p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">Mostrá una ruta clara para captar y convertir sin fricción.</p>
+</div>
+</article>
+<article class="fad-chip w-full md:w-1/3 shrink-0 px-3">
+<div class="h-full rounded-3xl border border-primary/10 bg-white dark:bg-slate-900/70 p-8 shadow-xl reveal-on-scroll">
+<div class="mb-4 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">Demo visual</div>
+<h3 class="text-2xl font-bold">Bonos visibles</h3>
+<p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">Usá bloques de oferta para reforzar urgencia y valor.</p>
+</div>
+</article>
+<article class="fad-chip w-full md:w-1/3 shrink-0 px-3">
+<div class="h-full rounded-3xl border border-primary/10 bg-white dark:bg-slate-900/70 p-8 shadow-xl reveal-on-scroll">
+<div class="mb-4 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">Demo visual</div>
+<h3 class="text-2xl font-bold">Prueba social</h3>
+<p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">Más actividad y señales de interés elevan la percepción.</p>
+</div>
+</article>
+<article class="fad-chip w-full md:w-1/3 shrink-0 px-3">
+<div class="h-full rounded-3xl border border-primary/10 bg-white dark:bg-slate-900/70 p-8 shadow-xl reveal-on-scroll">
+<div class="mb-4 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">Demo visual</div>
+<h3 class="text-2xl font-bold">Embudo simple</h3>
+<p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">Mostrá una ruta clara para captar y convertir sin fricción.</p>
+</div>
+</article>
+<article class="fad-chip w-full md:w-1/3 shrink-0 px-3">
+<div class="h-full rounded-3xl border border-primary/10 bg-white dark:bg-slate-900/70 p-8 shadow-xl reveal-on-scroll">
+<div class="mb-4 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">Demo visual</div>
+<h3 class="text-2xl font-bold">Bonos visibles</h3>
+<p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">Usá bloques de oferta para reforzar urgencia y valor.</p>
+</div>
+</article>
+<article class="fad-chip w-full md:w-1/3 shrink-0 px-3">
+<div class="h-full rounded-3xl border border-primary/10 bg-white dark:bg-slate-900/70 p-8 shadow-xl reveal-on-scroll">
+<div class="mb-4 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">Demo visual</div>
+<h3 class="text-2xl font-bold">Prueba social</h3>
+<p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">Más actividad y señales de interés elevan la percepción.</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 text-center reveal-on-scroll" id="pricing">
 <div class="max-w-3xl mx-auto px-6">
-<div class="bg-background-dark border-2 border-primary p-12 rounded-xl relative overflow-hidden">
+<div class="mb-8 grid gap-4 md:grid-cols-2">
+<div class="rounded-2xl bg-primary text-white p-6 shadow-xl reveal-on-scroll fad-pulse" data-fad-countdown="" data-start="900">
+<p class="text-xs font-bold uppercase tracking-[0.2em] text-white/80">Últimos accesos</p>
+<p class="mt-3 text-4xl font-black" data-fad-time="">15:00</p>
+<p class="mt-3 text-sm text-white/85">Entrá hoy y asegurá bonus + acceso a la comunidad VIP.</p>
+</div>
+<div class="rounded-2xl border border-primary/15 bg-white dark:bg-slate-900/70 p-6 shadow-xl reveal-on-scroll" data-fad-live="" data-max="74" data-min="28" data-start="63">
+<p class="text-xs font-bold uppercase tracking-[0.2em] text-primary">Actividad en tiempo real</p>
+<p class="mt-3 text-4xl font-black"><span data-fad-live-value="">63</span></p>
+<p class="mt-3 text-sm text-slate-600 dark:text-slate-400">personas están mirando esta propuesta ahora</p>
+</div>
+</div>
+
+<div class="bg-background-dark border-2 border-primary p-12 rounded-xl relative overflow-hidden reveal-on-scroll">
 <!-- Glowing effect behind card -->
 <div class="absolute -top-24 -right-24 w-48 h-48 bg-primary/30 blur-[60px]"></div>
 <h2 class="text-3xl font-bold mb-2">Inversión para tu Futuro</h2>
@@ -190,7 +316,7 @@
                         ⚠️ Oferta disponible solo por las próximas 24 horas
                     </p>
 </div>
-<a class="block w-full bg-primary hover:bg-primary/90 text-white py-6 rounded-full text-2xl font-black transition-all shadow-2xl shadow-primary/40 transform hover:scale-[1.02]" href="#">
+<a class="block w-full bg-primary hover:bg-primary/90 text-white py-6 rounded-full text-2xl font-black transition-all shadow-2xl shadow-primary/40 transform hover:scale-[1.02] fad-cta fad-pulse" href="#">
                     ASEGURAR MI LUGAR
                 </a>
 <div class="mt-8 flex items-center justify-center gap-6 opacity-60">
@@ -222,8 +348,59 @@
 </footer>
 <!-- Bottom Sticky Mobile CTA -->
 <div class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] md:hidden z-50">
-<a class="bg-primary text-white w-full py-4 rounded-full font-bold shadow-2xl shadow-primary/50 flex items-center justify-center gap-2 text-lg" href="#pricing">
+<a class="bg-primary text-white w-full py-4 rounded-full font-bold shadow-2xl shadow-primary/50 flex items-center justify-center gap-2 text-lg fad-cta fad-pulse" href="#pricing">
             INSCRIBIRME AHORA <span class="material-icons">arrow_forward</span>
 </a>
 </div>
+
+<script id="fad-enhancements-script">
+(function(){
+  const revealEls = document.querySelectorAll('.reveal-on-scroll');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add('is-visible'); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el=>io.observe(el));
+
+  document.querySelectorAll('[data-fad-countdown]').forEach((box)=>{
+    let total = parseInt(box.getAttribute('data-start') || '900', 10);
+    const out = box.querySelector('[data-fad-time]');
+    const tick = ()=>{
+      const minutes = String(Math.floor(total / 60)).padStart(2, '0');
+      const seconds = String(total % 60).padStart(2, '0');
+      if (out) out.textContent = `${minutes}:${seconds}`;
+      total = total <= 1 ? parseInt(box.getAttribute('data-start') || '900', 10) : total - 1;
+    };
+    tick();
+    setInterval(tick, 1000);
+  });
+
+  document.querySelectorAll('[data-fad-live]').forEach((box)=>{
+    const out = box.querySelector('[data-fad-live-value]');
+    let value = parseInt(box.getAttribute('data-start') || '42', 10);
+    const min = parseInt(box.getAttribute('data-min') || '28', 10);
+    const max = parseInt(box.getAttribute('data-max') || '68', 10);
+    const tick = ()=>{
+      value += Math.floor(Math.random() * 5) - 2;
+      value = Math.max(min, Math.min(max, value));
+      if (out) out.textContent = String(value);
+    };
+    if (out) out.textContent = String(value);
+    setInterval(tick, 1800);
+  });
+
+  document.querySelectorAll('[data-fad-counter]').forEach((el)=>{
+    const target = parseInt(el.getAttribute('data-fad-counter') || '0', 10);
+    const suffix = el.getAttribute('data-fad-suffix') || '';
+    let current = 0;
+    const step = Math.max(1, Math.floor(target / 50));
+    const run = ()=>{
+      current += step;
+      if(current >= target){ current = target; }
+      el.textContent = String(current) + suffix;
+      if(current < target) requestAnimationFrame(run);
+    };
+    run();
+  });
+})();
+</script>
 </body></html>

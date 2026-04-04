@@ -42,7 +42,24 @@
                         radial-gradient(circle at bottom left, rgba(48, 186, 232, 0.05), transparent);
         }
     </style>
-</head>
+
+<style id="dynamic-enhancements">
+  @keyframes pulse-soft {0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,255,255,.0)}50%{transform:scale(1.03);box-shadow:0 0 0 10px rgba(255,255,255,0)}}
+  @keyframes shimmer-x {0%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+  @keyframes float-soft {0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+  .reveal-left,.reveal-right,.reveal-up{opacity:0;transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1);will-change:transform,opacity}
+  .reveal-left{transform:translateX(-40px)}
+  .reveal-right{transform:translateX(40px)}
+  .reveal-up{transform:translateY(28px)}
+  .reveal-visible{opacity:1 !important;transform:none !important}
+  .shimmer-wrap{position:relative;overflow:hidden}
+  .shimmer-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 0%,rgba(255,255,255,.08) 45%,rgba(255,255,255,.28) 50%,transparent 55%);transform:translateX(-120%);animation:shimmer-x 3.5s linear infinite;pointer-events:none}
+  .pulse-soft{animation:pulse-soft 2.5s ease-in-out infinite}
+  .float-soft{animation:float-soft 4s ease-in-out infinite}
+  .counter-card{backdrop-filter:blur(12px)}
+  .mini-dots span{display:inline-block;height:.45rem;border-radius:9999px;transition:all .35s ease}
+  .mini-dots span.active{width:2rem;opacity:1}.mini-dots span:not(.active){width:.45rem;opacity:.35}
+</style></head>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 selection:bg-primary/30">
 <!-- Top Navigation -->
 <nav class="fixed top-0 w-full z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-border-dark/30">
@@ -55,7 +72,7 @@
 <a class="text-sm font-medium hover:text-primary transition-colors" href="#beneficios">Beneficios</a>
 <a class="text-sm font-medium hover:text-primary transition-colors" href="#programa">Programa</a>
 <a class="text-sm font-medium hover:text-primary transition-colors" href="#bonos">Bonos</a>
-<button class="bg-primary hover:bg-primary/90 text-background-dark px-6 py-2.5 rounded-full font-bold text-sm transition-all shadow-lg shadow-primary/20">
+<button class="bg-primary hover:bg-primary/90 text-background-dark px-6 py-2.5 rounded-full font-bold text-sm transition-all shadow-lg shadow-primary/20 shimmer-wrap">
                     Inicia ahora
                 </button>
 </div>
@@ -64,11 +81,11 @@
 <main class="pt-20">
 <!-- Hero Section -->
 <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden px-6">
-<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 z-0 reveal-up">
 <div class="absolute inset-0 bg-gradient-to-b from-background-dark/60 via-background-dark/80 to-background-dark z-10"></div>
-<img class="w-full h-full object-cover" data-alt="Mujer practicando yoga al amanecer en la montaña" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf9mKSdOOn8CqtfGBfzsVgBXDT4szki4ULPg823fFjuzuB5DEEMjcTDuSq3bs6RLQsqUtiqF6Iva2i-bfAoWJyQC3aJ7u_X8asToRIKjdiTXnCI641dabOFLLta0jB4kZAp_7Xyg3J86VXPkid-P_ReH4Y5__DxqK9R0jHUe1V5tiZuQr9DhKt8yOAz-SYD8KjWIKAt9IZqAL0bn3RPKqsixaiY4cT5XrgUzOAT0AK7G001-qgKQ4OuPZz7WiGCMCE_gBauCwZkg"/>
+<img class="w-full h-full object-cover reveal-left" data-alt="Mujer practicando yoga al amanecer en la montaña" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf9mKSdOOn8CqtfGBfzsVgBXDT4szki4ULPg823fFjuzuB5DEEMjcTDuSq3bs6RLQsqUtiqF6Iva2i-bfAoWJyQC3aJ7u_X8asToRIKjdiTXnCI641dabOFLLta0jB4kZAp_7Xyg3J86VXPkid-P_ReH4Y5__DxqK9R0jHUe1V5tiZuQr9DhKt8yOAz-SYD8KjWIKAt9IZqAL0bn3RPKqsixaiY4cT5XrgUzOAT0AK7G001-qgKQ4OuPZz7WiGCMCE_gBauCwZkg"/>
 </div>
-<div class="relative z-20 max-w-4xl text-center flex flex-col items-center gap-8">
+<div class="relative z-20 max-w-4xl text-center flex flex-col items-center gap-8 reveal-up">
 <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest border border-primary/20">
                     Programa Online de Bienestar
                 </span>
@@ -79,22 +96,32 @@
                     Un camino guiado hacia la paz mental y la flexibilidad física desde la comodidad de tu hogar. Diseñado para mentes inquietas.
                 </p>
 <div class="flex flex-col sm:flex-row gap-4 mt-4">
-<button class="bg-primary hover:bg-primary/90 text-background-dark px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl shadow-primary/30 flex items-center gap-2">
+<button class="bg-primary hover:bg-primary/90 text-background-dark px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl shadow-primary/30 flex items-center gap-2 reveal-right shimmer-wrap pulse-soft">
                         Inicia tu transformación hoy
                         <span class="material-symbols-outlined">arrow_forward</span>
 </button>
 </div>
+<div class="mt-8 flex flex-wrap justify-center gap-4 reveal-up">
+<div class="counter-card rounded-2xl border border-primary/20 bg-background-dark/55 px-5 py-4 min-w-[210px]">
+<p class="text-[11px] uppercase tracking-[0.22em] text-primary font-black mb-1">Personas viendo ahora</p>
+<div class="text-4xl font-black text-white" id="yoga-live">41</div>
+<p class="text-xs text-slate-400 uppercase tracking-widest mt-1">sesión activa</p>
 </div>
+<div class="counter-card rounded-2xl border border-white/10 bg-white/5 px-5 py-4 min-w-[210px]">
+<p class="text-[11px] uppercase tracking-[0.22em] text-primary font-black mb-2">Tu progreso</p>
+<div class="w-full h-2 rounded-full bg-white/10 overflow-hidden"><div class="h-full bg-primary w-[18%] transition-all duration-700" id="yoga-progress"></div></div>
+<p class="text-xs text-slate-400 uppercase tracking-widest mt-2">78% de cupos tomados</p>
+</div></div></div>
 </section>
 <!-- Pain Points Section -->
 <section class="py-24 px-6 zen-gradient">
-<div class="max-w-7xl mx-auto">
+<div class="max-w-7xl mx-auto reveal-up">
 <div class="text-center mb-16">
 <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Sientes el peso del día a día?</h2>
 <p class="text-slate-400 max-w-xl mx-auto">Identificamos los desafíos que te impiden vivir plenamente y te damos las herramientas para superarlos.</p>
 </div>
 <div class="grid md:grid-cols-2 gap-8">
-<div class="group p-8 rounded-2xl bg-neutral-dark border border-border-dark/50 hover:border-primary/50 transition-all duration-500">
+<div class="group p-8 rounded-2xl bg-neutral-dark border border-border-dark/50 hover:border-primary/50 transition-all duration-500 reveal-left">
 <div class="w-14 h-14 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
 <span class="material-symbols-outlined text-red-400 text-3xl">work_history</span>
 </div>
@@ -103,7 +130,7 @@
                             Libera la tensión acumulada en tus hombros y espalda tras largas jornadas. Nuestras rutinas cortas resetean tu sistema nervioso en minutos.
                         </p>
 </div>
-<div class="group p-8 rounded-2xl bg-neutral-dark border border-border-dark/50 hover:border-primary/50 transition-all duration-500">
+<div class="group p-8 rounded-2xl bg-neutral-dark border border-border-dark/50 hover:border-primary/50 transition-all duration-500 reveal-right">
 <div class="w-14 h-14 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
 <span class="material-symbols-outlined text-indigo-400 text-3xl">nights_stay</span>
 </div>
@@ -117,18 +144,18 @@
 </section>
 <!-- Benefits Section -->
 <section class="py-24 px-6 bg-slate-900/30" id="beneficios">
-<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-<div class="order-2 lg:order-1 relative">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center reveal-up">
+<div class="order-2 lg:order-1 relative reveal-left">
 <div class="absolute -inset-4 bg-primary/20 rounded-full blur-3xl opacity-30"></div>
-<img class="relative rounded-3xl shadow-2xl border border-white/5 object-cover aspect-[4/5]" data-alt="Persona meditando en un ambiente tranquilo y minimalista" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_iNYipeIhQKRUmFraSVJ_Nnzq6hxu-MgVSI1kJjZp8lswN5RxEDsl_N4gI6hQv3c3mhBSuNKV_kUID-aU8vPrEgpg0Cu6YZWcd3aIT7ljijO9_2pDsT-_DrbIG9vXOpxLD04GVHIU0GozpACUQMD9PPSi5zBIa6K2H-BarxZIN3vPx9W7oi7WZqbGqUWPktbOcLPGIWRW2oHPi8NyExAbGUHbEvuqZ1LauvQHqJLYdrLFZuqZ96l5Y6abn9OpufM07xUIHOmoMw"/>
+<img class="relative rounded-3xl shadow-2xl border border-white/5 object-cover aspect-[4/5] reveal-right" data-alt="Persona meditando en un ambiente tranquilo y minimalista" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_iNYipeIhQKRUmFraSVJ_Nnzq6hxu-MgVSI1kJjZp8lswN5RxEDsl_N4gI6hQv3c3mhBSuNKV_kUID-aU8vPrEgpg0Cu6YZWcd3aIT7ljijO9_2pDsT-_DrbIG9vXOpxLD04GVHIU0GozpACUQMD9PPSi5zBIa6K2H-BarxZIN3vPx9W7oi7WZqbGqUWPktbOcLPGIWRW2oHPi8NyExAbGUHbEvuqZ1LauvQHqJLYdrLFZuqZ96l5Y6abn9OpufM07xUIHOmoMw"/>
 </div>
-<div class="order-1 lg:order-2 space-y-12">
-<div>
+<div class="order-1 lg:order-2 space-y-12 reveal-right">
+<div class="reveal-left">
 <h2 class="text-4xl font-bold mb-6">Tu camino hacia el bienestar integral</h2>
 <p class="text-slate-400 font-light">No es solo ejercicio, es una reconfiguración de tu estado mental y físico.</p>
 </div>
-<div class="space-y-8">
-<div class="flex gap-6">
+<div class="space-y-8 reveal-right">
+<div class="flex gap-6 reveal-left">
 <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
 <span class="material-symbols-outlined text-primary">accessibility_new</span>
 </div>
@@ -137,7 +164,7 @@
 <p class="text-slate-400 font-light text-sm leading-relaxed">Adaptamos las posturas a tu nivel actual. Verás progreso real en tu movilidad semana a semana.</p>
 </div>
 </div>
-<div class="flex gap-6">
+<div class="flex gap-6 reveal-right">
 <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
 <span class="material-symbols-outlined text-primary">self_care</span>
 </div>
@@ -146,7 +173,7 @@
 <p class="text-slate-400 font-light text-sm leading-relaxed">Domina el arte de estar presente. Silencia el ruido externo y reconecta con tu centro.</p>
 </div>
 </div>
-<div class="flex gap-6">
+<div class="flex gap-6 reveal-left">
 <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
 <span class="material-symbols-outlined text-primary">auto_awesome</span>
 </div>
@@ -161,11 +188,11 @@
 </section>
 <!-- Bonus Section -->
 <section class="py-24 px-6 overflow-hidden" id="bonos">
-<div class="max-w-5xl mx-auto">
+<div class="max-w-5xl mx-auto reveal-up">
 <div class="relative p-1 rounded-[2rem] bg-gradient-to-br from-primary via-primary/50 to-transparent">
 <div class="bg-neutral-dark rounded-[1.8rem] p-8 md:p-16 flex flex-col md:flex-row items-center gap-12">
 <div class="flex-1 space-y-6">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-yellow-500/10 text-yellow-500 text-xs font-bold border border-yellow-500/20">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-yellow-500/10 text-yellow-500 text-xs font-bold border border-yellow-500/20 reveal-left">
 <span class="material-symbols-outlined text-sm">workspace_premium</span>
                                 REGALO EXCLUSIVO
                             </div>
@@ -185,7 +212,7 @@
 </ul>
 </div>
 <div class="w-full md:w-64 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
-<img class="w-full h-full object-cover" data-alt="Plato de comida saludable con vegetales frescos" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOGslriybS4MAQA4KGoNjgPB5R7Ko0GVD61Fm8MeRGM3tSr7fRF4ODea1JupL0rmBe2tAJfiWaeW2h2JZbgq54TXwhkWf8boIxYIvCZpUUHaE4EVQoGsFAEq2bF1jhL7X73hOrEnGiY01z1gQdULUj2vIU4Y2jtKqviw9EdieBoutr3jWNV0-Iy1mMBMCzwxhsc6iq0HFpRohDyUDRcDnj7LkpIsZPG-0_QuI_Jp1JNrDHtEIgtjYouMgEA4mHm3zJcvejSR5qTw"/>
+<img class="w-full h-full object-cover reveal-left" data-alt="Plato de comida saludable con vegetales frescos" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOGslriybS4MAQA4KGoNjgPB5R7Ko0GVD61Fm8MeRGM3tSr7fRF4ODea1JupL0rmBe2tAJfiWaeW2h2JZbgq54TXwhkWf8boIxYIvCZpUUHaE4EVQoGsFAEq2bF1jhL7X73hOrEnGiY01z1gQdULUj2vIU4Y2jtKqviw9EdieBoutr3jWNV0-Iy1mMBMCzwxhsc6iq0HFpRohDyUDRcDnj7LkpIsZPG-0_QuI_Jp1JNrDHtEIgtjYouMgEA4mHm3zJcvejSR5qTw"/>
 </div>
 </div>
 </div>
@@ -193,12 +220,12 @@
 </section>
 <!-- Pricing Section -->
 <section class="py-24 px-6 bg-gradient-to-b from-transparent to-primary/5">
-<div class="max-w-xl mx-auto text-center space-y-10">
-<div class="space-y-4">
+<div class="max-w-xl mx-auto text-center space-y-10 reveal-up"><div class="inline-flex items-center gap-2 rounded-full bg-primary/10 border border-primary/20 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary reveal-left"><span class="material-symbols-outlined text-sm">favorite</span>Oferta calma: acceso hoy + bonus</div>
+<div class="space-y-4 reveal-left">
 <h2 class="text-4xl font-bold">Tu transformación empieza aquí</h2>
 <p class="text-slate-400 font-light">Únete a cientos de personas que ya han cambiado su relación con el estrés.</p>
 </div>
-<div class="bg-neutral-dark border border-border-dark p-10 rounded-[2.5rem] shadow-2xl relative">
+<div class="bg-neutral-dark border border-border-dark p-10 rounded-[2.5rem] shadow-2xl relative reveal-right">
 <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-background-dark px-4 py-1 rounded-full text-xs font-bold uppercase">
                         Precio Lanzamiento
                     </div>
@@ -210,7 +237,7 @@
 </div>
 <p class="text-primary text-sm font-medium mt-2">Pago único • Acceso de por vida</p>
 </div>
-<button class="w-full bg-primary hover:bg-primary/90 text-background-dark py-5 rounded-2xl font-bold text-xl transition-all shadow-xl shadow-primary/20 mb-6 active:scale-95">
+<button class="w-full bg-primary hover:bg-primary/90 text-background-dark py-5 rounded-2xl font-bold text-xl transition-all shadow-xl shadow-primary/20 mb-6 active:scale-95 reveal-left shimmer-wrap pulse-soft">
                         Inicia tu transformación hoy
                     </button>
 <div class="flex items-center justify-center gap-6 text-slate-400 text-xs uppercase tracking-widest font-bold">
@@ -242,4 +269,38 @@
 <p class="text-xs text-slate-600">© 2024 Yoga y Calma Interior. Todos los derechos reservados.</p>
 </div>
 </footer>
-</body></html>
+<script>(function(){const live=document.getElementById('yoga-live');const prog=document.getElementById('yoga-progress');let viewers=41,p=18;setInterval(()=>{viewers=Math.max(28,Math.min(64,viewers + Math.floor(Math.random()*5)-2)); if(live) live.textContent=String(viewers); p = p>=78 ? 18 : p+6; if(prog) prog.style.width = p+'%';},1800);})();</script>
+<script id="dynamic-enhancements-script">
+(() => {
+  const revealEls = document.querySelectorAll('.reveal-left, .reveal-right, .reveal-up');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.14 });
+  revealEls.forEach((el, index) => {
+    el.style.transitionDelay = `${Math.min(index * 70, 320)}ms`;
+    io.observe(el);
+  });
+
+  document.querySelectorAll('[data-counter-target]').forEach((el) => {
+    const target = Number(el.dataset.counterTarget || 0);
+    const suffix = el.dataset.counterSuffix || '';
+    const duration = Number(el.dataset.counterDuration || 1400);
+    let start = 0;
+    const step = Math.max(1, Math.ceil(target / (duration / 16)));
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= target) {
+        el.textContent = `${target}${suffix}`;
+        clearInterval(timer);
+      } else {
+        el.textContent = `${start}${suffix}`;
+      }
+    }, 16);
+  });
+})();
+</script></body></html>
