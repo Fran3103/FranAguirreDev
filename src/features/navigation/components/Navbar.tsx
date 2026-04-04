@@ -96,9 +96,9 @@ export function Navbar() {
             to="/"
             className="text-lg font-semibold tracking-tight text-brand-foreground"
           >
-            Fran Aguirre
+            <img src="/logo.png" alt="logo" className="w-48 " />
           </Link>
-          <IoRocketSharp className="text-brand-primary" />
+
         </div>
 
 
@@ -121,7 +121,7 @@ export function Navbar() {
 
         <div className="hidden md:block">
           <a href={SITE_CONFIG.whatsappUrl} target="_blank" rel="noreferrer">
-            <Button size="sm">Hablemos</Button>
+            <Button size="sm">Quiero mi landing   <span className="ml-2"><IoRocketSharp/></span></Button>
           </a>
         </div>
 

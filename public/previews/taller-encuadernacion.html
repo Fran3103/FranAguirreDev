@@ -39,7 +39,24 @@
             background: linear-gradient(180deg, rgba(22, 34, 16, 0.8) 0%, rgba(22, 34, 16, 1) 100%);
         }
     </style>
-</head>
+
+<style id="dynamic-enhancements">
+  @keyframes pulse-soft {0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,255,255,.0)}50%{transform:scale(1.03);box-shadow:0 0 0 10px rgba(255,255,255,0)}}
+  @keyframes shimmer-x {0%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+  @keyframes float-soft {0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+  .reveal-left,.reveal-right,.reveal-up{opacity:0;transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1);will-change:transform,opacity}
+  .reveal-left{transform:translateX(-40px)}
+  .reveal-right{transform:translateX(40px)}
+  .reveal-up{transform:translateY(28px)}
+  .reveal-visible{opacity:1 !important;transform:none !important}
+  .shimmer-wrap{position:relative;overflow:hidden}
+  .shimmer-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 0%,rgba(255,255,255,.08) 45%,rgba(255,255,255,.28) 50%,transparent 55%);transform:translateX(-120%);animation:shimmer-x 3.5s linear infinite;pointer-events:none}
+  .pulse-soft{animation:pulse-soft 2.5s ease-in-out infinite}
+  .float-soft{animation:float-soft 4s ease-in-out infinite}
+  .counter-card{backdrop-filter:blur(12px)}
+  .mini-dots span{display:inline-block;height:.45rem;border-radius:9999px;transition:all .35s ease}
+  .mini-dots span.active{width:2rem;opacity:1}.mini-dots span:not(.active){width:.45rem;opacity:.35}
+</style></head>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
 <!-- Top Navigation Bar -->
 <header class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md">
@@ -54,7 +71,7 @@
 <a class="text-sm font-medium hover:text-primary transition-colors" href="#programa">Programa</a>
 <a class="text-sm font-medium hover:text-primary transition-colors" href="#bonos">Bonos</a>
 <a class="text-sm font-medium hover:text-primary transition-colors" href="#precio">Precio</a>
-<button class="bg-primary hover:bg-primary/90 text-background-dark px-6 py-2 rounded-lg font-bold text-sm transition-all transform hover:scale-105">
+<button class="bg-primary hover:bg-primary/90 text-background-dark px-6 py-2 rounded-lg font-bold text-sm transition-all transform hover:scale-105 shimmer-wrap">
                         Inscribirme
                     </button>
 </nav>
@@ -67,11 +84,11 @@
 <main>
 <!-- Hero Section -->
 <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover opacity-40" data-alt="Handmade notebooks and bookbinding tools on a wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy_JBkPRMElroz97qc61TNdx5qNpDmRyAHDlX2DAlrziks7T5i-2wsT81sxvpcfdKgwMFbSviMCPpjf67H0LSBW2KDIZ52UCnJ6iM0bzO3IcbfLgFKDKrMeNjGIr6KiWTmG1AIeL5-79CPqNy1Esb5dKPP1dMONpZiVVDqx5RiVk1XHV3tyrVQ8lWKnwAGLjLm4rA1fStnZ-KQ_BopfHe2fceLYuv-oAqadhTnD8UthLmsQyiBcJj_O2o0tareUQPrWLlKP_pdqg"/>
+<div class="absolute inset-0 z-0 reveal-up">
+<img class="w-full h-full object-cover opacity-40 reveal-left" data-alt="Handmade notebooks and bookbinding tools on a wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy_JBkPRMElroz97qc61TNdx5qNpDmRyAHDlX2DAlrziks7T5i-2wsT81sxvpcfdKgwMFbSviMCPpjf67H0LSBW2KDIZ52UCnJ6iM0bzO3IcbfLgFKDKrMeNjGIr6KiWTmG1AIeL5-79CPqNy1Esb5dKPP1dMONpZiVVDqx5RiVk1XHV3tyrVQ8lWKnwAGLjLm4rA1fStnZ-KQ_BopfHe2fceLYuv-oAqadhTnD8UthLmsQyiBcJj_O2o0tareUQPrWLlKP_pdqg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/60 to-transparent"></div>
 </div>
-<div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
+<div class="relative z-10 max-w-5xl mx-auto px-4 text-center reveal-up">
 <span class="inline-block py-1 px-3 rounded-full bg-primary/20 text-primary border border-primary/30 text-xs font-bold uppercase tracking-widest mb-6">
                     Taller Online &amp; Artesanal
                 </span>
@@ -83,7 +100,7 @@
                     Aprende un oficio milenario, encuentra un hobby creativo y descubre una salida laboral rápida desde la comodidad de tu casa.
                 </p>
 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-<button class="w-full sm:w-auto bg-primary hover:bg-primary/90 text-background-dark px-10 py-5 rounded-xl font-extrabold text-lg transition-all shadow-lg shadow-primary/20">
+<button class="w-full sm:w-auto bg-primary hover:bg-primary/90 text-background-dark px-10 py-5 rounded-xl font-extrabold text-lg transition-all shadow-lg shadow-primary/20 reveal-right shimmer-wrap pulse-soft">
                         Inscribirme al taller
                     </button>
 <div class="flex items-center gap-2 text-slate-400">
@@ -91,17 +108,27 @@
 <span class="text-sm font-medium">Acceso de por vida</span>
 </div>
 </div>
+<div class="mt-8 flex flex-wrap items-center justify-center gap-4 reveal-up">
+<div class="counter-card rounded-xl border border-primary/30 bg-background-dark/65 px-5 py-4 min-w-[190px]">
+<p class="text-[11px] uppercase tracking-[0.22em] text-primary font-black mb-1">Cupos restantes</p>
+<div class="text-4xl font-black text-white" id="spots-left">12</div>
+<p class="text-xs text-slate-400 uppercase tracking-widest mt-1">últimos lugares</p>
 </div>
+<div class="counter-card rounded-xl border border-white/10 bg-white/5 px-5 py-4 min-w-[190px]">
+<p class="text-[11px] uppercase tracking-[0.22em] text-primary font-black mb-1">Inscripciones hoy</p>
+<div class="text-4xl font-black text-primary" data-counter-target="37">0</div>
+<p class="text-xs text-slate-400 uppercase tracking-widest mt-1">alumnos nuevos</p>
+</div></div></div>
 </section>
 <!-- Pain Points Section -->
 <section class="py-24 bg-background-dark border-t border-white/5">
-<div class="max-w-7xl mx-auto px-4">
+<div class="max-w-7xl mx-auto px-4 reveal-up">
 <div class="grid md:grid-cols-2 gap-16 items-center">
-<div>
+<div class="reveal-left">
 <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">¿Sientes el peso de la <span class="text-primary/80 italic">rutina digital</span>?</h2>
 <p class="text-slate-400 text-lg mb-8">Vivimos rodeados de pantallas. Tu mente necesita un respiro táctil, algo real que puedas tocar y crear con tus propias manos.</p>
 <div class="space-y-6">
-<div class="flex gap-4 p-6 rounded-xl bg-white/5 border border-white/10 hover:border-primary/30 transition-all group">
+<div class="flex gap-4 p-6 rounded-xl bg-white/5 border border-white/10 hover:border-primary/30 transition-all group reveal-left">
 <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-all">
 <span class="material-symbols-outlined">psychology</span>
 </div>
@@ -110,7 +137,7 @@
 <p class="text-slate-400">Encuentra un espacio de meditación activa a través del oficio manual.</p>
 </div>
 </div>
-<div class="flex gap-4 p-6 rounded-xl bg-white/5 border border-white/10 hover:border-primary/30 transition-all group">
+<div class="flex gap-4 p-6 rounded-xl bg-white/5 border border-white/10 hover:border-primary/30 transition-all group reveal-right">
 <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-all">
 <span class="material-symbols-outlined">palette</span>
 </div>
@@ -121,42 +148,42 @@
 </div>
 </div>
 </div>
-<div class="relative">
+<div class="relative reveal-right">
 <div class="absolute -inset-4 bg-primary/20 blur-3xl rounded-full"></div>
-<img class="relative rounded-2xl w-full h-[500px] object-cover border border-white/10 shadow-2xl" data-alt="Close up of hands sewing a book spine" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZylaAFxX8wJQtTZEXWfkP3aBvmPD4zhFOT959vC_N7OP7PD0Z8AN6XJVujT3RTUzR1l2Q99_WGAg31QRrTWgZBiQvYv1p-jgQVPqjnBFeQSYSNvjVYqEeVCwwdDkPrBUYxTIbNUvXkplMehb9c1_TU6PEfMT_hRnRDgagG6zTfcRs4I7ROaGNjlHZlIQqRiIJD7E4zmPUnMu_9eBvv1ofQo3ZL0pnjBLIJy1MB4hocQwlmMt9f1FwM8sDdLxk1Lk26LvNJcfCNA"/>
+<img class="relative rounded-2xl w-full h-[500px] object-cover border border-white/10 shadow-2xl reveal-right" data-alt="Close up of hands sewing a book spine" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZylaAFxX8wJQtTZEXWfkP3aBvmPD4zhFOT959vC_N7OP7PD0Z8AN6XJVujT3RTUzR1l2Q99_WGAg31QRrTWgZBiQvYv1p-jgQVPqjnBFeQSYSNvjVYqEeVCwwdDkPrBUYxTIbNUvXkplMehb9c1_TU6PEfMT_hRnRDgagG6zTfcRs4I7ROaGNjlHZlIQqRiIJD7E4zmPUnMu_9eBvv1ofQo3ZL0pnjBLIJy1MB4hocQwlmMt9f1FwM8sDdLxk1Lk26LvNJcfCNA"/>
 </div>
 </div>
 </div>
 </section>
 <!-- Benefits & Outcomes -->
 <section class="py-24 bg-white/5" id="beneficios">
-<div class="max-w-7xl mx-auto px-4">
+<div class="max-w-7xl mx-auto px-4 reveal-up">
 <div class="text-center mb-16">
 <h2 class="text-3xl md:text-5xl font-black text-white mb-4">Lo que lograrás en este taller</h2>
 <p class="text-slate-400 text-lg">Un camino práctico para dominar la encuadernación de principio a fin.</p>
 </div>
 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="bg-background-dark p-8 rounded-2xl border border-white/10 flex flex-col gap-6">
+<div class="bg-background-dark p-8 rounded-2xl border border-white/10 flex flex-col gap-6 reveal-left reveal-left">
 <div class="w-full aspect-video rounded-xl overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="Finished professional handmade books on display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3IMSuU9jmJRivm0tJ5F344T4J3TvVygRLokPU8YQxOQD3xu8ZXUrbmjhlnEsiUEKAPrnyVSxMXd8w5dkvVWK5kDMocd3UfFuIXC80sxDq_3MmaHcPjEJn4h5A5076B5O9y194na1oGs0j3U-EzRAB3zfo_aR5byCF9N1bUr05P-OkK0_isL4QdiE9eKf0-az8j2QH07YoirPbT93r7HK5RIeVWkM5Ku7tC3YQJrVCi_vOP7yikZKQQpg2ivup5mBVaJwNEz48bQ"/>
+<img class="w-full h-full object-cover reveal-left" data-alt="Finished professional handmade books on display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3IMSuU9jmJRivm0tJ5F344T4J3TvVygRLokPU8YQxOQD3xu8ZXUrbmjhlnEsiUEKAPrnyVSxMXd8w5dkvVWK5kDMocd3UfFuIXC80sxDq_3MmaHcPjEJn4h5A5076B5O9y194na1oGs0j3U-EzRAB3zfo_aR5byCF9N1bUr05P-OkK0_isL4QdiE9eKf0-az8j2QH07YoirPbT93r7HK5RIeVWkM5Ku7tC3YQJrVCi_vOP7yikZKQQpg2ivup5mBVaJwNEz48bQ"/>
 </div>
 <div>
 <h3 class="text-xl font-bold text-white mb-2">Aprende un oficio real</h3>
 <p class="text-slate-400">Domina las técnicas tradicionales de costura, adhesivos y armado profesional de tapas duras.</p>
 </div>
 </div>
-<div class="bg-background-dark p-8 rounded-2xl border border-white/10 flex flex-col gap-6">
+<div class="bg-background-dark p-8 rounded-2xl border border-white/10 flex flex-col gap-6 reveal-right reveal-right">
 <div class="w-full aspect-video rounded-xl overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="Workshop table with organized bookbinding tools" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzL_CDDGwurwfqfyDSfNIiBwMuoPavsC5u2osw4WdcD5ySXXjYK58BlXDDqQg54IKs1DbyDsrzx8Cfs0TKf0KUzbbcshE2SO8t99vSXr6A0cGzcamTXQAMVmCI9KlgHFEle63cZBJrv5_hVUBOUBIe56QjqvNbnC7cR0rHP52iPS7ViqbVx8R8WEhVTn5eFySc-w1Qmkb3xjZrZArEvwAOKrJ1zKRm1W5soKyEN2OiElUZIDnsO-iVqsZbhxIn9M5-pi_PjDHH9Q"/>
+<img class="w-full h-full object-cover reveal-right" data-alt="Workshop table with organized bookbinding tools" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzL_CDDGwurwfqfyDSfNIiBwMuoPavsC5u2osw4WdcD5ySXXjYK58BlXDDqQg54IKs1DbyDsrzx8Cfs0TKf0KUzbbcshE2SO8t99vSXr6A0cGzcamTXQAMVmCI9KlgHFEle63cZBJrv5_hVUBOUBIe56QjqvNbnC7cR0rHP52iPS7ViqbVx8R8WEhVTn5eFySc-w1Qmkb3xjZrZArEvwAOKrJ1zKRm1W5soKyEN2OiElUZIDnsO-iVqsZbhxIn9M5-pi_PjDHH9Q"/>
 </div>
 <div>
 <h3 class="text-xl font-bold text-white mb-2">Salida laboral rápida</h3>
 <p class="text-slate-400">Crea productos únicos con alta demanda en el mercado de regalos personalizados y papelería.</p>
 </div>
 </div>
-<div class="bg-background-dark p-8 rounded-2xl border border-white/10 flex flex-col gap-6">
+<div class="bg-background-dark p-8 rounded-2xl border border-white/10 flex flex-col gap-6 reveal-left reveal-left">
 <div class="w-full aspect-video rounded-xl overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="Artist studio with books and creative materials" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQHUn_-qYZazT-krcWk2EVVRXrEieyYZavZ-RXEWQ-p49sk-xXUsenHWnzCkExJyugaHrgsbzYuOvB-OuMwMXrOg0OflzMm2H-oEDlPCRn5VD-C_u1c1_NT3EZlas1PoNPp5n9xaWOHl03tH68c_r91R1xkl_CXMB2wFu0yKEQtHdRcRQ-TEh1j8OhAE9H_xBLrk0ueKgMw99eaAgTktvFJ9XKjvZg7U5nEziBjM_qFG3L5prDDa2-cV1VtSIFG4D1o1qgQQLuzg"/>
+<img class="w-full h-full object-cover reveal-left" data-alt="Artist studio with books and creative materials" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQHUn_-qYZazT-krcWk2EVVRXrEieyYZavZ-RXEWQ-p49sk-xXUsenHWnzCkExJyugaHrgsbzYuOvB-OuMwMXrOg0OflzMm2H-oEDlPCRn5VD-C_u1c1_NT3EZlas1PoNPp5n9xaWOHl03tH68c_r91R1xkl_CXMB2wFu0yKEQtHdRcRQ-TEh1j8OhAE9H_xBLrk0ueKgMw99eaAgTktvFJ9XKjvZg7U5nEziBjM_qFG3L5prDDa2-cV1VtSIFG4D1o1qgQQLuzg"/>
 </div>
 <div>
 <h3 class="text-xl font-bold text-white mb-2">Libertad Creativa</h3>
@@ -168,7 +195,7 @@
 </section>
 <!-- Bonus Section -->
 <section class="py-20" id="bonos">
-<div class="max-w-4xl mx-auto px-4">
+<div class="max-w-4xl mx-auto px-4 reveal-up">
 <div class="relative bg-gradient-to-br from-primary/10 to-transparent border-2 border-primary/30 rounded-3xl p-8 md:p-12 overflow-hidden">
 <div class="absolute top-0 right-0 p-4">
 <span class="bg-primary text-background-dark px-4 py-1 rounded-full text-xs font-black uppercase tracking-tighter">GRATIS</span>
@@ -200,7 +227,7 @@
 </section>
 <!-- Pricing Section -->
 <section class="py-24 bg-background-dark text-center" id="precio">
-<div class="max-w-3xl mx-auto px-4">
+<div class="max-w-3xl mx-auto px-4 reveal-up">
 <h2 class="text-3xl md:text-5xl font-black text-white mb-12">Comienza tu viaje artesanal hoy</h2>
 <div class="bg-white/5 border border-white/10 rounded-[2.5rem] p-12 relative overflow-hidden group">
 <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/20 blur-[100px] pointer-events-none"></div>
@@ -228,13 +255,13 @@
 <span>Certificado de finalización</span>
 </li>
 </ul>
-<button class="w-full bg-primary hover:bg-primary/90 text-background-dark py-6 rounded-2xl font-black text-xl transition-all shadow-xl shadow-primary/20 transform hover:-translate-y-1">
+<button class="w-full bg-primary hover:bg-primary/90 text-background-dark py-6 rounded-2xl font-black text-xl transition-all shadow-xl shadow-primary/20 transform hover:-translate-y-1 reveal-left shimmer-wrap pulse-soft">
                         Inscribirme al taller
                     </button>
 <div class="mt-6 flex items-center justify-center gap-6 opacity-60">
-<img class="h-6" data-alt="Visa logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTafSCC8ZtaAwXmOcKVVcySi2ZwkgfHttuWRK_9J9hmrcCK-eHpkNMxNiRaBfJvWXDuEfv4h7BqmAYVP_bvf-0npE6s7pZz158SZbkqSH6InfXnoyzxSw24WBW2O_0ZvGK2DPiuvdZzWGkXU8FJfaVa8DpoOWZLVHDs6BWgEqhSZ_REbGr0deQkM6yyOptTWFbhW1YeVCIOdqmgFVFrmk3Rm90sEuwaQzvZmxVOQm3enlyagOYiyf26ksifyYDs1dStQTI5grx9A"/>
-<img class="h-6" data-alt="Mastercard logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMyMD9CCUiBitHRLZsKqS31E8YWOAVcHNEkiQRwoKw2JhtL_IFnaEnDo5ozkDStAJ63kUney79eTnh0f2UWMhuPbEBP_f_smV8vJ0Vt-tv_kzNSGKcwjJCWJwCRccR3t1NXE8fsLgdnZmZTEQvVcmi26ksP_TBd4b3RUvKE60CvLsfB8lnmPikHDYKa960OseNwgnXj_wR-iPKPJ1bhx-RYrBgQ30r1rAelYHxnR1qcOBBFTYyhCbh-UpQ_bHF2k8XDZwxZvNHjQ"/>
-<img class="h-6" data-alt="Mercado Pago logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqcYSpUBYoxlFpGemMcrz2StS8zp2cmq5nfuZFsiLLqc1sK80QZUdwPzZtf9pu-wwzEJ7-sSKnNJIqSg9Muc5I_l_DofLYrmrVDbB61QbMyjRLIXEokuPOPDtmD3p0JzE_hHoU0STddvyNLqCdEP7ocST_AVBTvV8io2VwLSOKua47C5zZqgrtw7dJwYe4AoGjfDbWb5TO-wAbzvxLCXPyb_PrfvCWJMolf1EPvVvKoZP8dSD7sudbdC3LXLUTfe_INI7JBHEYBw"/>
+<img class="h-6 reveal-right" data-alt="Visa logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTafSCC8ZtaAwXmOcKVVcySi2ZwkgfHttuWRK_9J9hmrcCK-eHpkNMxNiRaBfJvWXDuEfv4h7BqmAYVP_bvf-0npE6s7pZz158SZbkqSH6InfXnoyzxSw24WBW2O_0ZvGK2DPiuvdZzWGkXU8FJfaVa8DpoOWZLVHDs6BWgEqhSZ_REbGr0deQkM6yyOptTWFbhW1YeVCIOdqmgFVFrmk3Rm90sEuwaQzvZmxVOQm3enlyagOYiyf26ksifyYDs1dStQTI5grx9A"/>
+<img class="h-6 reveal-left" data-alt="Mastercard logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMyMD9CCUiBitHRLZsKqS31E8YWOAVcHNEkiQRwoKw2JhtL_IFnaEnDo5ozkDStAJ63kUney79eTnh0f2UWMhuPbEBP_f_smV8vJ0Vt-tv_kzNSGKcwjJCWJwCRccR3t1NXE8fsLgdnZmZTEQvVcmi26ksP_TBd4b3RUvKE60CvLsfB8lnmPikHDYKa960OseNwgnXj_wR-iPKPJ1bhx-RYrBgQ30r1rAelYHxnR1qcOBBFTYyhCbh-UpQ_bHF2k8XDZwxZvNHjQ"/>
+<img class="h-6 reveal-right" data-alt="Mercado Pago logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqcYSpUBYoxlFpGemMcrz2StS8zp2cmq5nfuZFsiLLqc1sK80QZUdwPzZtf9pu-wwzEJ7-sSKnNJIqSg9Muc5I_l_DofLYrmrVDbB61QbMyjRLIXEokuPOPDtmD3p0JzE_hHoU0STddvyNLqCdEP7ocST_AVBTvV8io2VwLSOKua47C5zZqgrtw7dJwYe4AoGjfDbWb5TO-wAbzvxLCXPyb_PrfvCWJMolf1EPvVvKoZP8dSD7sudbdC3LXLUTfe_INI7JBHEYBw"/>
 </div>
 </div>
 </div>
@@ -255,4 +282,38 @@
 </div>
 </div>
 </footer>
-</body></html>
+<script>(function(){let spots=12;const el=document.getElementById('spots-left');setInterval(()=>{spots=spots<=8?12:spots-1;if(el)el.textContent=String(spots);},2600);})();</script>
+<script id="dynamic-enhancements-script">
+(() => {
+  const revealEls = document.querySelectorAll('.reveal-left, .reveal-right, .reveal-up');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.14 });
+  revealEls.forEach((el, index) => {
+    el.style.transitionDelay = `${Math.min(index * 70, 320)}ms`;
+    io.observe(el);
+  });
+
+  document.querySelectorAll('[data-counter-target]').forEach((el) => {
+    const target = Number(el.dataset.counterTarget || 0);
+    const suffix = el.dataset.counterSuffix || '';
+    const duration = Number(el.dataset.counterDuration || 1400);
+    let start = 0;
+    const step = Math.max(1, Math.ceil(target / (duration / 16)));
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= target) {
+        el.textContent = `${target}${suffix}`;
+        clearInterval(timer);
+      } else {
+        el.textContent = `${start}${suffix}`;
+      }
+    }, 16);
+  });
+})();
+</script></body></html>

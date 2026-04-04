@@ -42,6 +42,26 @@
             background: radial-gradient(circle at center, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
         }
     </style>
+
+<style>
+.reveal-left,.reveal-right,.reveal-up{opacity:0;transition:opacity .8s ease, transform .8s cubic-bezier(.2,.65,.2,1);will-change:transform,opacity}
+.reveal-left{transform:translateX(-48px)}
+.reveal-right{transform:translateX(48px)}
+.reveal-up{transform:translateY(36px)}
+.reveal-visible{opacity:1;transform:none}
+.float-soft{animation:floatSoft 4.5s ease-in-out infinite}
+.pulse-soft{animation:pulseSoft 2.2s ease-in-out infinite}
+.shimmer-cta{position:relative;overflow:hidden}
+.shimmer-cta::after{content:"";position:absolute;inset:0;transform:translateX(-120%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);animation:shimmerMove 3.2s linear infinite}
+.offer-marquee{white-space:nowrap;overflow:hidden;position:relative}
+.offer-marquee span{display:inline-block;padding-left:100%;animation:marqueeMove 16s linear infinite}
+.side-counter-card{backdrop-filter:blur(12px)}
+@keyframes shimmerMove{100%{transform:translateX(120%)}}
+@keyframes floatSoft{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes pulseSoft{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.04);opacity:.88}}
+@keyframes marqueeMove{100%{transform:translateX(-100%)}}
+</style>
+
 </head>
 <body class="selection:bg-primary/30 star-pattern">
 <header class="sticky top-0 z-50 bg-night-bg/80 backdrop-blur-xl border-b border-slate-800 px-6 md:px-20 py-4">
@@ -63,7 +83,7 @@
 <main class="max-w-7xl mx-auto px-6 md:px-20">
 <section class="relative py-16 md:py-28 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 <div class="absolute -top-20 -left-20 w-96 h-96 gradient-blur -z-10"></div>
-<div class="order-2 lg:order-1 space-y-8">
+<div class="order-2 lg:order-1 space-y-8 reveal-left">
 <div class="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">Guía Definitiva - Edición Argentina</div>
 <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.1] text-white">
                 Dile adiós al <br/><span class="text-primary font-display italic">insomnio crónico</span>
@@ -79,6 +99,33 @@
 <span class="material-symbols-outlined text-primary">verified_user</span>
 <span class="text-sm font-medium text-slate-300">Pago seguro en ARS</span>
 </div>
+</div>
+
+<div class="grid gap-4 sm:grid-cols-3 max-w-2xl pt-2">
+  <div class="reveal-left rounded-2xl bg-night-card border border-slate-700 px-5 py-4">
+    <p class="text-xs uppercase tracking-[0.24em] text-primary font-bold mb-2">Descargas hoy</p>
+    <p class="text-3xl font-black text-white" data-count-to="146"></p>
+    <p class="text-sm text-slate-400">personas mejorando su descanso</p>
+  </div>
+  <div class="reveal-up rounded-2xl bg-night-card border border-slate-700 px-5 py-4">
+    <p class="text-xs uppercase tracking-[0.24em] text-primary font-bold mb-2">Oferta tranquila</p>
+    <p class="text-2xl font-black text-white" data-countdown="6780"></p>
+    <p class="text-sm text-slate-400">incluye audio nocturno</p>
+  </div>
+  <div class="reveal-right rounded-2xl bg-night-card border border-slate-700 px-5 py-4" data-rotate-group>
+    <div data-rotate-item>
+      <p class="text-xs uppercase tracking-[0.24em] text-primary font-bold mb-2">Meta de sueño</p>
+      <p class="text-sm text-slate-300">Dormirte más rápido sin apagarte agotado.</p>
+    </div>
+    <div data-rotate-item style="display:none">
+      <p class="text-xs uppercase tracking-[0.24em] text-primary font-bold mb-2">Meta de sueño</p>
+      <p class="text-sm text-slate-300">Reducir despertares nocturnos y ansiedad.</p>
+    </div>
+    <div data-rotate-item style="display:none">
+      <p class="text-xs uppercase tracking-[0.24em] text-primary font-bold mb-2">Meta de sueño</p>
+      <p class="text-sm text-slate-300">Despertarte con energía real, no con culpa.</p>
+    </div>
+  </div>
 </div>
 </div>
 <div class="order-1 lg:order-2 relative">
@@ -97,7 +144,7 @@
 <p class="text-slate-400 max-w-2xl mx-auto">El agotamiento no debería ser tu estado natural.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div class="p-8 rounded-2xl bg-slate-900/40 border border-slate-800 flex gap-6 items-center">
+<div class="p-8 rounded-2xl bg-slate-900/40 border border-slate-800 flex gap-6 items-center reveal-left">
 <div class="size-14 bg-accent/10 text-accent rounded-2xl flex items-center justify-center shrink-0">
 <span class="material-symbols-outlined text-3xl">bedtime_off</span>
 </div>
@@ -106,7 +153,7 @@
 <p class="text-slate-400">Horas dando vueltas en la cama sin poder apagar la mente.</p>
 </div>
 </div>
-<div class="p-8 rounded-2xl bg-slate-900/40 border border-slate-800 flex gap-6 items-center">
+<div class="p-8 rounded-2xl bg-slate-900/40 border border-slate-800 flex gap-6 items-center reveal-right">
 <div class="size-14 bg-accent/10 text-accent rounded-2xl flex items-center justify-center shrink-0">
 <span class="material-symbols-outlined text-3xl">battery_0_bar</span>
 </div>
@@ -214,5 +261,25 @@
         © 2024 Sueño Reparador ARS. Todos los derechos reservados. Tu descanso es nuestra prioridad.
     </div>
 </footer>
+
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const io=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting){entry.target.classList.add('reveal-visible');io.unobserve(entry.target);}})},{threshold:.14});
+  document.querySelectorAll('.reveal-left,.reveal-right,.reveal-up').forEach(el=>io.observe(el));
+  document.querySelectorAll('[data-count-to]').forEach((el)=>{
+    const end=parseInt(el.getAttribute('data-count-to')||'0',10); const suffix=el.getAttribute('data-suffix')||''; const duration=parseInt(el.getAttribute('data-duration')||'1600',10); const start=performance.now();
+    const step=(now)=>{ const progress=Math.min((now-start)/duration,1); const value=Math.floor(end*progress); el.textContent=value.toLocaleString('es-AR')+suffix; if(progress<1) requestAnimationFrame(step);}; requestAnimationFrame(step);
+  });
+  document.querySelectorAll('[data-countdown]').forEach((el)=>{
+    let total=parseInt(el.getAttribute('data-countdown')||'900',10); const reset=parseInt(el.getAttribute('data-reset')||el.getAttribute('data-countdown')||'900',10);
+    const render=()=>{ const h=Math.floor(total/3600),m=Math.floor((total%3600)/60),s=total%60; el.textContent=[h,m,s].map(v=>String(v).padStart(2,'0')).join(':'); };
+    render(); setInterval(()=>{total=total<=1?reset:total-1; render();},1000);
+  });
+  document.querySelectorAll('[data-live-range]').forEach((el)=>{ const [min,max]=String(el.getAttribute('data-live-range')).split('-').map(Number); let current=Math.round((min+max)/2); el.textContent=current; setInterval(()=>{current=Math.max(min,Math.min(max,current+(Math.floor(Math.random()*5)-2))); el.textContent=current;},1700);});
+  document.querySelectorAll('[data-rotate-group]').forEach((wrap)=>{ const items=[...wrap.querySelectorAll('[data-rotate-item]')]; let active=0; const paint=()=>items.forEach((item,i)=>item.style.display=i===active?'block':'none'); paint(); setInterval(()=>{active=(active+1)%items.length; paint();},2600);});
+  document.querySelectorAll('[data-progress-fill]').forEach((bar)=>{ const target=bar.getAttribute('data-progress-fill'); requestAnimationFrame(()=>{bar.style.width=target;});});
+});
+</script>
 
 </body></html>

@@ -44,6 +44,26 @@
             box-shadow: 0 0 20px rgba(242, 13, 166, 0.4);
         }
     </style>
+
+<style>
+.reveal-left,.reveal-right,.reveal-up{opacity:0;transition:opacity .8s ease, transform .8s cubic-bezier(.2,.65,.2,1);will-change:transform,opacity}
+.reveal-left{transform:translateX(-48px)}
+.reveal-right{transform:translateX(48px)}
+.reveal-up{transform:translateY(36px)}
+.reveal-visible{opacity:1;transform:none}
+.float-soft{animation:floatSoft 4.5s ease-in-out infinite}
+.pulse-soft{animation:pulseSoft 2.2s ease-in-out infinite}
+.shimmer-cta{position:relative;overflow:hidden}
+.shimmer-cta::after{content:"";position:absolute;inset:0;transform:translateX(-120%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);animation:shimmerMove 3.2s linear infinite}
+.offer-marquee{white-space:nowrap;overflow:hidden;position:relative}
+.offer-marquee span{display:inline-block;padding-left:100%;animation:marqueeMove 16s linear infinite}
+.side-counter-card{backdrop-filter:blur(12px)}
+@keyframes shimmerMove{100%{transform:translateX(120%)}}
+@keyframes floatSoft{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes pulseSoft{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.04);opacity:.88}}
+@keyframes marqueeMove{100%{transform:translateX(-100%)}}
+</style>
+
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-white">
 <!-- Top Navigation Bar -->
@@ -69,7 +89,7 @@
 <main class="pt-24">
 <!-- Hero Section -->
 <section class="max-w-7xl mx-auto px-6 py-12 md:py-24 grid lg:grid-cols-2 gap-12 items-center">
-<div class="space-y-8">
+<div class="space-y-8 reveal-left">
 <div class="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-1.5 rounded-full border border-primary/30">
 <span class="material-symbols-outlined text-sm">trending_up</span>
 <span class="text-xs font-bold uppercase tracking-wider">Actualizado 2024</span>
@@ -92,6 +112,28 @@
 </div>
 <span class="text-sm font-medium text-slate-400">+2.5k alumnos</span>
 </div>
+</div>
+
+<div class="grid gap-4 sm:grid-cols-2 max-w-2xl">
+  <div class="reveal-left rounded-3xl glass px-5 py-4">
+    <p class="text-xs uppercase tracking-[0.24em] text-primary font-bold mb-2">Creadores mirando</p>
+    <p class="text-3xl font-black" data-live-range="48-96"></p>
+    <p class="text-sm text-slate-400">viendo este entrenamiento ahora</p>
+  </div>
+  <div class="reveal-right rounded-3xl glass px-5 py-4" data-rotate-group>
+    <div data-rotate-item>
+      <p class="text-xs uppercase tracking-[0.24em] text-primary font-bold mb-2">Hook viral</p>
+      <p class="text-sm text-slate-300">Textos que frenan el scroll en 1 segundo.</p>
+    </div>
+    <div data-rotate-item style="display:none">
+      <p class="text-xs uppercase tracking-[0.24em] text-primary font-bold mb-2">Hook viral</p>
+      <p class="text-sm text-slate-300">CapCut templates + subtítulos listos para retener.</p>
+    </div>
+    <div data-rotate-item style="display:none">
+      <p class="text-xs uppercase tracking-[0.24em] text-primary font-bold mb-2">Hook viral</p>
+      <p class="text-sm text-slate-300">Edición completa en minutos con atajos reales.</p>
+    </div>
+  </div>
 </div>
 </div>
 <div class="relative">
@@ -117,17 +159,17 @@
 <p class="text-slate-400">La edición tradicional ya no funciona. Necesitas dinamismo.</p>
 </div>
 <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
-<div class="bg-background-light dark:bg-background-dark p-8 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all group">
+<div class="bg-background-light dark:bg-background-dark p-8 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all group reveal-left">
 <span class="material-symbols-outlined text-4xl text-primary mb-6 group-hover:scale-110 transition-transform">mood_bad</span>
 <h3 class="text-xl font-bold mb-3">Videos Aburridos</h3>
 <p class="text-slate-400 leading-relaxed">Pasas horas grabando pero nadie llega al final del video porque falta ritmo y hooks visuales.</p>
 </div>
-<div class="bg-background-light dark:bg-background-dark p-8 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all group">
+<div class="bg-background-light dark:bg-background-dark p-8 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all group reveal-up">
 <span class="material-symbols-outlined text-4xl text-primary mb-6 group-hover:scale-110 transition-transform">leak_remove</span>
 <h3 class="text-xl font-bold mb-3">Falta de Alcance</h3>
 <p class="text-slate-400 leading-relaxed">El algoritmo te ignora. No importa cuánto te esfuerces, tus videos mueren en 200 vistas.</p>
 </div>
-<div class="bg-background-light dark:bg-background-dark p-8 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all group">
+<div class="bg-background-light dark:bg-background-dark p-8 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all group reveal-right">
 <span class="material-symbols-outlined text-4xl text-primary mb-6 group-hover:scale-110 transition-transform">timer_off</span>
 <h3 class="text-xl font-bold mb-3">Horas Perdidas</h3>
 <p class="text-slate-400 leading-relaxed">Editar te toma todo el día. Aprenderás a hacerlo en 15 minutos con flujos de trabajo optimizados.</p>
@@ -272,4 +314,24 @@
             ÚLTIMOS 12 CUPOS DISPONIBLES
         </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const io=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting){entry.target.classList.add('reveal-visible');io.unobserve(entry.target);}})},{threshold:.14});
+  document.querySelectorAll('.reveal-left,.reveal-right,.reveal-up').forEach(el=>io.observe(el));
+  document.querySelectorAll('[data-count-to]').forEach((el)=>{
+    const end=parseInt(el.getAttribute('data-count-to')||'0',10); const suffix=el.getAttribute('data-suffix')||''; const duration=parseInt(el.getAttribute('data-duration')||'1600',10); const start=performance.now();
+    const step=(now)=>{ const progress=Math.min((now-start)/duration,1); const value=Math.floor(end*progress); el.textContent=value.toLocaleString('es-AR')+suffix; if(progress<1) requestAnimationFrame(step);}; requestAnimationFrame(step);
+  });
+  document.querySelectorAll('[data-countdown]').forEach((el)=>{
+    let total=parseInt(el.getAttribute('data-countdown')||'900',10); const reset=parseInt(el.getAttribute('data-reset')||el.getAttribute('data-countdown')||'900',10);
+    const render=()=>{ const h=Math.floor(total/3600),m=Math.floor((total%3600)/60),s=total%60; el.textContent=[h,m,s].map(v=>String(v).padStart(2,'0')).join(':'); };
+    render(); setInterval(()=>{total=total<=1?reset:total-1; render();},1000);
+  });
+  document.querySelectorAll('[data-live-range]').forEach((el)=>{ const [min,max]=String(el.getAttribute('data-live-range')).split('-').map(Number); let current=Math.round((min+max)/2); el.textContent=current; setInterval(()=>{current=Math.max(min,Math.min(max,current+(Math.floor(Math.random()*5)-2))); el.textContent=current;},1700);});
+  document.querySelectorAll('[data-rotate-group]').forEach((wrap)=>{ const items=[...wrap.querySelectorAll('[data-rotate-item]')]; let active=0; const paint=()=>items.forEach((item,i)=>item.style.display=i===active?'block':'none'); paint(); setInterval(()=>{active=(active+1)%items.length; paint();},2600);});
+  document.querySelectorAll('[data-progress-fill]').forEach((bar)=>{ const target=bar.getAttribute('data-progress-fill'); requestAnimationFrame(()=>{bar.style.width=target;});});
+});
+</script>
+
 </body></html>

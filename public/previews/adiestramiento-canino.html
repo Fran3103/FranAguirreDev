@@ -25,6 +25,26 @@
             },
         }
     </script>
+
+<style>
+.reveal-left,.reveal-right,.reveal-up{opacity:0;transition:opacity .8s ease, transform .8s cubic-bezier(.2,.65,.2,1);will-change:transform,opacity}
+.reveal-left{transform:translateX(-48px)}
+.reveal-right{transform:translateX(48px)}
+.reveal-up{transform:translateY(36px)}
+.reveal-visible{opacity:1;transform:none}
+.float-soft{animation:floatSoft 4.5s ease-in-out infinite}
+.pulse-soft{animation:pulseSoft 2.2s ease-in-out infinite}
+.shimmer-cta{position:relative;overflow:hidden}
+.shimmer-cta::after{content:"";position:absolute;inset:0;transform:translateX(-120%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);animation:shimmerMove 3.2s linear infinite}
+.offer-marquee{white-space:nowrap;overflow:hidden;position:relative}
+.offer-marquee span{display:inline-block;padding-left:100%;animation:marqueeMove 16s linear infinite}
+.side-counter-card{backdrop-filter:blur(12px)}
+@keyframes shimmerMove{100%{transform:translateX(120%)}}
+@keyframes floatSoft{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes pulseSoft{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.04);opacity:.88}}
+@keyframes marqueeMove{100%{transform:translateX(-100%)}}
+</style>
+
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
 <div class="relative flex min-h-screen flex-col overflow-x-hidden">
@@ -52,7 +72,7 @@
 <main class="flex-1">
 <section class="px-6 lg:px-20 py-12 lg:py-24">
 <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-<div class="flex flex-col gap-8">
+<div class="flex flex-col gap-8 reveal-left">
 <div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full w-fit">
 <span class="material-symbols-outlined text-sm">verified</span>
 <span class="text-xs font-bold uppercase tracking-wider">Adiestramiento en Argentina</span>
@@ -72,6 +92,28 @@
 <span class="text-sm font-bold text-slate-900 dark:text-white">$13.200 ARS</span>
 <span class="text-xs text-slate-500">Pago único</span>
 </div>
+
+<div class="mt-6 grid gap-4 sm:flex max-w-xl sm:min-h-24">
+  <div class="reveal-left rounded-2xl border border-primary/10 bg-white/80 dark:bg-slate-900/60 px-5 py-4">
+    <p class="text-xs uppercase tracking-[0.24em] text-primary font-bold mb-2">Dueños conectados</p>
+    <p class="text-3xl font-black" data-live-range="22-49"></p>
+    <p class="text-sm text-slate-500">viendo esta guía ahora</p>
+  </div>
+  <div class="reveal-right rounded-2xl border border-accent/20 bg-white/80 dark:bg-slate-900/60 px-5 py-4" data-rotate-group>
+    <div data-rotate-item>
+      <p class="text-xs uppercase tracking-[0.24em] text-accent font-bold mb-2">Caso frecuente</p>
+      <p class="text-sm text-slate-600 dark:text-slate-300">"Tira de la correa" → resolución paso a paso</p>
+    </div>
+    <div data-rotate-item style="display:none">
+      <p class="text-xs uppercase tracking-[0.24em] text-accent font-bold mb-2">Caso frecuente</p>
+      <p class="text-sm text-slate-600 dark:text-slate-300">"Ladra cuando me voy" → protocolo de calma</p>
+    </div>
+    <div data-rotate-item style="display:none">
+      <p class="text-xs uppercase tracking-[0.24em] text-accent font-bold mb-2">Caso frecuente</p>
+      <p class="text-sm text-slate-600 dark:text-slate-300">"Salta sobre la gente" → límites y refuerzo</p>
+    </div>
+  </div>
+</div>
 </div>
 </div>
 <div class="relative">
@@ -90,7 +132,7 @@
 <p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">Tener un perro no debería ser una fuente de estrés constante.</p>
 </div>
 <div class="grid md:grid-cols-3 gap-8">
-<div class="group p-8 rounded-3xl bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-800 hover:border-red-400 transition-all">
+<div class="group p-8 rounded-3xl bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-800 hover:border-red-400 transition-all reveal-left">
 <div class="w-14 h-14 bg-red-100 text-red-500 rounded-2xl flex items-center justify-center mb-6">
 <span class="material-symbols-outlined text-3xl">volume_up</span>
 </div>
@@ -99,7 +141,7 @@
                             Ruidos molestos que afectan tu tranquilidad y la de tus vecinos durante todo el día.
                         </p>
 </div>
-<div class="group p-8 rounded-3xl bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-800 hover:border-red-400 transition-all">
+<div class="group p-8 rounded-3xl bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-800 hover:border-red-400 transition-all reveal-up">
 <div class="w-14 h-14 bg-red-100 text-red-500 rounded-2xl flex items-center justify-center mb-6">
 <span class="material-symbols-outlined text-3xl">chair</span>
 </div>
@@ -108,7 +150,7 @@
                             Encontrar tus objetos favoritos destruidos al volver a casa por falta de estimulación adecuada.
                         </p>
 </div>
-<div class="group p-8 rounded-3xl bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-800 hover:border-red-400 transition-all">
+<div class="group p-8 rounded-3xl bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-800 hover:border-red-400 transition-all reveal-right">
 <div class="w-14 h-14 bg-red-100 text-red-500 rounded-2xl flex items-center justify-center mb-6">
 <span class="material-symbols-outlined text-3xl">error</span>
 </div>
@@ -184,6 +226,19 @@
 </div>
 </div>
 </div>
+</div>
+
+<div class="mt-8 reveal-up rounded-3xl bg-accent text-white p-6 shadow-xl">
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+    <div>
+      <p class="text-xs uppercase tracking-[0.24em] font-bold mb-2">Oferta por tiempo limitado</p>
+      <p class="text-2xl font-black">Bonus: rutina de paseos sin tirones</p>
+    </div>
+    <div class="text-right">
+      <p class="text-sm uppercase tracking-widest opacity-80">termina en</p>
+      <p class="text-3xl font-black" data-countdown="6420"></p>
+    </div>
+  </div>
 </div>
 </div>
 </section>
@@ -263,5 +318,25 @@
 </button>
 </div>
 </div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const io=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting){entry.target.classList.add('reveal-visible');io.unobserve(entry.target);}})},{threshold:.14});
+  document.querySelectorAll('.reveal-left,.reveal-right,.reveal-up').forEach(el=>io.observe(el));
+  document.querySelectorAll('[data-count-to]').forEach((el)=>{
+    const end=parseInt(el.getAttribute('data-count-to')||'0',10); const suffix=el.getAttribute('data-suffix')||''; const duration=parseInt(el.getAttribute('data-duration')||'1600',10); const start=performance.now();
+    const step=(now)=>{ const progress=Math.min((now-start)/duration,1); const value=Math.floor(end*progress); el.textContent=value.toLocaleString('es-AR')+suffix; if(progress<1) requestAnimationFrame(step);}; requestAnimationFrame(step);
+  });
+  document.querySelectorAll('[data-countdown]').forEach((el)=>{
+    let total=parseInt(el.getAttribute('data-countdown')||'900',10); const reset=parseInt(el.getAttribute('data-reset')||el.getAttribute('data-countdown')||'900',10);
+    const render=()=>{ const h=Math.floor(total/3600),m=Math.floor((total%3600)/60),s=total%60; el.textContent=[h,m,s].map(v=>String(v).padStart(2,'0')).join(':'); };
+    render(); setInterval(()=>{total=total<=1?reset:total-1; render();},1000);
+  });
+  document.querySelectorAll('[data-live-range]').forEach((el)=>{ const [min,max]=String(el.getAttribute('data-live-range')).split('-').map(Number); let current=Math.round((min+max)/2); el.textContent=current; setInterval(()=>{current=Math.max(min,Math.min(max,current+(Math.floor(Math.random()*5)-2))); el.textContent=current;},1700);});
+  document.querySelectorAll('[data-rotate-group]').forEach((wrap)=>{ const items=[...wrap.querySelectorAll('[data-rotate-item]')]; let active=0; const paint=()=>items.forEach((item,i)=>item.style.display=i===active?'block':'none'); paint(); setInterval(()=>{active=(active+1)%items.length; paint();},2600);});
+  document.querySelectorAll('[data-progress-fill]').forEach((bar)=>{ const target=bar.getAttribute('data-progress-fill'); requestAnimationFrame(()=>{bar.style.width=target;});});
+});
+</script>
 
 </body></html>
