@@ -15,10 +15,10 @@ export function Footer() {
         </div>
 
         <div className="flex items-center gap-6 text-sm text-brand-muted">
-          <a href="#" className="transition-colors hover:text-brand-primary">
+          <a href="https://www.instagram.com/franaguirreweb/?__pwa=1" target="_blank" className="transition-colors hover:text-brand-primary">
             Instagram
           </a>
-          <a href="#" className="transition-colors hover:text-brand-primary">
+          <a href="https://www.linkedin.com/in/franconahuelaguirre" target="_blank" className="transition-colors hover:text-brand-primary">
             LinkedIn
           </a>
           <Link
